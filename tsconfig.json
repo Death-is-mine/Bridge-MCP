@@ -1,1 +1,20 @@
-ewogICJjb21waWxlck9wdGlvbnMiOiB7CiAgICAidGFyZ2V0IjogIkVTMjAyMiIsCiAgICAibW9kdWxlIjogIk5vZGVOZXh0IiwKICAgICJtb2R1bGVSZXNvbHV0aW9uIjogIk5vZGVOZXh0IiwKICAgICJsaWIiOiBbIkVTMjAyMiJdLAogICAgIm91dERpciI6ICJkaXN0IiwKICAgICJyb290RGlyIjogInNyYyIsCiAgICAic3RyaWN0IjogdHJ1ZSwKICAgICJlc01vZHVsZUludGVyb3AiOiB0cnVlLAogICAgInNraXBMaWJDaGVjayI6IHRydWUsCiAgICAiZm9yY2VDb25zaXN0ZW50Q2FzaW5nSW5GaWxlTmFtZXMiOiB0cnVlLAogICAgInJlc29sdmVKc29uTW9kdWxlIjogdHJ1ZSwKICAgICJkZWNsYXJhdGlvbiI6IHRydWUsCiAgICAiZGVjbGFyYXRpb25NYXAiOiB0cnVlLAogICAgInNvdXJjZU1hcCI6IHRydWUKICB9LAogICJpbmNsdWRlIjogWyJzcmMvKiovKiJdLAogICJleGNsdWRlIjogWyJub2RlX21vZHVsZXMiLCAiZGlzdCIsICJ0ZXN0Il0KfQo=
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2022"],
+    "outDir": "dist",
+    "rootDir": "src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "test"]
+}
