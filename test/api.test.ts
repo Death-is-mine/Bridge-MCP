@@ -1,1 +1,60 @@
-aW1wb3J0IHsgZGVzY3JpYmUsIGl0LCBleHBlY3QsIHZpIH0gZnJvbSAidml0ZXN0IjsKCnZpLm1vY2soIi4uL3NyYy9jb3JlL2NvbmZpZy5qcyIsICgpID0+ICh7CiAgY29uZmlnOiB7CiAgICBvcGVuY29kZTogeyBiYXNlVXJsOiAiaHR0cDovLzEyNy4wLjAuMTo0MDk2IiwgcGFzc3dvcmQ6ICIiIH0sCiAgICBicmlkZ2U6IHsgcG9ydDogMCwgYXV0aFNlY3JldDogIiIgfSwKICAgIGdpdGh1YjogeyB0b2tlbjogIiIsIHJlcG86ICIiIH0sCiAgICBsb2c6IHsgbGV2ZWw6ICJzaWxlbnQiIH0sCiAgfSwKfSkpOwoKZGVzY3JpYmUoInJhdGUgbGltaXRlciIsICgpID0+IHsKICBpdCgiZXhwb3J0cyBhIG1pZGRsZXdhcmUiLCBhc3luYyAoKSA9PiB7CiAgICBjb25zdCB7IGFwaUxpbWl0ZXIgfSA9IGF3YWl0IGltcG9ydCgiLi4vc3JjL3NlY3VyaXR5L3JhdGUtbGltaXQuanMiKTsKICAgIGV4cGVjdCh0eXBlb2YgYXBpTGltaXRlcikudG9CZSgiZnVuY3Rpb24iKTsKICB9KTsKfSk7CgpkZXNjcmliZSgibWlkZGxld2FyZSIsICgpID0+IHsKICBpdCgiZXhwb3J0cyBhdXRoIG1pZGRsZXdhcmUgYW5kIGVycm9yIGhhbmRsZXIiLCBhc3luYyAoKSA9PiB7CiAgICBjb25zdCB7IGF1dGhNaWRkbGV3YXJlLCBlcnJvckhhbmRsZXIgfSA9IGF3YWl0IGltcG9ydCgiLi4vc3JjL2FwaS9taWRkbGV3YXJlLmpzIik7CiAgICBleHBlY3QodHlwZW9mIGF1dGhNaWRkbGV3YXJlKS50b0JlKCJmdW5jdGlvbiIpOwogICAgZXhwZWN0KHR5cGVvZiBlcnJvckhhbmRsZXIpLnRvQmUoImZ1bmN0aW9uIik7CiAgfSk7Cn0pOwoKZGVzY3JpYmUoIkFQSSByb3V0ZXMiLCAoKSA9PiB7CiAgaXQoImV4cG9ydHMgYSByb3V0ZXIiLCBhc3luYyAoKSA9PiB7CiAgICBjb25zdCB7IHJvdXRlciB9ID0gYXdhaXQgaW1wb3J0KCIuLi9zcmMvYXBpL3JvdXRlcy5qcyIpOwogICAgZXhwZWN0KHJvdXRlcikudG9CZVRydXRoeSgpOwogIH0pOwp9KTsK
+import { describe, it, expect } from "vitest";
+
+describe("rate limiter", () => {
+  it("exports rateLimit middleware", async () => {
+    const { rateLimit } = await import("../src/security/rate-limit.js");
+    expect(typeof rateLimit).toBe("function");
+  });
+});
+
+describe("auth middleware", () => {
+  it("exports authMiddleware and errorHandler", async () => {
+    const { authMiddleware, errorHandler } = await import("../src/auth/middleware.js");
+    expect(typeof authMiddleware).toBe("function");
+    expect(typeof errorHandler).toBe("function");
+  });
+});
+
+describe("cors middleware", () => {
+  it("exports corsMiddleware", async () => {
+    const { corsMiddleware } = await import("../src/security/cors.js");
+    expect(typeof corsMiddleware).toBe("function");
+  });
+});
+
+describe("OAuth", () => {
+  it("generates and validates auth codes", async () => {
+    const { generateAuthCode, validateAuthCode } = await import("../src/auth/oauth.js");
+    const { createHash } = await import("node:crypto");
+    const verifier = "test_verifier_12345";
+    const challenge = createHash("sha256").update(verifier).digest("base64url");
+    const code = generateAuthCode("client1", "http://localhost/callback", challenge, "S256", "read");
+    expect(code).toBeTruthy();
+    expect(validateAuthCode(code, verifier)).toBeTruthy();
+    expect(validateAuthCode(code, "wrong_verifier")).toBeNull();
+    expect(validateAuthCode("invalid", verifier)).toBeNull();
+  });
+
+  it("issues and validates tokens", async () => {
+    const { issueToken, validateAccessToken, revokeToken } = await import("../src/auth/oauth.js");
+    const token = issueToken("client1", "user1", "read write");
+    expect(token.access_token).toBeTruthy();
+    expect(token.token_type).toBe("Bearer");
+    expect(token.expires_in).toBe(3600);
+    expect(token.refresh_token).toBeTruthy();
+    const valid = validateAccessToken(token.access_token);
+    expect(valid?.clientId).toBe("client1");
+    expect(revokeToken(token.access_token)).toBe(true);
+    expect(validateAccessToken(token.access_token)).toBeNull();
+  });
+
+  it("returns metadata", async () => {
+    const { getMetadata, getProtectedResourceMetadata } = await import("../src/auth/oauth.js");
+    const meta = getMetadata();
+    expect(meta.authorization_endpoint).toContain("/oauth/authorize");
+    expect(meta.token_endpoint).toContain("/oauth/token");
+    expect(meta.code_challenge_methods_supported).toContain("S256");
+    const prm = getProtectedResourceMetadata();
+    expect(prm.resource).toBeTruthy();
+  });
+});
