@@ -1,1 +1,103 @@
-aW1wb3J0IHsgY29uZmlnIH0gZnJvbSAiLi4vY29yZS9jb25maWcuanMiOwppbXBvcnQgdHlwZSB7IEJyaWRnZVNlc3Npb24sIE9wZW5Db2RlRXZlbnQgfSBmcm9tICIuLi9jb3JlL3R5cGVzLmpzIjsKCmNvbnN0IEJBU0UgPSBjb25maWcub3BlbmNvZGUuYmFzZVVybDsKY29uc3QgQVVUSCA9IGNvbmZpZy5vcGVuY29kZS5wYXNzd29yZDsKCmludGVyZmFjZSBPcGVuQ29kZVNlc3Npb24gewogIGlkOiBzdHJpbmc7CiAgc3RhdHVzOiBzdHJpbmc7Cn0KCmFzeW5jIGZ1bmN0aW9uIGFwaTxUPihwYXRoOiBzdHJpbmcsIGluaXQ/OiBSZXF1ZXN0SW5pdCk6IFByb21pc2U8VD4gewogIGNvbnN0IHJlcyA9IGF3YWl0IGZldGNoKGAke0JBU0V9JHtwYXRofWAsIHsKICAgIC4uLmluaXQsCiAgICBoZWFkZXJzOiB7CiAgICAgICJDb250ZW50LVR5cGUiOiAiYXBwbGljYXRpb24vanNvbiIsCiAgICAgIC4uLihBVVRIID8geyBBdXRob3JpemF0aW9uOiBgQmVhcmVyICR7QVVUSH1gIH0gOiB7fSksCiAgICAgIC4uLmluaXQ/LmhlYWRlcnMsCiAgICB9LAogIH0pOwogIGlmICghcmVzLm9rKSB7CiAgICBjb25zdCBib2R5ID0gYXdhaXQgcmVzLnRleHQoKS5jYXRjaCgoKSA9PiAiIik7CiAgICB0aHJvdyBuZXcgRXJyb3IoYE9wZW5Db2RlICR7cmVzLnN0YXR1c306ICR7Ym9keSB8fCByZXMuc3RhdHVzVGV4dH1gKTsKICB9CiAgcmV0dXJuIHJlcy5qc29uKCkgYXMgUHJvbWlzZTxUPjsKfQoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGhlYWx0aENoZWNrKCk6IFByb21pc2U8Ym9vbGVhbj4gewogIHRyeSB7CiAgICBhd2FpdCBhcGkoIi9oZWFsdGgiKTsKICAgIHJldHVybiB0cnVlOwogIH0gY2F0Y2ggewogICAgcmV0dXJuIGZhbHNlOwogIH0KfQoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGNyZWF0ZVNlc3Npb24oKTogUHJvbWlzZTxzdHJpbmc+IHsKICBjb25zdCBkYXRhID0gYXdhaXQgYXBpPE9wZW5Db2RlU2Vzc2lvbj4oIi9zZXNzaW9ucyIsIHsgbWV0aG9kOiAiUE9TVCIgfSk7CiAgcmV0dXJuIGRhdGEuaWQ7Cn0KCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBzZW5kUHJvbXB0KHNlc3Npb25JZDogc3RyaW5nLCBwcm9tcHQ6IHN0cmluZyk6IFByb21pc2U8dm9pZD4gewogIGF3YWl0IGFwaShgL3Nlc3Npb25zLyR7c2Vzc2lvbklkfS9tZXNzYWdlc2AsIHsKICAgIG1ldGhvZDogIlBPU1QiLAogICAgYm9keTogSlNPTi5zdHJpbmdpZnkoeyBjb250ZW50OiBwcm9tcHQgfSksCiAgfSk7Cn0KCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBzdG9wU2Vzc2lvbihzZXNzaW9uSWQ6IHN0cmluZyk6IFByb21pc2U8dm9pZD4gewogIGF3YWl0IGFwaShgL3Nlc3Npb25zLyR7c2Vzc2lvbklkfS9zdG9wYCwgeyBtZXRob2Q6ICJQT1NUIiB9KTsKfQoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGdldFNlc3Npb24oc2Vzc2lvbklkOiBzdHJpbmcpOiBQcm9taXNlPE9wZW5Db2RlU2Vzc2lvbj4gewogIHJldHVybiBhcGk8T3BlbkNvZGVTZXNzaW9uPihgL3Nlc3Npb25zLyR7c2Vzc2lvbklkfWApOwp9CgpleHBvcnQgYXN5bmMgZnVuY3Rpb24gZ2V0RGlmZihzZXNzaW9uSWQ6IHN0cmluZyk6IFByb21pc2U8c3RyaW5nPiB7CiAgY29uc3QgZGF0YSA9IGF3YWl0IGFwaTx7IGRpZmY6IHN0cmluZyB9PihgL3Nlc3Npb25zLyR7c2Vzc2lvbklkfS9kaWZmYCk7CiAgcmV0dXJuIGRhdGEuZGlmZjsKfQoKZXhwb3J0IGZ1bmN0aW9uIHN0cmVhbUV2ZW50cygKICBzZXNzaW9uSWQ6IHN0cmluZywKICBvbkV2ZW50OiAoZXZlbnQ6IE9wZW5Db2RlRXZlbnQpID0+IHZvaWQsCiAgb25FcnJvcjogKGVycjogRXJyb3IpID0+IHZvaWQsCik6ICgpID0+IHZvaWQgewogIGNvbnN0IGNvbnRyb2xsZXIgPSBuZXcgQWJvcnRDb250cm9sbGVyKCk7CgogIGZldGNoKGAke0JBU0V9L3Nlc3Npb25zLyR7c2Vzc2lvbklkfS9ldmVudHNgLCB7CiAgICBoZWFkZXJzOiBBVVRIID8geyBBdXRob3JpemF0aW9uOiBgQmVhcmVyICR7QVVUSH1gIH0gOiB7fSwKICAgIHNpZ25hbDogY29udHJvbGxlci5zaWduYWwsCiAgfSkKICAgIC50aGVuKGFzeW5jIChyZXMpID0+IHsKICAgICAgaWYgKCFyZXMub2sgfHwgIXJlcy5ib2R5KSB7CiAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBTdHJlYW0gZmFpbGVkOiAke3Jlcy5zdGF0dXN9YCk7CiAgICAgIH0KICAgICAgY29uc3QgcmVhZGVyID0gcmVzLmJvZHkuZ2V0UmVhZGVyKCk7CiAgICAgIGNvbnN0IGRlY29kZXIgPSBuZXcgVGV4dERlY29kZXIoKTsKICAgICAgbGV0IGJ1ZmZlciA9ICIiOwoKICAgICAgd2hpbGUgKHRydWUpIHsKICAgICAgICBjb25zdCB7IGRvbmUsIHZhbHVlIH0gPSBhd2FpdCByZWFkZXIucmVhZCgpOwogICAgICAgIGlmIChkb25lKSBicmVhazsKICAgICAgICBidWZmZXIgKz0gZGVjb2Rlci5kZWNvZGUodmFsdWUsIHsgc3RyZWFtOiB0cnVlIH0pOwogICAgICAgIGNvbnN0IGxpbmVzID0gYnVmZmVyLnNwbGl0KCJcbiIpOwogICAgICAgIGJ1ZmZlciA9IGxpbmVzLnBvcCgpIHx8ICIiOwogICAgICAgIGZvciAoY29uc3QgbGluZSBvZiBsaW5lcykgewogICAgICAgICAgaWYgKGxpbmUuc3RhcnRzV2l0aCgiZGF0YTogIikpIHsKICAgICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgICBjb25zdCBkYXRhID0gSlNPTi5wYXJzZShsaW5lLnNsaWNlKDYpKTsKICAgICAgICAgICAgICBvbkV2ZW50KHsgdHlwZTogZGF0YS50eXBlIHx8ICJ1bmtub3duIiwgZGF0YTogZGF0YS5kYXRhIHx8IGRhdGEsIHRpbWVzdGFtcDogbmV3IERhdGUoKSB9KTsKICAgICAgICAgICAgfSBjYXRjaCB7IC8qIHNraXAgbWFsZm9ybWVkICovIH0KICAgICAgICAgIH0KICAgICAgICB9CiAgICAgIH0KICAgIH0pCiAgICAuY2F0Y2goKGVycikgPT4gewogICAgICBpZiAoZXJyLm5hbWUgIT09ICJBYm9ydEVycm9yIikgb25FcnJvcihlcnIpOwogICAgfSk7CgogIHJldHVybiAoKSA9PiBjb250cm9sbGVyLmFib3J0KCk7Cn0K
+import { spawn, execSync } from "node:child_process";
+import { logger } from "../core/audit.js";
+import { config } from "../core/config.js";
+
+function ocArgs(...extra: string[]): string[] {
+  const args = ["-y", "opencode", "-o", "json"];
+  if (config.opencode.username) {
+    args.push("-u", config.opencode.username);
+  }
+  return [...args, ...extra];
+}
+
+function ocExec(args: string[]): Promise<{ stdout: string; stderr: string }> {
+  return new Promise((resolve, reject) => {
+    const child = spawn("npx", ocArgs(...args), {
+      stdio: ["pipe", "pipe", "pipe"],
+      timeout: config.opencode.timeoutMs,
+      shell: process.platform === "win32",
+    });
+    let stdout = "";
+    let stderr = "";
+    child.stdout.on("data", (d: Buffer) => (stdout += d.toString()));
+    child.stderr.on("data", (d: Buffer) => (stderr += d.toString()));
+    child.on("close", (code) => {
+      if (code === 0) resolve({ stdout, stderr });
+      else reject(new Error(`OpenCode exited ${code}: ${stderr || stdout}`));
+    });
+    child.on("error", reject);
+  });
+}
+
+export async function healthCheck(): Promise<{ ok: boolean; version?: string; error?: string }> {
+  try {
+    const { stdout } = await ocExec(["version"]);
+    const version = stdout.trim().split("\n")[0];
+    return { ok: true, version };
+  } catch (err: any) {
+    return { ok: false, error: err.message };
+  }
+}
+
+export async function createSession(title?: string): Promise<string> {
+  const args = ["session", "create"];
+  if (title) args.push("--title", title);
+  const { stdout } = await ocExec(args);
+  const parsed = JSON.parse(stdout);
+  return parsed.id || parsed.sessionId || parsed;
+}
+
+export async function sendPrompt(sessionId: string, text: string): Promise<string> {
+  const { stdout } = await ocExec(["session", "send", "--session", sessionId, "--message", text]);
+  return stdout.trim();
+}
+
+export async function stopSession(sessionId: string): Promise<void> {
+  await ocExec(["session", "stop", "--session", sessionId]);
+}
+
+export async function getDiff(sessionId: string): Promise<string> {
+  try {
+    const { stdout } = await ocExec(["session", "diff", "--session", sessionId]);
+    return stdout.trim();
+  } catch {
+    return "";
+  }
+}
+
+export async function listEvents(sessionId: string, since?: number, signal?: AbortSignal): Promise<ReadableStream<Uint8Array>> {
+  const encoder = new TextEncoder();
+  const stream = new ReadableStream<Uint8Array>({
+    async start(controller) {
+      const args = ["session", "events", "--session", sessionId];
+      if (since) args.push("--since", String(since));
+      const child = spawn("npx", ocArgs(...args), {
+        stdio: ["pipe", "pipe", "pipe"],
+        shell: process.platform === "win32",
+      });
+      child.stdout.on("data", (chunk: Buffer) => {
+        controller.enqueue(encoder.encode(chunk.toString()));
+      });
+      child.on("close", () => controller.close());
+      child.on("error", (err) => controller.error(err));
+      if (signal) {
+        signal.addEventListener("abort", () => {
+          child.kill();
+          controller.close();
+        });
+      }
+    },
+  });
+  return stream;
+}
+
+export async function listSessions(): Promise<string[]> {
+  try {
+    const { stdout } = await ocExec(["session", "list"]);
+    const parsed = JSON.parse(stdout);
+    if (Array.isArray(parsed)) return parsed.map((s: any) => s.id || s.sessionId || String(s));
+    return [];
+  } catch {
+    return [];
+  }
+}
