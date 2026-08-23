@@ -1,1 +1,277 @@
-aW1wb3J0IHsgTWNwU2VydmVyIH0gZnJvbSAiQG1vZGVsY29udGV4dHByb3RvY29sL3Nkay9zZXJ2ZXIvbWNwLmpzIjsKaW1wb3J0IHsgeiB9IGZyb20gInpvZCI7CmltcG9ydCAqIGFzIG9wZW5jb2RlIGZyb20gIi4uL2FkYXB0ZXIvb3BlbmNvZGUuanMiOwppbXBvcnQgKiBhcyBzZXNzaW9ucyBmcm9tICIuLi9jb3JlL3Nlc3Npb24uanMiOwppbXBvcnQgKiBhcyBhcHByb3ZhbHMgZnJvbSAiLi4vY29yZS9hcHByb3ZhbC5qcyI7CmltcG9ydCB7IGF1ZGl0IH0gZnJvbSAiLi4vY29yZS9hdWRpdC5qcyI7CmltcG9ydCB7IHY0IGFzIHV1aWQgfSBmcm9tICJ1dWlkIjsKCmV4cG9ydCBmdW5jdGlvbiBjcmVhdGVNY3BTZXJ2ZXIoKTogTWNwU2VydmVyIHsKICBjb25zdCBzZXJ2ZXIgPSBuZXcgTWNwU2VydmVyKHsKICAgIG5hbWU6ICJvcGVuY29kZS1tY3AtYnJpZGdlIiwKICAgIHZlcnNpb246ICIwLjEuMCIsCiAgfSk7CgogIHNlcnZlci50b29sKCJicmlkZ2Uuc3RhdHVzIiwgIlJldHVybiBicmlkZ2UgaGVhbHRoLCBPcGVuQ29kZSBoZWFsdGgsIHZlcnNpb24iLCBhc3luYyAoKSA9PiB7CiAgICBjb25zdCBvY0hlYWx0aHkgPSBhd2FpdCBvcGVuY29kZS5oZWFsdGhDaGVjaygpOwogICAgcmV0dXJuIHsKICAgICAgY29udGVudDogW3sKICAgICAgICB0eXBlOiAidGV4dCIgYXMgY29uc3QsCiAgICAgICAgdGV4dDogSlNPTi5zdHJpbmdpZnkoewogICAgICAgICAgYnJpZGdlOiB7IHN0YXR1czogIm9rIiwgdmVyc2lvbjogIjAuMS4wIiB9LAogICAgICAgICAgb3BlbmNvZGU6IHsgc3RhdHVzOiBvY0hlYWx0aHkgPyAiY29ubmVjdGVkIiA6ICJ1bmF2YWlsYWJsZSIgfSwKICAgICAgICB9KSwKICAgICAgfV0sCiAgICB9OwogIH0pOwoKICBzZXJ2ZXIudG9vbCgib3BlbmNvZGUuc2Vzc2lvbnMubGlzdCIsICJMaXN0IGF2YWlsYWJsZSBzZXNzaW9ucyIsIGFzeW5jICgpID0+IHsKICAgIHJldHVybiB7CiAgICAgIGNvbnRlbnQ6IFt7CiAgICAgICAgdHlwZTogInRleHQiIGFzIGNvbnN0LAogICAgICAgIHRleHQ6IEpTT04uc3RyaW5naWZ5KHNlc3Npb25zLmxpc3RTZXNzaW9ucygpKSwKICAgICAgfV0sCiAgICB9OwogIH0pOwoKICBzZXJ2ZXIudG9vbCgib3BlbmNvZGUuc2Vzc2lvbi5jcmVhdGUiLCAiQ3JlYXRlIGEgbmV3IGNvZGluZyBzZXNzaW9uIiwgeyByZXBvc2l0b3J5OiB6LnN0cmluZygpIH0sIGFzeW5jICh7IHJlcG9zaXRvcnkgfSkgPT4gewogICAgY29uc3Qgc2Vzc2lvbiA9IHNlc3Npb25zLmNyZWF0ZVNlc3Npb24oIm1jcCIsIHJlcG9zaXRvcnkpOwogICAgcmV0dXJuIHsKICAgICAgY29udGVudDogW3sKICAgICAgICB0eXBlOiAidGV4dCIgYXMgY29uc3QsCiAgICAgICAgdGV4dDogSlNPTi5zdHJpbmdpZnkoc2Vzc2lvbiksCiAgICAgIH1dLAogICAgfTsKICB9KTsKCiAgc2VydmVyLnRvb2woCiAgICAib3BlbmNvZGUuc2Vzc2lvbi5zZW5kIiwKICAgICJTZW5kIGEgY29kaW5nIGluc3RydWN0aW9uIHRvIGEgc2Vzc2lvbiIsCiAgICB7IHNlc3Npb25JZDogei5zdHJpbmcoKSwgcHJvbXB0OiB6LnN0cmluZygpIH0sCiAgICBhc3luYyAoeyBzZXNzaW9uSWQsIHByb21wdCB9KSA9PiB7CiAgICAgIGNvbnN0IHNlc3Npb24gPSBzZXNzaW9ucy5nZXRTZXNzaW9uKHNlc3Npb25JZCk7CiAgICAgIGlmICghc2Vzc2lvbikgewogICAgICAgIHJldHVybiB7IGNvbnRlbnQ6IFt7IHR5cGU6ICJ0ZXh0IiBhcyBjb25zdCwgdGV4dDogIlNlc3Npb24gbm90IGZvdW5kIiB9XSwgaXNFcnJvcjogdHJ1ZSB9OwogICAgICB9CgogICAgICBjb25zdCByZXF1ZXN0SWQgPSB1dWlkKCk7CiAgICAgIHRyeSB7CiAgICAgICAgaWYgKCFzZXNzaW9uLm9wZW5jb2RlU2Vzc2lvbklkKSB7CiAgICAgICAgICBjb25zdCBvY0lkID0gYXdhaXQgb3BlbmNvZGUuY3JlYXRlU2Vzc2lvbigpOwogICAgICAgICAgc2Vzc2lvbnMudXBkYXRlU2Vzc2lvbihzZXNzaW9uSWQsIHsgb3BlbmNvZGVTZXNzaW9uSWQ6IG9jSWQgfSk7CiAgICAgICAgICBzZXNzaW9uLm9wZW5jb2RlU2Vzc2lvbklkID0gb2NJZDsKICAgICAgICB9CiAgICAgICAgc2Vzc2lvbnMudXBkYXRlU2Vzc2lvbihzZXNzaW9uSWQsIHsgc3RhdHVzOiAiUlVOTklORyIgfSk7CiAgICAgICAgYXdhaXQgb3BlbmNvZGUuc2VuZFByb21wdChzZXNzaW9uLm9wZW5jb2RlU2Vzc2lvbklkLCBwcm9tcHQpOwogICAgICAgIGF1ZGl0KHsgcmVxdWVzdElkLCBjbGllbnRJZDogIm1jcCIsIGFjdGlvbjogInNlbmRfcHJvbXB0IiwgcmVwb3NpdG9yeTogc2Vzc2lvbi5yZXBvc2l0b3J5LCBzZXNzaW9uOiBzZXNzaW9uSWQsIGFwcHJvdmFsU3RhdHVzOiAibi9hIiwgcmVzdWx0OiAib2siIH0pOwogICAgICAgIHJldHVybiB7IGNvbnRlbnQ6IFt7IHR5cGU6ICJ0ZXh0IiBhcyBjb25zdCwgdGV4dDogSlNPTi5zdHJpbmdpZnkoeyBvazogdHJ1ZSwgcmVxdWVzdElkIH0pIH1dIH07CiAgICAgIH0gY2F0Y2ggKGVycikgewogICAgICAgIHNlc3Npb25zLnVwZGF0ZVNlc3Npb24oc2Vzc2lvbklkLCB7IHN0YXR1czogIkZBSUxFRCIgfSk7CiAgICAgICAgYXVkaXQoeyByZXF1ZXN0SWQsIGNsaWVudElkOiAibWNwIiwgYWN0aW9uOiAic2VuZF9wcm9tcHQiLCByZXBvc2l0b3J5OiBzZXNzaW9uLnJlcG9zaXRvcnksIHNlc3Npb246IHNlc3Npb25JZCwgYXBwcm92YWxTdGF0dXM6ICJuL2EiLCByZXN1bHQ6ICJlcnJvciIsIGVycm9yOiAoZXJyIGFzIEVycm9yKS5tZXNzYWdlIH0pOwogICAgICAgIHJldHVybiB7IGNvbnRlbnQ6IFt7IHR5cGU6ICJ0ZXh0IiBhcyBjb25zdCwgdGV4dDogKGVyciBhcyBFcnJvcikubWVzc2FnZSB9XSwgaXNFcnJvcjogdHJ1ZSB9OwogICAgICB9CiAgICB9LAogICk7CgogIHNlcnZlci50b29sKCJvcGVuY29kZS5zZXNzaW9uLnN0b3AiLCAiU3RvcCBhIHJ1bm5pbmcgc2Vzc2lvbiIsIHsgc2Vzc2lvbklkOiB6LnN0cmluZygpIH0sIGFzeW5jICh7IHNlc3Npb25JZCB9KSA9PiB7CiAgICBjb25zdCBzZXNzaW9uID0gc2Vzc2lvbnMuZ2V0U2Vzc2lvbihzZXNzaW9uSWQpOwogICAgaWYgKCFzZXNzaW9uKSB7CiAgICAgIHJldHVybiB7IGNvbnRlbnQ6IFt7IHR5cGU6ICJ0ZXh0IiBhcyBjb25zdCwgdGV4dDogIlNlc3Npb24gbm90IGZvdW5kIiB9XSwgaXNFcnJvcjogdHJ1ZSB9OwogICAgfQogICAgc2Vzc2lvbnMudXBkYXRlU2Vzc2lvbihzZXNzaW9uSWQsIHsgc3RhdHVzOiAiU1RPUFBJTkciIH0pOwogICAgdHJ5IHsKICAgICAgaWYgKHNlc3Npb24ub3BlbmNvZGVTZXNzaW9uSWQpIGF3YWl0IG9wZW5jb2RlLnN0b3BTZXNzaW9uKHNlc3Npb24ub3BlbmNvZGVTZXNzaW9uSWQpOwogICAgICBzZXNzaW9ucy51cGRhdGVTZXNzaW9uKHNlc3Npb25JZCwgeyBzdGF0dXM6ICJJRExFIiB9KTsKICAgICAgcmV0dXJuIHsgY29udGVudDogW3sgdHlwZTogInRleHQiIGFzIGNvbnN0LCB0ZXh0OiAiU3RvcHBlZCIgfV0gfTsKICAgIH0gY2F0Y2ggKGVycikgewogICAgICBzZXNzaW9ucy51cGRhdGVTZXNzaW9uKHNlc3Npb25JZCwgeyBzdGF0dXM6ICJGQUlMRUQiIH0pOwogICAgICByZXR1cm4geyBjb250ZW50OiBbeyB0eXBlOiAidGV4dCIgYXMgY29uc3QsIHRleHQ6IChlcnIgYXMgRXJyb3IpLm1lc3NhZ2UgfV0sIGlzRXJyb3I6IHRydWUgfTsKICAgIH0KICB9KTsKCiAgc2VydmVyLnRvb2woInJlcG9zaXRvcnkuc3RhdHVzIiwgIlJldHVybiBnaXQgc3RhdHVzIGZvciByZXBvc2l0b3J5IiwgYXN5bmMgKCkgPT4gewogICAgcmV0dXJuIHsgY29udGVudDogW3sgdHlwZTogInRleHQiIGFzIGNvbnN0LCB0ZXh0OiAiTm90IHlldCBpbXBsZW1lbnRlZCIgfV0gfTsKICB9KTsKCiAgc2VydmVyLnRvb2woInJlcG9zaXRvcnkuZGlmZiIsICJSZXR1cm4gdGhlIGN1cnJlbnQgZGlmZiIsIGFzeW5jICgpID0+IHsKICAgIHJldHVybiB7IGNvbnRlbnQ6IFt7IHR5cGU6ICJ0ZXh0IiBhcyBjb25zdCwgdGV4dDogIk5vdCB5ZXQgaW1wbGVtZW50ZWQiIH1dIH07CiAgfSk7CgogIHNlcnZlci50b29sKCJicmlkZ2UuYXBwcm92YWwucmVxdWVzdCIsICJDcmVhdGUgYW4gYXBwcm92YWwgcmVxdWVzdCBmb3IgYSBzZW5zaXRpdmUgYWN0aW9uIiwgewogICAgYWN0aW9uOiB6LnN0cmluZygpLAogICAgcmVwb3NpdG9yeTogei5zdHJpbmcoKSwKICAgIHNlc3Npb246IHouc3RyaW5nKCksCiAgICByZWFzb246IHouc3RyaW5nKCksCiAgICBwcm9wb3NlZEVmZmVjdDogei5zdHJpbmcoKSwKICB9LCBhc3luYyAocGFyYW1zKSA9PiB7CiAgICBjb25zdCByZXEgPSBhcHByb3ZhbHMuY3JlYXRlQXBwcm92YWwocGFyYW1zLmFjdGlvbiwgcGFyYW1zLnJlcG9zaXRvcnksIHBhcmFtcy5zZXNzaW9uLCBwYXJhbXMucmVhc29uLCBwYXJhbXMucHJvcG9zZWRFZmZlY3QpOwogICAgcmV0dXJuIHsgY29udGVudDogW3sgdHlwZTogInRleHQiIGFzIGNvbnN0LCB0ZXh0OiBKU09OLnN0cmluZ2lmeShyZXEpIH1dIH07CiAgfSk7CgogIHJldHVybiBzZXJ2ZXI7Cn0K
+import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import { z } from "zod";
+import { healthCheck, createSession, sendPrompt, stopSession, getDiff, listSessions } from "../adapter/opencode.js";
+import { getSession, createSession as createBridgeSession, listSessions as listBridgeSessions, updateSession } from "../core/session.js";
+import { createApproval, listPendingApprovals, resolveApproval, listAllApprovals } from "../core/approval.js";
+import { audit, listAuditLogs, logger } from "../core/audit.js";
+import { config } from "../core/config.js";
+import { execSync } from "node:child_process";
+import { validatePath } from "../security/path-traversal.js";
+
+const shell = process.platform === "win32" ? "powershell.exe" : undefined;
+
+export function createMcpServer(): McpServer {
+  const server = new McpServer({
+    name: "bridge-mcp",
+    version: "1.0.0",
+  });
+
+  // ─── bridge.status ───
+  server.tool("bridge.status", "Check health and status of the Bridge-MCP server and connected OpenCode instance", {}, async () => {
+    const oc = await healthCheck();
+    return {
+      content: [{ type: "text" as const, text: JSON.stringify({ bridge: { ok: true, version: "1.0.0" }, opencode: oc }) }],
+    };
+  });
+
+  // ─── bridge.capabilities ───
+  server.tool("bridge.capabilities", "List available tools and features of this MCP server", {}, async () => ({
+    content: [{ type: "text" as const, text: JSON.stringify({
+      tools: [
+        "bridge.status", "bridge.capabilities",
+        "opencode.sessions.list", "opencode.session.create", "opencode.session.get", "opencode.session.send", "opencode.session.stop", "opencode.session.diff",
+        "repository.status", "repository.diff", "repository.files",
+        "github.status", "github.review", "github.pull_request",
+        "bridge.approval.list", "bridge.approval.request", "bridge.approval.resolve",
+        "bridge.execution.get",
+      ],
+      features: ["oauth2.1", "pkce", "streamable-http", "multi-session", "audit-log"],
+    }) }],
+  }));
+
+  // ─── opencode.sessions.list ───
+  server.tool("opencode.sessions.list", "List all active OpenCode sessions managed by this bridge", {}, async () => {
+    const sessions = listBridgeSessions();
+    return { content: [{ type: "text" as const, text: JSON.stringify(sessions) }] };
+  });
+
+  // ─── opencode.session.create ───
+  server.tool("opencode.session.create", "Create a new OpenCode session", {
+    repository: z.string().optional().describe("Repository name or path"),
+    workingDirectory: z.string().optional().describe("Working directory for the session"),
+    title: z.string().optional().describe("Session title"),
+  }, async (args) => {
+    const repo = args.repository || config.repositories.allowed[0] || "default";
+    const bridge = createBridgeSession("mcp-client", repo, args.workingDirectory);
+    try {
+      const ocSessionId = await createSession(args.title);
+      updateSession(bridge.bridgeSessionId, { opencodeSessionId: ocSessionId, status: "RUNNING" });
+      audit({ requestId: "", clientId: "mcp", userId: "mcp", tool: "opencode.session.create", argumentsHash: JSON.stringify(args), repository: repo, bridgeSessionId: bridge.bridgeSessionId, opencodeSessionId: ocSessionId, permission: "", approvalStatus: "", status: "ok" });
+      return { content: [{ type: "text" as const, text: JSON.stringify({ bridgeSessionId: bridge.bridgeSessionId, opencodeSessionId: ocSessionId, status: "RUNNING" }) }] };
+    } catch (err: any) {
+      updateSession(bridge.bridgeSessionId, { status: "FAILED" });
+      return { content: [{ type: "text" as const, text: JSON.stringify({ error: err.message }) }], isError: true };
+    }
+  });
+
+  // ─── opencode.session.get ───
+  server.tool("opencode.session.get", "Get details of a specific bridge session", {
+    bridgeSessionId: z.string().describe("Bridge session ID"),
+  }, async (args) => {
+    const session = getSession(args.bridgeSessionId);
+    if (!session) return { content: [{ type: "text" as const, text: "Session not found" }], isError: true };
+    return { content: [{ type: "text" as const, text: JSON.stringify(session) }] };
+  });
+
+  // ─── opencode.session.send ───
+  server.tool("opencode.session.send", "Send a prompt to an active OpenCode session", {
+    bridgeSessionId: z.string().describe("Bridge session ID"),
+    prompt: z.string().describe("Prompt to send to OpenCode"),
+  }, async (args) => {
+    const session = getSession(args.bridgeSessionId);
+    if (!session?.opencodeSessionId) return { content: [{ type: "text" as const, text: "Session not found or not connected" }], isError: true };
+    try {
+      const result = await sendPrompt(session.opencodeSessionId, args.prompt);
+      updateSession(session.bridgeSessionId, { lastEventAt: new Date() });
+      audit({ requestId: "", clientId: "mcp", userId: "mcp", tool: "opencode.session.send", argumentsHash: JSON.stringify({ prompt: args.prompt.length }), repository: session.repository, bridgeSessionId: session.bridgeSessionId, opencodeSessionId: session.opencodeSessionId, permission: "", approvalStatus: "", status: "ok" });
+      return { content: [{ type: "text" as const, text: result }] };
+    } catch (err: any) {
+      return { content: [{ type: "text" as const, text: JSON.stringify({ error: err.message }) }], isError: true };
+    }
+  });
+
+  // ─── opencode.session.stop ───
+  server.tool("opencode.session.stop", "Stop an active OpenCode session", {
+    bridgeSessionId: z.string().describe("Bridge session ID"),
+  }, async (args) => {
+    const session = getSession(args.bridgeSessionId);
+    if (!session?.opencodeSessionId) return { content: [{ type: "text" as const, text: "Session not found" }], isError: true };
+    try {
+      await stopSession(session.opencodeSessionId);
+      updateSession(session.bridgeSessionId, { status: "COMPLETED" });
+      return { content: [{ type: "text" as const, text: JSON.stringify({ status: "COMPLETED" }) }] };
+    } catch (err: any) {
+      return { content: [{ type: "text" as const, text: JSON.stringify({ error: err.message }) }], isError: true };
+    }
+  });
+
+  // ─── opencode.session.diff ───
+  server.tool("opencode.session.diff", "Get the diff of changes made in an OpenCode session", {
+    bridgeSessionId: z.string().describe("Bridge session ID"),
+  }, async (args) => {
+    const session = getSession(args.bridgeSessionId);
+    if (!session?.opencodeSessionId) return { content: [{ type: "text" as const, text: "Session not found" }], isError: true };
+    try {
+      const diff = await getDiff(session.opencodeSessionId);
+      return { content: [{ type: "text" as const, text: diff || "No changes" }] };
+    } catch (err: any) {
+      return { content: [{ type: "text" as const, text: JSON.stringify({ error: err.message }) }], isError: true };
+    }
+  });
+
+  // ─── repository.status ───
+  server.tool("repository.status", "Get git status of a repository", {
+    repository: z.string().describe("Repository path"),
+  }, async (args) => {
+    const repo = config.repositories.allowed.length > 0
+      ? config.repositories.allowed.find((r) => r === args.repository)
+      : args.repository;
+    if (!repo) return { content: [{ type: "text" as const, text: "Repository not in allowed list" }], isError: true };
+    try {
+      const status = execSync("git status --porcelain", { cwd: repo, encoding: "utf-8", timeout: 5000, shell });
+      return { content: [{ type: "text" as const, text: status || "Clean" }] };
+    } catch (err: any) {
+      return { content: [{ type: "text" as const, text: JSON.stringify({ error: err.message }) }], isError: true };
+    }
+  });
+
+  // ─── repository.diff ───
+  server.tool("repository.diff", "Get git diff of a repository", {
+    repository: z.string().describe("Repository path"),
+    ref: z.string().optional().describe("Git ref to diff against"),
+  }, async (args) => {
+    const repo = config.repositories.allowed.length > 0
+      ? config.repositories.allowed.find((r) => r === args.repository)
+      : args.repository;
+    if (!repo) return { content: [{ type: "text" as const, text: "Repository not in allowed list" }], isError: true };
+    try {
+      const cmd = args.ref ? `git diff ${args.ref}` : "git diff";
+      const diff = execSync(cmd, { cwd: repo, encoding: "utf-8", timeout: 10000, shell });
+      return { content: [{ type: "text" as const, text: diff || "No changes" }] };
+    } catch (err: any) {
+      return { content: [{ type: "text" as const, text: JSON.stringify({ error: err.message }) }], isError: true };
+    }
+  });
+
+  // ─── repository.files ───
+  server.tool("repository.files", "List or read files in a repository", {
+    repository: z.string().describe("Repository path"),
+    path: z.string().optional().describe("Relative path within repo"),
+    pattern: z.string().optional().describe("Glob pattern to filter files"),
+  }, async (args) => {
+    const repo = config.repositories.allowed.length > 0
+      ? config.repositories.allowed.find((r) => r === args.repository)
+      : args.repository;
+    if (!repo) return { content: [{ type: "text" as const, text: "Repository not in allowed list" }], isError: true };
+    const targetPath = args.path || ".";
+    const safe = validatePath(repo, targetPath);
+    if (!safe) return { content: [{ type: "text" as const, text: "Path traversal detected" }], isError: true };
+    try {
+      const cmd = args.pattern
+        ? `git ls-files "${args.pattern}"`
+        : `git ls-files`;
+      const files = execSync(cmd, { cwd: repo, encoding: "utf-8", timeout: 5000, shell });
+      return { content: [{ type: "text" as const, text: files || "No files" }] };
+    } catch (err: any) {
+      return { content: [{ type: "text" as const, text: JSON.stringify({ error: err.message }) }], isError: true };
+    }
+  });
+
+  // ─── github.status ───
+  server.tool("github.status", "Get GitHub repository status (open PRs, recent commits)", {
+    repository: z.string().optional().describe("GitHub owner/repo (default: from env)"),
+  }, async (args) => {
+    const repo = args.repository || config.github.repository;
+    if (!repo) return { content: [{ type: "text" as const, text: "No repository specified" }], isError: true };
+    if (!config.github.token) return { content: [{ type: "text" as const, text: "GitHub token not configured" }], isError: true };
+    try {
+      const headers = { Authorization: `token ${config.github.token}`, Accept: "application/vnd.github+json" };
+      const [owner, name] = repo.split("/");
+      const prsRes = await fetch(`https://api.github.com/repos/${owner}/${name}/pulls?state=open&per_page=5`, { headers });
+      const prs = await prsRes.json() as any[];
+      const commitsRes = await fetch(`https://api.github.com/repos/${owner}/${name}/commits?per_page=3`, { headers });
+      const commits = await commitsRes.json() as any[];
+      return { content: [{ type: "text" as const, text: JSON.stringify({
+        openPullRequests: prs.map((p: any) => ({ number: p.number, title: p.title, author: p.user.login })),
+        recentCommits: commits.map((c: any) => ({ sha: c.sha.slice(0, 7), message: c.commit.message, author: c.commit.author.name })),
+      }) }] };
+    } catch (err: any) {
+      return { content: [{ type: "text" as const, text: JSON.stringify({ error: err.message }) }], isError: true };
+    }
+  });
+
+  // ─── github.review ───
+  server.tool("github.review", "Review a GitHub pull request", {
+    repository: z.string().optional().describe("GitHub owner/repo"),
+    pullRequest: z.number().describe("PR number"),
+    review: z.string().describe("Review body"),
+    event: z.enum(["APPROVE", "REQUEST_CHANGES", "COMMENT"]).describe("Review event"),
+  }, async (args) => {
+    const repo = args.repository || config.github.repository;
+    if (!repo) return { content: [{ type: "text" as const, text: "No repository specified" }], isError: true };
+    if (!config.github.token) return { content: [{ type: "text" as const, text: "GitHub token not configured" }], isError: true };
+    const approval = createApproval("github.review", repo, "", `Review PR #${args.pullRequest}: ${args.event}`, args.review);
+    audit({ requestId: approval.requestId, clientId: "mcp", userId: "mcp", tool: "github.review", argumentsHash: JSON.stringify(args), repository: repo, bridgeSessionId: "", opencodeSessionId: "", permission: "REQUIRES_APPROVAL", approvalStatus: "PENDING", status: "pending_approval" });
+    return { content: [{ type: "text" as const, text: JSON.stringify({ approvalId: approval.id, status: "PENDING", message: "Review requires approval" }) }] };
+  });
+
+  // ─── github.pull_request ───
+  server.tool("github.pull_request", "Create a GitHub pull request", {
+    repository: z.string().optional().describe("GitHub owner/repo"),
+    title: z.string().describe("PR title"),
+    body: z.string().describe("PR body"),
+    head: z.string().describe("Source branch"),
+    base: z.string().describe("Target branch"),
+  }, async (args) => {
+    const repo = args.repository || config.github.repository;
+    if (!repo) return { content: [{ type: "text" as const, text: "No repository specified" }], isError: true };
+    if (!config.github.token) return { content: [{ type: "text" as const, text: "GitHub token not configured" }], isError: true };
+    const approval = createApproval("github.pull_request", repo, "", `Create PR: ${args.title}`, `${args.head} -> ${args.base}`);
+    audit({ requestId: approval.requestId, clientId: "mcp", userId: "mcp", tool: "github.pull_request", argumentsHash: JSON.stringify(args), repository: repo, bridgeSessionId: "", opencodeSessionId: "", permission: "REQUIRES_APPROVAL", approvalStatus: "PENDING", status: "pending_approval" });
+    return { content: [{ type: "text" as const, text: JSON.stringify({ approvalId: approval.id, status: "PENDING", message: "PR creation requires approval" }) }] };
+  });
+
+  // ─── bridge.approval.list ───
+  server.tool("bridge.approval.list", "List pending or all approval requests", {
+    status: z.enum(["pending", "all"]).optional().describe("Filter by status"),
+  }, async (args) => {
+    const items = args.status === "all" ? listAllApprovals() : listPendingApprovals();
+    return { content: [{ type: "text" as const, text: JSON.stringify(items) }] };
+  });
+
+  // ─── bridge.approval.request ───
+  server.tool("bridge.approval.request", "Request approval for a sensitive operation", {
+    action: z.string().describe("Action requiring approval"),
+    repository: z.string().describe("Target repository"),
+    reason: z.string().describe("Reason for the action"),
+    proposedEffect: z.string().describe("What this action will change"),
+  }, async (args) => {
+    const approval = createApproval(args.action, args.repository, "", args.reason, args.proposedEffect);
+    audit({ requestId: approval.requestId, clientId: "mcp", userId: "mcp", tool: "bridge.approval.request", argumentsHash: JSON.stringify(args), repository: args.repository, bridgeSessionId: "", opencodeSessionId: "", permission: "REQUIRES_APPROVAL", approvalStatus: "PENDING", status: "pending_approval" });
+    return { content: [{ type: "text" as const, text: JSON.stringify({ approvalId: approval.id, status: "PENDING" }) }] };
+  });
+
+  // ─── bridge.approval.resolve ───
+  server.tool("bridge.approval.resolve", "Approve or reject a pending approval request", {
+    approvalId: z.string().describe("Approval ID"),
+    resolution: z.enum(["approve", "reject"]).describe("Resolution"),
+    resolvedBy: z.string().describe("Who resolved this"),
+  }, async (args) => {
+    const status = args.resolution === "approve" ? "APPROVED" : "REJECTED";
+    const result = resolveApproval(args.approvalId, status, args.resolvedBy);
+    if (!result) return { content: [{ type: "text" as const, text: "Approval not found or already resolved" }], isError: true };
+    audit({ requestId: result.requestId, clientId: "mcp", userId: args.resolvedBy, tool: "bridge.approval.resolve", argumentsHash: JSON.stringify(args), repository: result.repository, bridgeSessionId: "", opencodeSessionId: "", permission: "", approvalStatus: status, status: "ok" });
+    return { content: [{ type: "text" as const, text: JSON.stringify({ ...result, status }) }] };
+  });
+
+  // ─── bridge.execution.get ───
+  server.tool("bridge.execution.get", "Get audit log entries for execution tracking", {
+    limit: z.number().optional().describe("Max entries to return"),
+    clientId: z.string().optional().describe("Filter by client ID"),
+  }, async (args) => {
+    const entries = listAuditLogs(args.limit || 20, args.clientId);
+    return { content: [{ type: "text" as const, text: JSON.stringify(entries) }] };
+  });
+
+  return server;
+}
