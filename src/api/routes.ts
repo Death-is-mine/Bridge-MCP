@@ -1,1 +1,250 @@
-aW1wb3J0IHsgUm91dGVyIH0gZnJvbSAiZXhwcmVzcyI7CmltcG9ydCAqIGFzIG9wZW5jb2RlIGZyb20gIi4uL2FkYXB0ZXIvb3BlbmNvZGUuanMiOwppbXBvcnQgKiBhcyBzZXNzaW9ucyBmcm9tICIuLi9jb3JlL3Nlc3Npb24uanMiOwppbXBvcnQgKiBhcyBhcHByb3ZhbHMgZnJvbSAiLi4vY29yZS9hcHByb3ZhbC5qcyI7CmltcG9ydCB7IGF1ZGl0LCBsb2dnZXIgfSBmcm9tICIuLi9jb3JlL2F1ZGl0LmpzIjsKaW1wb3J0IHsgdjQgYXMgdXVpZCB9IGZyb20gInV1aWQiOwoKZXhwb3J0IGNvbnN0IHJvdXRlciA9IFJvdXRlcigpOwoKcm91dGVyLmdldCgiL2FwaS9zdGF0dXMiLCBhc3luYyAoX3JlcSwgcmVzKSA9PiB7CiAgY29uc3Qgb2NIZWFsdGh5ID0gYXdhaXQgb3BlbmNvZGUuaGVhbHRoQ2hlY2soKTsKICByZXMuanNvbih7CiAgICBicmlkZ2U6IHsgc3RhdHVzOiAib2siLCB2ZXJzaW9uOiAiMC4xLjAiIH0sCiAgICBvcGVuY29kZTogeyBzdGF0dXM6IG9jSGVhbHRoeSA/ICJjb25uZWN0ZWQiIDogInVuYXZhaWxhYmxlIiB9LAogIH0pOwp9KTsKCnJvdXRlci5nZXQoIi9hcGkvc2Vzc2lvbnMiLCAocmVxLCByZXMpID0+IHsKICBjb25zdCBjbGllbnRJZCA9IHJlcS5xdWVyeS5jbGllbnRJZCBhcyBzdHJpbmcgfCB1bmRlZmluZWQ7CiAgcmVzLmpzb24oc2Vzc2lvbnMubGlzdFNlc3Npb25zKGNsaWVudElkKSk7Cn0pOwoKcm91dGVyLnBvc3QoIi9hcGkvc2Vzc2lvbnMiLCAocmVxLCByZXMpID0+IHsKICBjb25zdCB7IGNsaWVudElkID0gIndlYiIsIHJlcG9zaXRvcnkgPSAiLiIgfSA9IHJlcS5ib2R5IHx8IHt9OwogIGNvbnN0IHNlc3Npb24gPSBzZXNzaW9ucy5jcmVhdGVTZXNzaW9uKGNsaWVudElkLCByZXBvc2l0b3J5KTsKICByZXMuc3RhdHVzKDIwMSkuanNvbihzZXNzaW9uKTsKfSk7Cgpyb3V0ZXIucG9zdCgiL2FwaS9zZXNzaW9ucy86aWQvbWVzc2FnZXMiLCBhc3luYyAocmVxLCByZXMpID0+IHsKICBjb25zdCB7IGlkIH0gPSByZXEucGFyYW1zOwogIGNvbnN0IHsgcHJvbXB0IH0gPSByZXEuYm9keSB8fCB7fTsKICBjb25zdCBzZXNzaW9uID0gc2Vzc2lvbnMuZ2V0U2Vzc2lvbihpZCk7CiAgaWYgKCFzZXNzaW9uKSB7CiAgICByZXMuc3RhdHVzKDQwNCkuanNvbih7IGVycm9yOiB7IGNvZGU6ICJTRVNTSU9OX05PVF9GT1VORCIsIG1lc3NhZ2U6ICJTZXNzaW9uIG5vdCBmb3VuZCIgfSB9KTsKICAgIHJldHVybjsKICB9CgogIGNvbnN0IHJlcXVlc3RJZCA9IHV1aWQoKTsKICB0cnkgewogICAgaWYgKCFzZXNzaW9uLm9wZW5jb2RlU2Vzc2lvbklkKSB7CiAgICAgIGNvbnN0IG9jU2Vzc2lvbklkID0gYXdhaXQgb3BlbmNvZGUuY3JlYXRlU2Vzc2lvbigpOwogICAgICBzZXNzaW9ucy51cGRhdGVTZXNzaW9uKGlkLCB7IG9wZW5jb2RlU2Vzc2lvbklkOiBvY1Nlc3Npb25JZCB9KTsKICAgICAgc2Vzc2lvbi5vcGVuY29kZVNlc3Npb25JZCA9IG9jU2Vzc2lvbklkOwogICAgfQogICAgc2Vzc2lvbnMudXBkYXRlU2Vzc2lvbihpZCwgeyBzdGF0dXM6ICJSVU5OSU5HIiB9KTsKICAgIGF3YWl0IG9wZW5jb2RlLnNlbmRQcm9tcHQoc2Vzc2lvbi5vcGVuY29kZVNlc3Npb25JZCwgcHJvbXB0KTsKICAgIGF1ZGl0KHsgcmVxdWVzdElkLCBjbGllbnRJZDogc2Vzc2lvbi5jbGllbnRJZCwgYWN0aW9uOiAic2VuZF9wcm9tcHQiLCByZXBvc2l0b3J5OiBzZXNzaW9uLnJlcG9zaXRvcnksIHNlc3Npb246IGlkLCBhcHByb3ZhbFN0YXR1czogIm4vYSIsIHJlc3VsdDogIm9rIiB9KTsKICAgIHJlcy5qc29uKHsgb2s6IHRydWUsIHJlcXVlc3RJZCB9KTsKICB9IGNhdGNoIChlcnIpIHsKICAgIHNlc3Npb25zLnVwZGF0ZVNlc3Npb24oaWQsIHsgc3RhdHVzOiAiRkFJTEVEIiB9KTsKICAgIGF1ZGl0KHsgcmVxdWVzdElkLCBjbGllbnRJZDogc2Vzc2lvbi5jbGllbnRJZCwgYWN0aW9uOiAic2VuZF9wcm9tcHQiLCByZXBvc2l0b3J5OiBzZXNzaW9uLnJlcG9zaXRvcnksIHNlc3Npb246IGlkLCBhcHByb3ZhbFN0YXR1czogIm4vYSIsIHJlc3VsdDogImVycm9yIiwgZXJyb3I6IChlcnIgYXMgRXJyb3IpLm1lc3NhZ2UgfSk7CiAgICByZXMuc3RhdHVzKDUwMikuanNvbih7IGVycm9yOiB7IGNvZGU6ICJPUEVOQ09ERV9FUlJPUiIsIG1lc3NhZ2U6IChlcnIgYXMgRXJyb3IpLm1lc3NhZ2UsIHJlcXVlc3RJZCB9IH0pOwogIH0KfSk7Cgpyb3V0ZXIucG9zdCgiL2FwaS9zZXNzaW9ucy86aWQvc3RvcCIsIGFzeW5jIChyZXEsIHJlcykgPT4gewogIGNvbnN0IHsgaWQgfSA9IHJlcS5wYXJhbXM7CiAgY29uc3Qgc2Vzc2lvbiA9IHNlc3Npb25zLmdldFNlc3Npb24oaWQpOwogIGlmICghc2Vzc2lvbikgewogICAgcmVzLnN0YXR1cyg0MDQpLmpzb24oeyBlcnJvcjogeyBjb2RlOiAiU0VTU0lPTl9OT1RfRk9VTkQiLCBtZXNzYWdlOiAiU2Vzc2lvbiBub3QgZm91bmQiIH0gfSk7CiAgICByZXR1cm47CiAgfQogIHNlc3Npb25zLnVwZGF0ZVNlc3Npb24oaWQsIHsgc3RhdHVzOiAiU1RPUFBJTkciIH0pOwogIHRyeSB7CiAgICBpZiAoc2Vzc2lvbi5vcGVuY29kZVNlc3Npb25JZCkgYXdhaXQgb3BlbmNvZGUuc3RvcFNlc3Npb24oc2Vzc2lvbi5vcGVuY29kZVNlc3Npb25JZCk7CiAgICBzZXNzaW9ucy51cGRhdGVTZXNzaW9uKGlkLCB7IHN0YXR1czogIklETEUiIH0pOwogICAgcmVzLmpzb24oeyBvazogdHJ1ZSB9KTsKICB9IGNhdGNoIChlcnIpIHsKICAgIHNlc3Npb25zLnVwZGF0ZVNlc3Npb24oaWQsIHsgc3RhdHVzOiAiRkFJTEVEIiB9KTsKICAgIHJlcy5zdGF0dXMoNTAyKS5qc29uKHsgZXJyb3I6IHsgY29kZTogIk9QRU5DT0RFX0VSUk9SIiwgbWVzc2FnZTogKGVyciBhcyBFcnJvcikubWVzc2FnZSB9IH0pOwogIH0KfSk7Cgpyb3V0ZXIuZ2V0KCIvYXBpL3Nlc3Npb25zLzppZC9ldmVudHMiLCAocmVxLCByZXMpID0+IHsKICBjb25zdCB7IGlkIH0gPSByZXEucGFyYW1zOwogIGNvbnN0IHNlc3Npb24gPSBzZXNzaW9ucy5nZXRTZXNzaW9uKGlkKTsKICBpZiAoIXNlc3Npb24/Lm9wZW5jb2RlU2Vzc2lvbklkKSB7CiAgICByZXMuc3RhdHVzKDQwNCkuanNvbih7IGVycm9yOiB7IGNvZGU6ICJTRVNTSU9OX05PVF9GT1VORCIsIG1lc3NhZ2U6ICJTZXNzaW9uIG5vdCBmb3VuZCIgfSB9KTsKICAgIHJldHVybjsKICB9CgogIHJlcy5zZXRIZWFkZXIoIkNvbnRlbnQtVHlwZSIsICJ0ZXh0L2V2ZW50LXN0cmVhbSIpOwogIHJlcy5zZXRIZWFkZXIoIkNhY2hlLUNvbnRyb2wiLCAibm8tY2FjaGUiKTsKICByZXMuc2V0SGVhZGVyKCJDb25uZWN0aW9uIiwgImtlZXAtYWxpdmUiKTsKICByZXMuZmx1c2hIZWFkZXJzKCk7CgogIGNvbnN0IGRpc2Nvbm5lY3QgPSBvcGVuY29kZS5zdHJlYW1FdmVudHMoCiAgICBzZXNzaW9uLm9wZW5jb2RlU2Vzc2lvbklkLAogICAgKGV2ZW50KSA9PiByZXMud3JpdGUoYGRhdGE6ICR7SlNPTi5zdHJpbmdpZnkoZXZlbnQpfVxuXG5gKSwKICAgIChlcnIpID0+IHsKICAgICAgbG9nZ2VyLmVycm9yKHsgZXJyIH0sICJzdHJlYW0gZXJyb3IiKTsKICAgICAgcmVzLndyaXRlKGBkYXRhOiAke0pTT04uc3RyaW5naWZ5KHsgdHlwZTogImVycm9yIiwgZGF0YTogZXJyLm1lc3NhZ2UgfSl9XG5cbmApOwogICAgfSwKICApOwoKICByZXEub24oImNsb3NlIiwgKCkgPT4gZGlzY29ubmVjdCgpKTsKfSk7Cgpyb3V0ZXIuZ2V0KCIvYXBpL3JlcG9zaXRvcnkvc3RhdHVzIiwgYXN5bmMgKF9yZXEsIHJlcykgPT4gewogIHJlcy5qc29uKHsgc3RhdHVzOiAibm90X2ltcGxlbWVudGVkIiB9KTsKfSk7Cgpyb3V0ZXIuZ2V0KCIvYXBpL3JlcG9zaXRvcnkvZGlmZiIsIGFzeW5jIChyZXEsIHJlcykgPT4gewogIGNvbnN0IHNlc3Npb25JZCA9IHJlcS5xdWVyeS5zZXNzaW9uIGFzIHN0cmluZzsKICBjb25zdCBzZXNzaW9uID0gc2Vzc2lvbklkID8gc2Vzc2lvbnMuZ2V0U2Vzc2lvbihzZXNzaW9uSWQpIDogdW5kZWZpbmVkOwogIGlmICghc2Vzc2lvbj8ub3BlbmNvZGVTZXNzaW9uSWQpIHsKICAgIHJlcy5qc29uKHsgZGlmZjogIiIgfSk7CiAgICByZXR1cm47CiAgfQogIHRyeSB7CiAgICBjb25zdCBkaWZmID0gYXdhaXQgb3BlbmNvZGUuZ2V0RGlmZihzZXNzaW9uLm9wZW5jb2RlU2Vzc2lvbklkKTsKICAgIHJlcy5qc29uKHsgZGlmZiB9KTsKICB9IGNhdGNoIHsKICAgIHJlcy5qc29uKHsgZGlmZjogIiIgfSk7CiAgfQp9KTsKCnJvdXRlci5nZXQoIi9hcGkvYXBwcm92YWxzIiwgKF9yZXEsIHJlcykgPT4gewogIHJlcy5qc29uKGFwcHJvdmFscy5saXN0UGVuZGluZ0FwcHJvdmFscygpKTsKfSk7Cgpyb3V0ZXIucG9zdCgiL2FwaS9hcHByb3ZhbHMvOmlkIiwgKHJlcSwgcmVzKSA9PiB7CiAgY29uc3QgeyBpZCB9ID0gcmVxLnBhcmFtczsKICBjb25zdCB7IHN0YXR1cyB9ID0gcmVxLmJvZHkgfHwge307CiAgaWYgKHN0YXR1cyAhPT0gIkFQUFJPVkVEIiAmJiBzdGF0dXMgIT09ICJERU5JRUQiKSB7CiAgICByZXMuc3RhdHVzKDQwMCkuanNvbih7IGVycm9yOiB7IGNvZGU6ICJJTlZBTElEX0FSR1VNRU5UIiwgbWVzc2FnZTogInN0YXR1cyBtdXN0IGJlIEFQUFJPVkVEIG9yIERFTklFRCIgfSB9KTsKICAgIHJldHVybjsKICB9CiAgY29uc3QgcmVzdWx0ID0gYXBwcm92YWxzLnJlc29sdmVBcHByb3ZhbChpZCwgc3RhdHVzKTsKICBpZiAoIXJlc3VsdCkgewogICAgcmVzLnN0YXR1cyg0MDQpLmpzb24oeyBlcnJvcjogeyBjb2RlOiAiTk9UX0ZPVU5EIiwgbWVzc2FnZTogIkFwcHJvdmFsIG5vdCBmb3VuZCIgfSB9KTsKICAgIHJldHVybjsKICB9CiAgcmVzLmpzb24ocmVzdWx0KTsKfSk7Cg==
+import { Router, type Request, type Response } from "express";
+import { config } from "../core/config.js";
+import { healthCheck, createSession as createOcSession, sendPrompt as ocSendPrompt, stopSession as ocStopSession } from "../adapter/opencode.js";
+import { getSession, listSessions, createSession, updateSession, deleteSession } from "../core/session.js";
+import { listPendingApprovals, resolveApproval, expireOldApprovals } from "../core/approval.js";
+import { audit, listAuditLogs } from "../core/audit.js";
+import { authMiddleware } from "../auth/middleware.js";
+import { rateLimit } from "../security/rate-limit.js";
+import {
+  getMetadata,
+  getProtectedResourceMetadata,
+  generateAuthCode,
+  validateAuthCode,
+  issueToken,
+  refreshAccessToken,
+  revokeToken,
+  registerClient,
+  getClient,
+} from "../auth/oauth.js";
+import { createMcpServer } from "../mcp/server.js";
+import { createTransport, getTransport, removeTransport } from "../mcp/transport.js";
+
+const router = Router();
+
+router.get("/health", async (_req, res) => {
+  const oc = await healthCheck();
+  res.status(oc.ok ? 200 : 503).json({
+    status: oc.ok ? "healthy" : "degraded",
+    bridge: { ok: true, version: "1.0.0", uptime: process.uptime() },
+    opencode: oc,
+  });
+});
+
+router.get("/ready", async (_req, res) => {
+  const oc = await healthCheck();
+  res.status(oc.ok ? 200 : 503).json({ ready: oc.ok, opencode: oc });
+});
+
+router.get("/.well-known/oauth-authorization-server", (_req, res) => {
+  res.json(getMetadata());
+});
+
+router.get("/.well-known/oauth-protected-resource", (_req, res) => {
+  res.json(getProtectedResourceMetadata());
+});
+
+router.get("/oauth/authorize", (req, res) => {
+  const q = req.query as Record<string, string>;
+  const { client_id, redirect_uri, code_challenge, code_challenge_method, scope, state } = q;
+  if (!client_id || !redirect_uri || !code_challenge) {
+    res.status(400).json({ error: "invalid_request" }); return;
+  }
+  const client = getClient(client_id);
+  if (!client) { res.status(400).json({ error: "invalid_client" }); return; }
+  const code = generateAuthCode(client_id, redirect_uri, code_challenge, code_challenge_method || "S256", scope || "read write");
+  const redirectUrl = new URL(redirect_uri);
+  redirectUrl.searchParams.set("code", code);
+  if (state) redirectUrl.searchParams.set("state", state);
+  res.redirect(redirectUrl.toString());
+});
+
+router.post("/oauth/token", (req, res) => {
+  const { grant_type, code, client_id, code_verifier, refresh_token } = req.body;
+  if (grant_type === "authorization_code") {
+    if (!code || !code_verifier || !client_id) { res.status(400).json({ error: "invalid_request" }); return; }
+    const validated = validateAuthCode(code, code_verifier);
+    if (!validated) { res.status(400).json({ error: "invalid_grant" }); return; }
+    res.json(issueToken(client_id, "user", validated.scope));
+  } else if (grant_type === "refresh_token") {
+    if (!refresh_token) { res.status(400).json({ error: "invalid_request" }); return; }
+    const token = refreshAccessToken(refresh_token);
+    if (!token) { res.status(400).json({ error: "invalid_grant" }); return; }
+    res.json(token);
+  } else {
+    res.status(400).json({ error: "unsupported_grant_type" });
+  }
+});
+
+router.post("/oauth/revoke", (req, res) => {
+  const { token } = req.body;
+  if (!token) { res.status(400).json({ error: "invalid_request" }); return; }
+  revokeToken(token);
+  res.json({ success: true });
+});
+
+router.post("/oauth/register", (req, res) => {
+  const clientId = "client_" + Date.now();
+  const client = registerClient({
+    client_id: clientId,
+    client_name: req.body.client_name || "unknown",
+    redirect_uris: req.body.redirect_uris || [],
+    grant_types: req.body.grant_types || ["authorization_code"],
+    response_types: req.body.response_types || ["code"],
+    token_endpoint_auth_method: "none",
+  });
+  res.status(201).json(client);
+});
+
+// ─── MCP Streamable HTTP ───
+router.all("/mcp", authMiddleware, rateLimit, async (req: Request, res: Response) => {
+  const incomingReq = req as any;
+  const incomingRes = res as any;
+  try {
+    if (req.method === "GET") {
+      const sessionId = req.headers["mcp-session-id"] as string | undefined;
+      if (!sessionId) { res.status(400).json({ error: "Missing Mcp-Session-Id header" }); return; }
+      const transport = getTransport(sessionId);
+      if (!transport) { res.status(404).json({ error: "Session not found" }); return; }
+      await transport.handleRequest(incomingReq, incomingRes);
+    } else if (req.method === "POST") {
+      const sessionId = req.headers["mcp-session-id"] as string | undefined;
+      if (sessionId) {
+        const transport = getTransport(sessionId);
+        if (!transport) { res.status(404).json({ error: "Session not found" }); return; }
+        await transport.handleRequest(incomingReq, incomingRes, req.body);
+      } else {
+        const server = createMcpServer();
+        const { transport, sessionId } = await createTransport(server);
+        res.setHeader("Mcp-Session-Id", sessionId);
+        await transport.handleRequest(incomingReq, incomingRes, req.body);
+      }
+    } else if (req.method === "DELETE") {
+      const sessionId = req.headers["mcp-session-id"] as string | undefined;
+      if (sessionId) {
+        const transport = getTransport(sessionId);
+        if (transport) { await transport.close(); removeTransport(sessionId); }
+      }
+      res.status(200).json({ ok: true });
+    } else {
+      res.status(405).json({ error: "Method not allowed" });
+    }
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ─── API ───
+router.get("/api/status", authMiddleware, rateLimit, async (_req, res) => {
+  const oc = await healthCheck();
+  res.json({ bridge: { ok: true, version: "1.0.0", uptime: process.uptime() }, opencode: oc });
+});
+
+router.get("/api/sessions", authMiddleware, rateLimit, (req, res) => {
+  res.json(listSessions(req.auth?.clientId));
+});
+
+router.post("/api/sessions", authMiddleware, rateLimit, async (req, res) => {
+  const { repository, workingDirectory, title } = req.body;
+  const session = createSession(req.auth?.clientId || "browser", repository || "default", workingDirectory);
+  try {
+    const ocSessionId = await createOcSession(title);
+    updateSession(session.bridgeSessionId, { opencodeSessionId: ocSessionId, status: "RUNNING" });
+    res.status(201).json({ ...session, opencodeSessionId: ocSessionId });
+  } catch (err: any) {
+    updateSession(session.bridgeSessionId, { status: "FAILED" });
+    res.status(502).json({ error: err.message });
+  }
+});
+
+router.get("/api/sessions/:id", authMiddleware, rateLimit, (req: Request, res: Response) => {
+  const session = getSession(req.params.id as string);
+  if (!session) { res.status(404).json({ error: "Not found" }); return; }
+  res.json(session);
+});
+
+router.post("/api/sessions/:id/send", authMiddleware, rateLimit, async (req: Request, res: Response) => {
+  const session = getSession(req.params.id as string);
+  if (!session?.opencodeSessionId) { res.status(404).json({ error: "Not found" }); return; }
+  const { prompt } = req.body;
+  if (!prompt) { res.status(400).json({ error: "prompt required" }); return; }
+  try {
+    const result = await ocSendPrompt(session.opencodeSessionId, prompt);
+    updateSession(session.bridgeSessionId, { lastEventAt: new Date() });
+    res.json({ result });
+  } catch (err: any) {
+    res.status(502).json({ error: err.message });
+  }
+});
+
+router.post("/api/sessions/:id/stop", authMiddleware, rateLimit, async (req: Request, res: Response) => {
+  const session = getSession(req.params.id as string);
+  if (!session?.opencodeSessionId) { res.status(404).json({ error: "Not found" }); return; }
+  try {
+    await ocStopSession(session.opencodeSessionId);
+    updateSession(session.bridgeSessionId, { status: "COMPLETED" });
+    res.json({ status: "COMPLETED" });
+  } catch (err: any) {
+    res.status(502).json({ error: err.message });
+  }
+});
+
+router.delete("/api/sessions/:id", authMiddleware, rateLimit, (req: Request, res: Response) => {
+  const deleted = deleteSession(req.params.id as string);
+  res.json({ deleted });
+});
+
+router.get("/api/repository/status", authMiddleware, rateLimit, (req, res) => {
+  const repo = req.query.repository as string;
+  if (!repo) { res.status(400).json({ error: "repository required" }); return; }
+  if (config.repositories.allowed.length > 0 && !config.repositories.allowed.includes(repo)) {
+    res.status(403).json({ error: "Repository not in allowed list" }); return;
+  }
+  try {
+    const { execSync } = require("node:child_process");
+    const shell = process.platform === "win32" ? "powershell.exe" : undefined;
+    const status = execSync("git status --porcelain", { cwd: repo, encoding: "utf-8", timeout: 5000, shell });
+    res.json({ repository: repo, status: status || "clean", modified: status.split("\n").filter(Boolean).length });
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+router.get("/api/repository/diff", authMiddleware, rateLimit, (req, res) => {
+  const repo = req.query.repository as string;
+  const ref = req.query.ref as string | undefined;
+  if (!repo) { res.status(400).json({ error: "repository required" }); return; }
+  if (config.repositories.allowed.length > 0 && !config.repositories.allowed.includes(repo)) {
+    res.status(403).json({ error: "Repository not in allowed list" }); return;
+  }
+  try {
+    const { execSync } = require("node:child_process");
+    const shell = process.platform === "win32" ? "powershell.exe" : undefined;
+    const cmd = ref ? `git diff ${ref}` : "git diff";
+    const diff = execSync(cmd, { cwd: repo, encoding: "utf-8", timeout: 10000, shell });
+    res.json({ repository: repo, diff: diff || "No changes" });
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+router.get("/api/approvals", authMiddleware, rateLimit, (_req, res) => {
+  expireOldApprovals();
+  res.json(listPendingApprovals());
+});
+
+router.post("/api/approvals/:id/resolve", authMiddleware, rateLimit, (req: Request, res: Response) => {
+  const { resolution, resolvedBy } = req.body;
+  if (!resolution || !resolvedBy) { res.status(400).json({ error: "resolution and resolvedBy required" }); return; }
+  const status = resolution === "approve" ? "APPROVED" : "REJECTED";
+  const result = resolveApproval(req.params.id as string, status, resolvedBy);
+  if (!result) { res.status(404).json({ error: "Not found or already resolved" }); return; }
+  res.json(result);
+});
+
+router.get("/api/audit", authMiddleware, rateLimit, (req: Request, res: Response) => {
+  const limit = parseInt(req.query.limit as string) || 50;
+  res.json(listAuditLogs(limit, req.auth?.clientId));
+});
+
+export default router;
