@@ -1,1 +1,571 @@
-PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImVuIj4KPGhlYWQ+CjxtZXRhIGNoYXJzZXQ9IlVURi04Ij4KPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xLjAiPgo8dGl0bGU+T3BlbkNvZGUgTUNQIEJyaWRnZTwvdGl0bGU+CjxzdHlsZT4KKnttYXJnaW46MDtwYWRkaW5nOjA7Ym94LXNpemluZzpib3JkZXItYm94fQo6cm9vdHstLWJnOiMwYTBhMGE7LS1zdXJmYWNlOiMxNDE0MTQ7LS1ib3JkZXI6IzI2MjYyNjstLXRleHQ6I2U1ZTVlNTstLW11dGVkOiM3MzczNzM7LS1hY2NlbnQ6IzNiODJmNjstLWdyZWVuOiMyMmM1NWU7LS1yZWQ6I2VmNDQ0NDstLXllbGxvdzojZWFiMzA4fQpib2R5e2ZvbnQtZmFtaWx5OnN5c3RlbS11aSxzYW5zLXNlcmlmO2JhY2tncm91bmQ6dmFyKC0tYmcpO2NvbG9yOnZhcigtLXRleHQpO21pbi1oZWlnaHQ6MTAwdmh9Ci5oZWFkZXJ7cGFkZGluZzoxNnB4IDI0cHg7Ym9yZGVyLWJvdHRvbToxcHggc29saWQgdmFyKC0tYm9yZGVyKTtkaXNwbGF5OmZsZXg7YWxpZ24taXRlbXM6Y2VudGVyO2dhcDoxNnB4fQouaGVhZGVyIGgxe2ZvbnQtc2l6ZToxOHB4O2ZvbnQtd2VpZ2h0OjYwMH0KLnN0YXR1cy1kb3R7d2lkdGg6OHB4O2hlaWdodDo4cHg7Ym9yZGVyLXJhZGl1czo1MCU7ZGlzcGxheTppbmxpbmUtYmxvY2t9Ci5zdGF0dXMtZG90Lm9re2JhY2tncm91bmQ6dmFyKC0tZ3JlZW4pfQouc3RhdHVzLWRvdC5lcnJ7YmFja2dyb3VuZDp2YXIoLS1yZWQpfQouc3RhdHVzLWRvdC53YXJue2JhY2tncm91bmQ6dmFyKC0teWVsbG93KX0KLmNvbnRhaW5lcntkaXNwbGF5OmdyaWQ7Z3JpZC10ZW1wbGF0ZS1jb2x1bW5zOjFmciAxZnI7Z2FwOjE2cHg7cGFkZGluZzoyNHB4O21heC13aWR0aDoxNDAwcHg7bWFyZ2luOjAgYXV0b30KLnBhbmVse2JhY2tncm91bmQ6dmFyKC0tc3VyZmFjZSk7Ym9yZGVyOjFweCBzb2xpZCB2YXIoLS1ib3JkZXIpO2JvcmRlci1yYWRpdXM6OHB4O3BhZGRpbmc6MTZweH0KLnBhbmVsIGgye2ZvbnQtc2l6ZToxNHB4O2ZvbnQtd2VpZ2h0OjYwMDttYXJnaW4tYm90dG9tOjEycHg7Y29sb3I6dmFyKC0tbXV0ZWQpO3RleHQtdHJhbnNmb3JtOnVwcGVyY2FzZTtsZXR0ZXItc3BhY2luZzowLjVweH0KLmZ1bGx7Z3JpZC1jb2x1bW46MS8tMX0KdGV4dGFyZWF7d2lkdGg6MTAwJTtoZWlnaHQ6ODBweDtiYWNrZ3JvdW5kOnZhcigtLWJnKTtib3JkZXI6MXB4IHNvbGlkIHZhcigtLWJvcmRlcik7Ym9yZGVyLXJhZGl1czo2cHg7Y29sb3I6dmFyKC0tdGV4dCk7cGFkZGluZzoxMnB4O2ZvbnQtZmFtaWx5Om1vbm9zcGFjZTtmb250LXNpemU6MTNweDtyZXNpemU6dmVydGljYWx9CnRleHRhcmVhOmZvY3Vze291dGxpbmU6bm9uZTtib3JkZXItY29sb3I6dmFyKC0tYWNjZW50KX0KLmJ0bntiYWNrZ3JvdW5kOnZhcigtLWFjY2VudCk7Y29sb3I6I2ZmZjtib3JkZXI6bm9uZTtib3JkZXItcmFkaXVzOjZweDtwYWRkaW5nOjhweCAxNnB4O2N1cnNvcjpwb2ludGVyO2ZvbnQtc2l6ZToxM3B4O2ZvbnQtd2VpZ2h0OjUwMH0KLmJ0bjpob3ZlcntvcGFjaXR5OjAuOX0KLmJ0bjpkaXNhYmxlZHtvcGFjaXR5OjAuNDtjdXJzb3I6bm90LWFsbG93ZWR9Ci5idG4uZGFuZ2Vye2JhY2tncm91bmQ6dmFyKC0tcmVkKX0KLnNlc3Npb24taW5mb3tkaXNwbGF5OmZsZXg7Z2FwOjEycHg7ZmxleC13cmFwOndyYXA7Zm9udC1zaXplOjEzcHh9Ci5zZXNzaW9uLWluZm8gc3Bhbntjb2xvcjp2YXIoLS1tdXRlZCl9Ci5zZXNzaW9uLWluZm8gc3Ryb25ne2NvbG9yOnZhcigtLXRleHQpfQoub3V0cHV0e2ZvbnQtZmFtaWx5Om1vbm9zcGFjZTtmb250LXNpemU6MTJweDt3aGl0ZS1zcGFjZTpwcmUtd3JhcDttYXgtaGVpZ2h0OjMwMHB4O292ZXJmbG93LXk6YXV0bztiYWNrZ3JvdW5kOnZhcigtLWJnKTtib3JkZXItcmFkaXVzOjZweDtwYWRkaW5nOjEycHh9Ci5kaWZmLXZpZXd7Zm9udC1mYW1pbHk6bW9ub3NwYWNlO2ZvbnQtc2l6ZToxMnB4O3doaXRlLXNwYWNlOnByZS13cmFwO21heC1oZWlnaHQ6MzAwcHg7b3ZlcmZsb3cteTphdXRvO2JhY2tncm91bmQ6dmFyKC0tYmcpO2JvcmRlci1yYWRpdXM6NnB4O3BhZGRpbmc6MTJweH0KLmFwcHJvdmFsLWNhcmR7YmFja2dyb3VuZDp2YXIoLS1iZyk7Ym9yZGVyOjFweCBzb2xpZCB2YXIoLS1ib3JkZXIpO2JvcmRlci1yYWRpdXM6NnB4O3BhZGRpbmc6MTJweDttYXJnaW4tYm90dG9tOjhweH0KLmFwcHJvdmFsLWNhcmQgLmFjdGlvbnN7ZGlzcGxheTpmbGV4O2dhcDo4cHg7bWFyZ2luLXRvcDo4cHh9Ci5lbXB0eXtjb2xvcjp2YXIoLS1tdXRlZCk7Zm9udC1zaXplOjEzcHg7Zm9udC1zdHlsZTppdGFsaWN9CiNjbGllbnRze2ZvbnQtc2l6ZToxM3B4fQouY2xpZW50LXRhZ3tkaXNwbGF5OmlubGluZS1ibG9jaztiYWNrZ3JvdW5kOnZhcigtLWJnKTtib3JkZXI6MXB4IHNvbGlkIHZhcigtLWJvcmRlcik7Ym9yZGVyLXJhZGl1czo0cHg7cGFkZGluZzoycHggOHB4O21hcmdpbjoycHh9Cjwvc3R5bGU+CjwvaGVhZD4KPGJvZHk+CjxkaXYgY2xhc3M9ImhlYWRlciI+CiAgPGgxPk9wZW5Db2RlIE1DUCBCcmlkZ2U8L2gxPgogIDxkaXYgaWQ9ImJyaWRnZS1zdGF0dXMiPjxzcGFuIGNsYXNzPSJzdGF0dXMtZG90IHdhcm4iPjwvc3Bhbj4gQ29ubmVjdGluZy4uLjwvZGl2PgogIDxkaXYgaWQ9Im9jLXN0YXR1cyI+PC9kaXY+CjwvZGl2Pgo8ZGl2IGNsYXNzPSJjb250YWluZXIiPgogIDxkaXYgY2xhc3M9InBhbmVsIGZ1bGwiPgogICAgPGgyPkNvbW1hbmQ8L2gyPgogICAgPHRleHRhcmVhIGlkPSJwcm9tcHQiIHBsYWNlaG9sZGVyPSJUZWxsIE9wZW5Db2RlIHdoYXQgdG8gZG8uLi4iPjwvdGV4dGFyZWE+CiAgICA8ZGl2IHN0eWxlPSJtYXJnaW4tdG9wOjhweDtkaXNwbGF5OmZsZXg7Z2FwOjhweCI+CiAgICAgIDxidXR0b24gY2xhc3M9ImJ0biIgaWQ9InNlbmQtYnRuIiBvbmNsaWNrPSJzZW5kKCkiPlNlbmQ8L2J1dHRvbj4KICAgICAgPGJ1dHRvbiBjbGFzcz0iYnRuIGRhbmdlciIgaWQ9InN0b3AtYnRuIiBvbmNsaWNrPSJzdG9wU2Vzc2lvbigpIiBkaXNhYmxlZD5TdG9wPC9idXR0b24+CiAgICA8L2Rpdj4KICA8L2Rpdj4KICA8ZGl2IGNsYXNzPSJwYW5lbCI+CiAgICA8aDI+U2Vzc2lvbjwvaDI+CiAgICA8ZGl2IGlkPSJzZXNzaW9uLWluZm8iIGNsYXNzPSJzZXNzaW9uLWluZm8iPjxzcGFuIGNsYXNzPSJlbXB0eSI+Tm8gYWN0aXZlIHNlc3Npb248L3NwYW4+PC9kaXY+CiAgPC9kaXY+CiAgPGRpdiBjbGFzcz0icGFuZWwiPgogICAgPGgyPkNvbm5lY3RlZCBDbGllbnRzPC9oMj4KICAgIDxkaXYgaWQ9ImNsaWVudHMiPjxzcGFuIGNsYXNzPSJlbXB0eSI+Tm9uZTwvc3Bhbj48L2Rpdj4KICA8L2Rpdj4KICA8ZGl2IGNsYXNzPSJwYW5lbCBmdWxsIj4KICAgIDxoMj5PdXRwdXQ8L2gyPgogICAgPGRpdiBpZD0ib3V0cHV0IiBjbGFzcz0ib3V0cHV0IGVtcHR5Ij5XYWl0aW5nIGZvciBvdXRwdXQuLi48L2Rpdj4KICA8L2Rpdj4KICA8ZGl2IGNsYXNzPSJwYW5lbCBmdWxsIj4KICAgIDxoMj5EaWZmPC9oMj4KICAgIDxkaXYgaWQ9ImRpZmYiIGNsYXNzPSJkaWZmLXZpZXcgZW1wdHkiPk5vIGNoYW5nZXM8L2Rpdj4KICA8L2Rpdj4KICA8ZGl2IGNsYXNzPSJwYW5lbCBmdWxsIj4KICAgIDxoMj5BcHByb3ZhbHM8L2gyPgogICAgPGRpdiBpZD0iYXBwcm92YWxzIj48c3BhbiBjbGFzcz0iZW1wdHkiPk5vIHBlbmRpbmcgYXBwcm92YWxzPC9zcGFuPjwvZGl2PgogIDwvZGl2Pgo8L2Rpdj4KPHNjcmlwdD4KY29uc3QgQVBJID0gJyc7CmxldCBjdXJyZW50U2Vzc2lvbiA9IG51bGw7CmxldCBldmVudFNvdXJjZSA9IG51bGw7Cgphc3luYyBmdW5jdGlvbiBhcGkocGF0aCwgb3B0cykgewogIGNvbnN0IHJlcyA9IGF3YWl0IGZldGNoKEFQSSArIHBhdGgsIHsgaGVhZGVyczogeydDb250ZW50LVR5cGUnOidhcHBsaWNhdGlvbi9qc29uJ30sIC4uLm9wdHMgfSk7CiAgcmV0dXJuIHJlcy5qc29uKCk7Cn0KCmFzeW5jIGZ1bmN0aW9uIHJlZnJlc2hTdGF0dXMoKSB7CiAgdHJ5IHsKICAgIGNvbnN0IHMgPSBhd2FpdCBhcGkoJy9hcGkvc3RhdHVzJyk7CiAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnYnJpZGdlLXN0YXR1cycpLmlubmVySFRNTCA9ICc8c3BhbiBjbGFzcz0ic3RhdHVzLWRvdCBvayI+PC9zcGFuPiBCcmlkZ2UgT0snOwogICAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ29jLXN0YXR1cycpLmlubmVySFRNTCA9IHMub3BlbmNvZGUuc3RhdHVzID09PSAnY29ubmVjdGVkJwogICAgICA/ICc8c3BhbiBjbGFzcz0ic3RhdHVzLWRvdCBvayI+PC9zcGFuPiBPcGVuQ29kZSBjb25uZWN0ZWQnCiAgICAgIDogJzxzcGFuIGNsYXNzPSJzdGF0dXMtZG90IGVyciI+PC9zcGFuPiBPcGVuQ29kZSB1bmF2YWlsYWJsZSc7CiAgfSBjYXRjaCB7CiAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnYnJpZGdlLXN0YXR1cycpLmlubmVySFRNTCA9ICc8c3BhbiBjbGFzcz0ic3RhdHVzLWRvdCBlcnIiPjwvc3Bhbj4gQnJpZGdlIG9mZmxpbmUnOwogIH0KfQoKYXN5bmMgZnVuY3Rpb24gcmVmcmVzaEFwcHJvdmFscygpIHsKICB0cnkgewogICAgY29uc3QgbGlzdCA9IGF3YWl0IGFwaSgnL2FwaS9hcHByb3ZhbHMnKTsKICAgIGNvbnN0IGVsID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2FwcHJvdmFscycpOwogICAgaWYgKCFsaXN0Lmxlbmd0aCkgeyBlbC5pbm5lckhUTUwgPSAnPHNwYW4gY2xhc3M9ImVtcHR5Ij5ObyBwZW5kaW5nIGFwcHJvdmFsczwvc3Bhbj4nOyByZXR1cm47IH0KICAgIGVsLmlubmVySFRNTCA9IGxpc3QubWFwKGEgPT4gYAogICAgICA8ZGl2IGNsYXNzPSJhcHByb3ZhbC1jYXJkIj4KICAgICAgICA8c3Ryb25nPiR7YS5hY3Rpb259PC9zdHJvbmc+IG9uICR7YS5yZXBvc2l0b3J5fTxicj4KICAgICAgICA8c21hbGw+JHthLnJlYXNvbn08L3NtYWxsPgogICAgICAgIDxkaXYgY2xhc3M9ImFjdGlvbnMiPgogICAgICAgICAgPGJ1dHRvbiBjbGFzcz0iYnRuIiBvbmNsaWNrPSJyZXNvbHZlQXBwcm92YWwoJyR7YS5pZH0nLCdBUFBST1ZFRCcpIj5BcHByb3ZlPC9idXR0b24+CiAgICAgICAgICA8YnV0dG9uIGNsYXNzPSJidG4gZGFuZ2VyIiBvbmNsaWNrPSJyZXNvbHZlQXBwcm92YWwoJyR7YS5pZH0nLCdERU5JRUQnKSI+RGVueTwvYnV0dG9uPgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgIGApLmpvaW4oJycpOwogIH0gY2F0Y2gge30KfQoKYXN5bmMgZnVuY3Rpb24gcmVzb2x2ZUFwcHJvdmFsKGlkLCBzdGF0dXMpIHsKICBhd2FpdCBhcGkoJy9hcGkvYXBwcm92YWxzLycgKyBpZCwgeyBtZXRob2Q6J1BPU1QnLCBib2R5OiBKU09OLnN0cmluZ2lmeSh7c3RhdHVzfSkgfSk7CiAgcmVmcmVzaEFwcHJvdmFscygpOwp9Cgphc3luYyBmdW5jdGlvbiBzZW5kKCkgewogIGNvbnN0IHByb21wdCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdwcm9tcHQnKS52YWx1ZS50cmltKCk7CiAgaWYgKCFwcm9tcHQpIHJldHVybjsKICBpZiAoIWN1cnJlbnRTZXNzaW9uKSB7CiAgICBjb25zdCBzID0gYXdhaXQgYXBpKCcvYXBpL3Nlc3Npb25zJywgeyBtZXRob2Q6J1BPU1QnLCBib2R5OiBKU09OLnN0cmluZ2lmeSh7Y2xpZW50SWQ6J3dlYicsIHJlcG9zaXRvcnk6Jy4nfSkgfSk7CiAgICBjdXJyZW50U2Vzc2lvbiA9IHM7CiAgfQogIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdzZW5kLWJ0bicpLmRpc2FibGVkID0gdHJ1ZTsKICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnc3RvcC1idG4nKS5kaXNhYmxlZCA9IGZhbHNlOwogIHVwZGF0ZVNlc3Npb25VSSgpOwogIHRyeSB7CiAgICBhd2FpdCBhcGkoYC9hcGkvc2Vzc2lvbnMvJHtjdXJyZW50U2Vzc2lvbi5icmlkZ2VTZXNzaW9uSWR9L21lc3NhZ2VzYCwgewogICAgICBtZXRob2Q6J1BPU1QnLCBib2R5OiBKU09OLnN0cmluZ2lmeSh7cHJvbXB0fSkKICAgIH0pOwogICAgbGlzdGVuRXZlbnRzKCk7CiAgfSBjYXRjaChlKSB7CiAgICBhcHBlbmRPdXRwdXQoJ0Vycm9yOiAnICsgZS5tZXNzYWdlKTsKICB9CiAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3NlbmQtYnRuJykuZGlzYWJsZWQgPSBmYWxzZTsKICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncHJvbXB0JykudmFsdWUgPSAnJzsKfQoKZnVuY3Rpb24gbGlzdGVuRXZlbnRzKCkgewogIGlmIChldmVudFNvdXJjZSkgZXZlbnRTb3VyY2UuY2xvc2UoKTsKICBldmVudFNvdXJjZSA9IG5ldyBFdmVudFNvdXJjZShgL2FwaS9zZXNzaW9ucy8ke2N1cnJlbnRTZXNzaW9uLmJyaWRnZVNlc3Npb25JZH0vZXZlbnRzYCk7CiAgZXZlbnRTb3VyY2Uub25tZXNzYWdlID0gKGUpID0+IHsKICAgIHRyeSB7CiAgICAgIGNvbnN0IGRhdGEgPSBKU09OLnBhcnNlKGUuZGF0YSk7CiAgICAgIGFwcGVuZE91dHB1dChgWyR7ZGF0YS50eXBlfV0gJHtKU09OLnN0cmluZ2lmeShkYXRhLmRhdGEpfWApOwogICAgICBpZiAoZGF0YS50eXBlID09PSAnY29tcGxldGVkJyB8fCBkYXRhLnR5cGUgPT09ICdlcnJvcicpIHsKICAgICAgICBjdXJyZW50U2Vzc2lvbi5zdGF0dXMgPSBkYXRhLnR5cGUgPT09ICdjb21wbGV0ZWQnID8gJ0NPTVBMRVRFRCcgOiAnRkFJTEVEJzsKICAgICAgICB1cGRhdGVTZXNzaW9uVUkoKTsKICAgICAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnc3RvcC1idG4nKS5kaXNhYmxlZCA9IHRydWU7CiAgICAgICAgcmVmcmVzaERpZmYoKTsKICAgICAgICByZWZyZXNoQXBwcm92YWxzKCk7CiAgICAgIH0KICAgIH0gY2F0Y2gge30KICB9OwogIGV2ZW50U291cmNlLm9uZXJyb3IgPSAoKSA9PiBhcHBlbmRPdXRwdXQoJ1tzdHJlYW1dIGRpc2Nvbm5lY3RlZCcpOwp9Cgphc3luYyBmdW5jdGlvbiBzdG9wU2Vzc2lvbigpIHsKICBpZiAoIWN1cnJlbnRTZXNzaW9uKSByZXR1cm47CiAgYXdhaXQgYXBpKGAvYXBpL3Nlc3Npb25zLyR7Y3VycmVudFNlc3Npb24uYnJpZGdlU2Vzc2lvbklkfS9zdG9wYCwgeyBtZXRob2Q6J1BPU1QnIH0pOwogIGN1cnJlbnRTZXNzaW9uLnN0YXR1cyA9ICdJRExFJzsKICB1cGRhdGVTZXNzaW9uVUkoKTsKICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnc3RvcC1idG4nKS5kaXNhYmxlZCA9IHRydWU7Cn0KCmFzeW5jIGZ1bmN0aW9uIHJlZnJlc2hEaWZmKCkgewogIGlmICghY3VycmVudFNlc3Npb24pIHJldHVybjsKICB0cnkgewogICAgY29uc3QgZCA9IGF3YWl0IGFwaShgL2FwaS9yZXBvc2l0b3J5L2RpZmY/c2Vzc2lvbj0ke2N1cnJlbnRTZXNzaW9uLmJyaWRnZVNlc3Npb25JZH1gKTsKICAgIGNvbnN0IGVsID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2RpZmYnKTsKICAgIGVsLnRleHRDb250ZW50ID0gZC5kaWZmIHx8ICdObyBjaGFuZ2VzJzsKICAgIGVsLmNsYXNzTGlzdC50b2dnbGUoJ2VtcHR5JywgIWQuZGlmZik7CiAgfSBjYXRjaCB7fQp9CgpmdW5jdGlvbiB1cGRhdGVTZXNzaW9uVUkoKSB7CiAgY29uc3QgZWwgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnc2Vzc2lvbi1pbmZvJyk7CiAgaWYgKCFjdXJyZW50U2Vzc2lvbikgeyBlbC5pbm5lckhUTUwgPSAnPHNwYW4gY2xhc3M9ImVtcHR5Ij5ObyBhY3RpdmUgc2Vzc2lvbjwvc3Bhbj4nOyByZXR1cm47IH0KICBlbC5pbm5lckhUTUwgPSBgCiAgICA8ZGl2PjxzcGFuPlN0YXR1czo8L3NwYW4+IDxzdHJvbmc+JHtjdXJyZW50U2Vzc2lvbi5zdGF0dXN9PC9zdHJvbmc+PC9kaXY+CiAgICA8ZGl2PjxzcGFuPlNlc3Npb246PC9zcGFuPiA8c3Ryb25nPiR7Y3VycmVudFNlc3Npb24uYnJpZGdlU2Vzc2lvbklkLnNsaWNlKDAsOCl9PC9zdHJvbmc+PC9kaXY+CiAgICA8ZGl2PjxzcGFuPlJlcG86PC9zcGFuPiA8c3Ryb25nPiR7Y3VycmVudFNlc3Npb24ucmVwb3NpdG9yeX08L3N0cm9uZz48L2Rpdj4KICBgOwp9CgpmdW5jdGlvbiBhcHBlbmRPdXRwdXQodGV4dCkgewogIGNvbnN0IGVsID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ291dHB1dCcpOwogIGlmIChlbC5jbGFzc0xpc3QuY29udGFpbnMoJ2VtcHR5JykpIHsgZWwudGV4dENvbnRlbnQgPSAnJzsgZWwuY2xhc3NMaXN0LnJlbW92ZSgnZW1wdHknKTsgfQogIGVsLnRleHRDb250ZW50ICs9IHRleHQgKyAnXG4nOwogIGVsLnNjcm9sbFRvcCA9IGVsLnNjcm9sbEhlaWdodDsKfQoKcmVmcmVzaFN0YXR1cygpOwpzZXRJbnRlcnZhbChyZWZyZXNoU3RhdHVzLCAxMDAwMCk7CnNldEludGVydmFsKHJlZnJlc2hBcHByb3ZhbHMsIDE1MDAwKTsKPC9zY3JpcHQ+CjwvYm9keT4KPC9odG1sPgo=
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bridge MCP Dashboard</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0d1117;--surface:#161b22;--border:#30363d;--text:#e6edf3;--text-dim:#8b949e;--accent:#58a6ff;--green:#3fb950;--red:#f85149;--yellow:#d29922;--radius:6px}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.5;min-height:100vh}
+a{color:var(--accent);text-decoration:none}
+button{cursor:pointer;border:1px solid var(--border);background:var(--surface);color:var(--text);padding:6px 14px;border-radius:var(--radius);font-size:13px;transition:background .15s}
+button:hover{background:#21262d}
+button.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+button.primary:hover{background:#4c9aed}
+button.danger{border-color:var(--red);color:var(--red)}
+button.danger:hover{background:var(--red);color:#fff}
+input,textarea,select{background:var(--surface);border:1px solid var(--border);color:var(--text);padding:6px 10px;border-radius:var(--radius);font-size:13px;font-family:inherit}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--accent)}
+textarea{resize:vertical;min-height:60px;font-family:monospace}
+.container{max-width:1200px;margin:0 auto;padding:16px}
+
+/* Header */
+.header{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);margin-bottom:16px;flex-wrap:wrap}
+.header h1{font-size:18px;font-weight:600;white-space:nowrap}
+.header .auth{display:flex;gap:8px;align-items:center;margin-left:auto}
+.header input[type="password"]{width:220px}
+.status-badge{font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;text-transform:uppercase;letter-spacing:.5px}
+.status-badge.connected{background:rgba(63,185,80,.15);color:var(--green)}
+.status-badge.disconnected{background:rgba(248,81,73,.15);color:var(--red)}
+.status-badge.checking{background:rgba(210,153,34,.15);color:var(--yellow)}
+
+/* Tabs */
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--border);margin-bottom:16px;overflow-x:auto}
+.tab{padding:8px 16px;border-bottom:2px solid transparent;color:var(--text-dim);font-size:13px;font-weight:500;cursor:pointer;white-space:nowrap;transition:color .15s,border-color .15s}
+.tab:hover{color:var(--text)}
+.tab.active{color:var(--text);border-bottom-color:var(--accent)}
+.panel{display:none}
+.panel.active{display:block}
+
+/* Cards */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:12px}
+.card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:8px;flex-wrap:wrap}
+.card-header h3{font-size:14px;font-weight:600}
+
+/* Tables */
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;padding:8px 12px;border-bottom:1px solid var(--border);color:var(--text-dim);font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+td{padding:8px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+tr:hover td{background:rgba(255,255,255,.02)}
+.empty{text-align:center;padding:24px;color:var(--text-dim);font-size:13px}
+
+/* Diff viewer */
+.diff{background:#0d1117;border:1px solid var(--border);border-radius:var(--radius);overflow:auto;max-height:400px;font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;font-size:12px;line-height:1.6}
+.diff .line{padding:0 12px;white-space:pre}
+.diff .line.added{background:rgba(63,185,80,.12);color:#aff5b4}
+.diff .line.removed{background:rgba(248,81,73,.12);color:#ffd7d5}
+.diff .line.info{color:var(--accent)}
+
+/* Modal */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:100;display:none;align-items:center;justify-content:center;padding:16px}
+.modal-overlay.open{display:flex}
+.modal{background:var(--surface);border:1px solid var(--border);border-radius:8px;width:100%;max-width:520px;max-height:80vh;overflow-y:auto;padding:20px}
+.modal h2{font-size:16px;margin-bottom:16px}
+.modal .field{margin-bottom:12px}
+.modal .field label{display:block;font-size:12px;color:var(--text-dim);margin-bottom:4px;font-weight:500}
+.modal .field input,.modal .field textarea{width:100%}
+.modal .actions{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
+
+/* Toast */
+.toast-container{position:fixed;top:16px;right:16px;z-index:200;display:flex;flex-direction:column;gap:8px}
+.toast{padding:10px 16px;border-radius:var(--radius);font-size:13px;animation:slideIn .2s ease}
+.toast.error{background:#3d1214;border:1px solid var(--red);color:#f85149}
+.toast.success{background:#0f2a18;border:1px solid var(--green);color:var(--green)}
+@keyframes slideIn{from{transform:translateX(40px);opacity:0}to{transform:translateX(0);opacity:1}}
+
+/* Detail panel */
+.detail-view{display:none}
+.detail-view.open{display:block}
+.back-link{font-size:13px;color:var(--accent);cursor:pointer;margin-bottom:12px;display:inline-block}
+.back-link:hover{text-decoration:underline}
+.prompt-box{display:flex;gap:8px;margin-top:12px}
+.prompt-box textarea{flex:1}
+
+/* Settings */
+.settings-grid{display:grid;gap:12px;max-width:600px}
+.settings-grid .field label{display:block;font-size:12px;color:var(--text-dim);margin-bottom:4px;font-weight:500}
+.settings-grid .field .hint{font-size:11px;color:var(--text-dim);margin-top:2px}
+
+/* Audit log */
+.audit-entry{display:flex;gap:12px;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px}
+.audit-entry:last-child{border-bottom:none}
+.audit-entry .ts{color:var(--text-dim);white-space:nowrap;min-width:140px}
+.audit-entry .action{color:var(--accent);min-width:100px}
+.audit-entry .detail{color:var(--text-dim);word-break:break-word}
+
+/* Responsive */
+@media(max-width:768px){
+  .header{flex-direction:column;align-items:flex-start}
+  .header .auth{margin-left:0;width:100%}
+  .header input[type="password"]{flex:1}
+  .tabs{gap:0}
+  .tab{padding:8px 10px;font-size:12px}
+  table{font-size:12px}
+  th,td{padding:6px 8px}
+  .audit-entry{flex-direction:column;gap:4px}
+  .audit-entry .ts,.audit-entry .action{min-width:auto}
+}
+
+/* Scrollbar */
+::-webkit-scrollbar{width:8px;height:8px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:#484f58}
+
+/* Spinner */
+.spinner{display:inline-block;width:14px;height:14px;border:2px solid var(--border);border-top-color:var(--text-dim);border-radius:50%;animation:spin .6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Header -->
+  <div class="header">
+    <h1>Bridge MCP</h1>
+    <span id="connStatus" class="status-badge checking">CHECKING</span>
+    <div class="auth">
+      <input type="password" id="tokenInput" placeholder="Auth token…" autocomplete="off">
+      <button onclick="saveToken()">Save</button>
+    </div>
+  </div>
+
+  <!-- Error bar -->
+  <div id="errorBar" style="display:none;background:rgba(248,81,73,.1);border:1px solid var(--red);border-radius:var(--radius);padding:10px 14px;margin-bottom:12px;display:none;align-items:center;gap:10px">
+    <span id="errorMsg" style="flex:1;color:var(--red);font-size:13px"></span>
+    <button onclick="retryAction()" style="font-size:12px">Retry</button>
+    <button onclick="dismissError()" style="font-size:12px;padding:4px 8px">✕</button>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <div class="tab active" data-tab="sessions">Sessions</div>
+    <div class="tab" data-tab="approvals">Approvals</div>
+    <div class="tab" data-tab="audit">Audit Log</div>
+    <div class="tab" data-tab="settings">Settings</div>
+  </div>
+
+  <!-- Sessions Panel -->
+  <div class="panel active" id="panel-sessions">
+    <div id="sessionsListView">
+      <div class="card">
+        <div class="card-header">
+          <h3>Sessions</h3>
+          <div style="display:flex;gap:8px">
+            <button onclick="loadSessions()"><span class="spinner" id="sessionsSpinner" style="display:none"></span> Refresh</button>
+            <button class="primary" onclick="openNewSessionModal()">+ New Session</button>
+          </div>
+        </div>
+        <div id="sessionsList"><div class="empty">Loading…</div></div>
+      </div>
+    </div>
+    <div class="detail-view" id="sessionDetailView">
+      <span class="back-link" onclick="closeSessionDetail()">← Back to sessions</span>
+      <div class="card" id="sessionDetailCard"></div>
+    </div>
+  </div>
+
+  <!-- Approvals Panel -->
+  <div class="panel" id="panel-approvals">
+    <div class="card">
+      <div class="card-header">
+        <h3>Pending Approvals</h3>
+        <button onclick="loadApprovals()">Refresh</button>
+      </div>
+      <div id="approvalsList"><div class="empty">Loading…</div></div>
+    </div>
+  </div>
+
+  <!-- Audit Panel -->
+  <div class="panel" id="panel-audit">
+    <div class="card">
+      <div class="card-header">
+        <h3>Recent Audit Log</h3>
+        <button onclick="loadAudit()">Refresh</button>
+      </div>
+      <div id="auditList"><div class="empty">Loading…</div></div>
+    </div>
+  </div>
+
+  <!-- Settings Panel -->
+  <div class="panel" id="panel-settings">
+    <div class="card">
+      <h3 style="margin-bottom:16px">Settings</h3>
+      <div class="settings-grid">
+        <div class="field">
+          <label>OpenCode Connection URL</label>
+          <input type="text" id="settingOpencodeUrl" placeholder="http://localhost:4096">
+          <div class="hint">Base URL for the OpenCode server</div>
+        </div>
+        <div class="field">
+          <label>MCP Endpoint URL <span style="color:var(--text-dim)">(read-only)</span></label>
+          <input type="text" id="settingMcpUrl" readonly style="opacity:.6">
+        </div>
+        <div class="field">
+          <label>GitHub Repository</label>
+          <input type="text" id="settingRepo" placeholder="owner/repo">
+        </div>
+        <div style="padding-top:8px">
+          <button class="primary" onclick="saveSettings()">Save Settings</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- New Session Modal -->
+<div class="modal-overlay" id="newSessionModal">
+  <div class="modal">
+    <h2>New Session</h2>
+    <div class="field">
+      <label>Repository (local path or owner/repo)</label>
+      <input type="text" id="newSessionRepo" placeholder="/path/to/repo">
+    </div>
+    <div class="field">
+      <label>Working Directory (optional)</label>
+      <input type="text" id="newSessionWorkDir" placeholder="/path/to/repo">
+    </div>
+    <div class="field">
+      <label>Title (optional)</label>
+      <input type="text" id="newSessionTitle" placeholder="Session title">
+    </div>
+    <div class="actions">
+      <button onclick="closeModal('newSessionModal')">Cancel</button>
+      <button class="primary" onclick="createSession()">Create</button>
+    </div>
+  </div>
+</div>
+
+<!-- Prompt Modal -->
+<div class="modal-overlay" id="promptModal">
+  <div class="modal">
+    <h2>Send Prompt</h2>
+    <div class="field">
+      <label>Prompt</label>
+      <textarea id="promptText" rows="4" placeholder="Enter your prompt…"></textarea>
+    </div>
+    <div class="actions">
+      <button onclick="closeModal('promptModal')">Cancel</button>
+      <button class="primary" onclick="sendPrompt()">Send</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast container -->
+<div class="toast-container" id="toasts"></div>
+
+<script>
+// ── State ──
+let token = localStorage.getItem('bridge_token') || '';
+let opencodeUrl = localStorage.getItem('bridge_opencode_url') || '';
+let repo = localStorage.getItem('bridge_repo') || '';
+let sessionsCache = [];
+let currentSessionId = null;
+let retryFn = null;
+let refreshInterval = null;
+
+// ── Init ──
+document.getElementById('tokenInput').value = token;
+document.getElementById('settingOpencodeUrl').value = opencodeUrl;
+document.getElementById('settingRepo').value = repo;
+document.getElementById('settingMcpUrl').value = location.origin + '/mcp';
+
+setupTabs();
+pollHealth();
+loadSessions();
+refreshInterval = setInterval(loadSessions, 10000);
+
+// ── Tabs ──
+function setupTabs() {
+  document.querySelectorAll('.tab').forEach(t => {
+    t.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
+      document.querySelectorAll('.panel').forEach(x => x.classList.remove('active'));
+      t.classList.add('active');
+      document.getElementById('panel-' + t.dataset.tab).classList.add('active');
+      if (t.dataset.tab === 'approvals') loadApprovals();
+      if (t.dataset.tab === 'audit') loadAudit();
+    });
+  });
+}
+
+// ── Auth ──
+function saveToken() {
+  token = document.getElementById('tokenInput').value.trim();
+  localStorage.setItem('bridge_token', token);
+  toast('Token saved', 'success');
+  pollHealth();
+  loadSessions();
+}
+
+// ── Health ──
+async function pollHealth() {
+  const el = document.getElementById('connStatus');
+  el.className = 'status-badge checking';
+  el.textContent = 'CHECKING';
+  try {
+    const r = await fetch('/health');
+    if (r.ok) {
+      el.className = 'status-badge connected';
+      el.textContent = 'CONNECTED';
+    } else {
+      throw new Error('not ok');
+    }
+  } catch {
+    el.className = 'status-badge disconnected';
+    el.textContent = 'DISCONNECTED';
+  }
+}
+setInterval(pollHealth, 15000);
+
+// ── API ──
+async function api(path, opts = {}) {
+  const headers = { ...opts.headers };
+  if (token) headers['Authorization'] = 'Bearer ' + token;
+  if (opts.body && typeof opts.body === 'object') {
+    headers['Content-Type'] = 'application/json';
+    opts.body = JSON.stringify(opts.body);
+  }
+  const r = await fetch(path, { ...opts, headers });
+  if (!r.ok) {
+    const text = await r.text().catch(() => '');
+    throw new Error(text || `HTTP ${r.status}`);
+  }
+  return r.json();
+}
+
+// ── Sessions ──
+async function loadSessions() {
+  const spin = document.getElementById('sessionsSpinner');
+  if (spin) spin.style.display = 'inline-block';
+  try {
+    const data = await api('/api/sessions');
+    sessionsCache = data.sessions || data || [];
+    renderSessions();
+  } catch (e) {
+    showError(e.message);
+  } finally {
+    if (spin) spin.style.display = 'none';
+  }
+}
+
+function renderSessions() {
+  const el = document.getElementById('sessionsList');
+  if (!sessionsCache.length) { el.innerHTML = '<div class="empty">No sessions</div>'; return; }
+  el.innerHTML = '<table><thead><tr><th>Title / ID</th><th>Status</th><th>Created</th><th>Actions</th></tr></thead><tbody>' +
+    sessionsCache.map(s => {
+      const statusColor = s.status === 'running' ? 'var(--green)' : s.status === 'stopped' ? 'var(--red)' : 'var(--text-dim)';
+      return `<tr>
+        <td><strong style="cursor:pointer;color:var(--accent)" onclick="viewSession('${s.id}')">${esc(s.title || s.id)}</strong><br><span style="font-size:11px;color:var(--text-dim)">${esc(s.id)}</span></td>
+        <td style="color:${statusColor}">${esc(s.status || 'unknown')}</td>
+        <td style="font-size:12px;color:var(--text-dim)">${formatTime(s.createdAt)}</td>
+        <td><div style="display:flex;gap:4px;flex-wrap:wrap">
+          <button onclick="viewSession('${s.id}')" style="font-size:11px">View</button>
+          ${s.status === 'running' ? `<button class="danger" onclick="stopSession('${s.id}')" style="font-size:11px">Stop</button>` : ''}
+          <button onclick="deleteSession('${s.id}')" style="font-size:11px;padding:4px 8px">🗑</button>
+        </div></td>
+      </tr>`;
+    }).join('') + '</tbody></table>';
+}
+
+async function viewSession(id) {
+  currentSessionId = id;
+  document.getElementById('sessionsListView').style.display = 'none';
+  const detail = document.getElementById('sessionDetailView');
+  detail.classList.add('open');
+  const card = document.getElementById('sessionDetailCard');
+  card.innerHTML = '<div class="spinner"></div> Loading…';
+  try {
+    const s = sessionsCache.find(x => x.id === id) || await api('/api/sessions/' + id).then(d => d.session || d);
+    renderSessionDetail(s);
+  } catch (e) {
+    card.innerHTML = `<div class="empty">${esc(e.message)}</div>`;
+  }
+}
+
+function renderSessionDetail(s) {
+  const card = document.getElementById('sessionDetailCard');
+  const msgs = s.messages || s.conversation || [];
+  const statusColor = s.status === 'running' ? 'var(--green)' : 'var(--red)';
+  card.innerHTML = `
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+      <div>
+        <h3 style="margin-bottom:2px">${esc(s.title || 'Untitled')}</h3>
+        <span style="font-size:11px;color:var(--text-dim)">${esc(s.id)}</span>
+      </div>
+      <span style="color:${statusColor};font-size:13px;font-weight:600">${esc(s.status)}</span>
+    </div>
+    <div style="font-size:12px;color:var(--text-dim);margin-bottom:12px">
+      Repo: ${esc(s.repository || s.repo || '—')} &nbsp;|&nbsp; Created: ${formatTime(s.createdAt)}
+    </div>
+    <div id="sessionMessages" style="border:1px solid var(--border);border-radius:var(--radius);padding:12px;max-height:400px;overflow-y:auto;margin-bottom:12px;background:#0d1117">
+      ${msgs.length ? msgs.map(m => `
+        <div style="margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid var(--border)">
+          <span style="font-size:11px;font-weight:600;color:${m.role==='assistant'?'var(--green)':'var(--accent)'}">${esc(m.role || 'system')}</span>
+          <div style="font-size:13px;margin-top:4px;white-space:pre-wrap">${esc(m.content || m.text || JSON.stringify(m))}</div>
+        </div>
+      `).join('') : '<div class="empty">No messages yet</div>'}
+    </div>
+    ${s.status === 'running' ? `
+    <div class="prompt-box">
+      <textarea id="promptInput" rows="2" placeholder="Type a prompt…"></textarea>
+      <button class="primary" onclick="sendPrompt()">Send</button>
+    </div>` : ''}
+    <div id="diffContainer" style="margin-top:12px"></div>
+  `;
+}
+
+function closeSessionDetail() {
+  currentSessionId = null;
+  document.getElementById('sessionsListView').style.display = '';
+  document.getElementById('sessionDetailView').classList.remove('open');
+}
+
+function openNewSessionModal() { document.getElementById('newSessionModal').classList.add('open'); }
+function openPromptModal() { document.getElementById('promptModal').classList.add('open'); }
+function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+
+async function createSession() {
+  const repository = document.getElementById('newSessionRepo').value.trim();
+  const workingDirectory = document.getElementById('newSessionWorkDir').value.trim();
+  const title = document.getElementById('newSessionTitle').value.trim();
+  if (!repository) { toast('Repository is required', 'error'); return; }
+  try {
+    await api('/api/sessions', { method: 'POST', body: { repository, workingDirectory, title } });
+    closeModal('newSessionModal');
+    toast('Session created', 'success');
+    loadSessions();
+  } catch (e) { showError(e.message); }
+}
+
+async function sendPrompt() {
+  if (!currentSessionId) return;
+  const ta = document.getElementById('promptInput');
+  const prompt = ta ? ta.value.trim() : document.getElementById('promptText').value.trim();
+  if (!prompt) return;
+  if (ta) ta.value = '';
+  try {
+    await api(`/api/sessions/${currentSessionId}/send`, { method: 'POST', body: { prompt } });
+    toast('Prompt sent', 'success');
+    closeModal('promptModal');
+    setTimeout(() => viewSession(currentSessionId), 1500);
+  } catch (e) { showError(e.message); }
+}
+
+async function stopSession(id) {
+  if (!confirm('Stop this session?')) return;
+  try {
+    await api(`/api/sessions/${id}/stop`, { method: 'POST' });
+    toast('Session stopped', 'success');
+    loadSessions();
+    if (currentSessionId === id) viewSession(id);
+  } catch (e) { showError(e.message); }
+}
+
+async function deleteSession(id) {
+  if (!confirm('Delete this session permanently?')) return;
+  try {
+    await api(`/api/sessions/${id}`, { method: 'DELETE' });
+    toast('Session deleted', 'success');
+    if (currentSessionId === id) closeSessionDetail();
+    loadSessions();
+  } catch (e) { showError(e.message); }
+}
+
+// ── Approvals ──
+async function loadApprovals() {
+  try {
+    const data = await api('/api/approvals');
+    const list = data.approvals || data || [];
+    const el = document.getElementById('approvalsList');
+    if (!list.length) { el.innerHTML = '<div class="empty">No pending approvals</div>'; return; }
+    el.innerHTML = '<table><thead><tr><th>Type</th><th>Description</th><th>Session</th><th>Actions</th></tr></thead><tbody>' +
+      list.map(a => `<tr>
+        <td style="font-weight:600">${esc(a.type || 'unknown')}</td>
+        <td style="max-width:300px;word-break:break-word">${esc(a.description || a.message || '—')}</td>
+        <td style="font-size:12px;color:var(--text-dim)">${esc(a.sessionId || '—')}</td>
+        <td><div style="display:flex;gap:4px">
+          <button class="primary" onclick="resolveApproval('${a.id}','approve')" style="font-size:11px">Approve</button>
+          <button class="danger" onclick="resolveApproval('${a.id}','reject')" style="font-size:11px">Reject</button>
+        </div></td>
+      </tr>`).join('') + '</tbody></table>';
+  } catch (e) { showError(e.message); }
+}
+
+async function resolveApproval(id, resolution) {
+  try {
+    await api(`/api/approvals/${id}/resolve`, { method: 'POST', body: { resolution, resolvedBy: 'dashboard' } });
+    toast(`Approval ${resolution}d`, 'success');
+    loadApprovals();
+  } catch (e) { showError(e.message); }
+}
+
+// ── Audit ──
+async function loadAudit() {
+  try {
+    const data = await api('/api/audit?limit=20');
+    const entries = data.entries || data.audit || data || [];
+    const el = document.getElementById('auditList');
+    if (!entries.length) { el.innerHTML = '<div class="empty">No audit entries</div>'; return; }
+    el.innerHTML = entries.map(e => `
+      <div class="audit-entry">
+        <span class="ts">${formatTime(e.timestamp || e.createdAt)}</span>
+        <span class="action">${esc(e.action || e.event || '—')}</span>
+        <span class="detail">${esc(e.detail || e.message || e.description || JSON.stringify(e))}</span>
+      </div>
+    `).join('');
+  } catch (e) { showError(e.message); }
+}
+
+// ── Settings ──
+function saveSettings() {
+  opencodeUrl = document.getElementById('settingOpencodeUrl').value.trim();
+  repo = document.getElementById('settingRepo').value.trim();
+  localStorage.setItem('bridge_opencode_url', opencodeUrl);
+  localStorage.setItem('bridge_repo', repo);
+  toast('Settings saved', 'success');
+}
+
+// ── Diff ──
+function renderDiff(text, containerId) {
+  const el = document.getElementById(containerId);
+  if (!el || !text) return;
+  el.innerHTML = '<div class="diff">' + text.split('\n').map(line => {
+    if (line.startsWith('+')) return `<div class="line added">${esc(line)}</div>`;
+    if (line.startsWith('-')) return `<div class="line removed">${esc(line)}</div>`;
+    if (line.startsWith('@@')) return `<div class="line info">${esc(line)}</div>`;
+    return `<div class="line">${esc(line)}</div>`;
+  }).join('') + '</div>';
+}
+
+// ── Errors ──
+function showError(msg, retry) {
+  const bar = document.getElementById('errorBar');
+  bar.style.display = 'flex';
+  document.getElementById('errorMsg').textContent = msg;
+  retryFn = retry || null;
+}
+function dismissError() { document.getElementById('errorBar').style.display = 'none'; }
+function retryAction() {
+  dismissError();
+  if (retryFn) retryFn();
+}
+
+// ── Helpers ──
+function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+function formatTime(t) {
+  if (!t) return '—';
+  const d = new Date(t);
+  return isNaN(d) ? t : d.toLocaleString();
+}
+function toast(msg, type) {
+  const el = document.createElement('div');
+  el.className = 'toast ' + type;
+  el.textContent = msg;
+  document.getElementById('toasts').appendChild(el);
+  setTimeout(() => el.remove(), 3000);
+}
+</script>
+</body>
+</html>
