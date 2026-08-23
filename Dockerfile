@@ -1,1 +1,19 @@
-RlJPTSBub2RlOjIyLWFscGluZSBBUyBidWlsZGVyCldPUktESVIgL2FwcApDT1BZIHBhY2thZ2UuanNvbiBwYWNrYWdlLWxvY2suanNvbiogLi8KUlVOIG5wbSBjaQpDT1BZIHRzY29uZmlnLmpzb24gLi8KQ09QWSBzcmMvIHNyYy8KUlVOIG5wbSBydW4gYnVpbGQKCkZST00gbm9kZToyMi1hbHBpbmUKV09SS0RJUiAvYXBwCkNPUFkgcGFja2FnZS5qc29uIHBhY2thZ2UtbG9jay5qc29uKiAuLwpSVU4gbnBtIGNpIC0tb21pdD1kZXYKQ09QWSAtLWZyb209YnVpbGRlciAvYXBwL2Rpc3QvIGRpc3QvCkNPUFkgd2ViLyB3ZWIvCkVYUE9TRSAzMDAwCkVOViBOT0RFX0VOVj1wcm9kdWN0aW9uCkNNRCBbIm5vZGUiLCAiZGlzdC9pbmRleC5qcyJdCg==
+FROM node:22-alpine AS builder
+WORKDIR /app
+COPY package.json package-lock.json* ./
+RUN npm ci
+COPY tsconfig.json ./
+COPY src/ src/
+RUN npm run build
+
+FROM node:22-alpine
+WORKDIR /app
+COPY package.json package-lock.json* ./
+RUN npm ci --omit=dev
+COPY --from=builder /app/dist/ dist/
+COPY web/ web/
+EXPOSE 3000
+ENV NODE_ENV=production
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
+  CMD wget -qO- http://localhost:3000/health || exit 1
+CMD ["node", "dist/index.js"]
