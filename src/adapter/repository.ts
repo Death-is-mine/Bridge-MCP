@@ -1,1 +1,30 @@
-aW1wb3J0IHsgZXhlY1N5bmMgfSBmcm9tICJub2RlOmNoaWxkX3Byb2Nlc3MiOwoKZXhwb3J0IGludGVyZmFjZSBSZXBvU3RhdHVzIHsKICBicmFuY2g6IHN0cmluZzsKICBjbGVhbjogYm9vbGVhbjsKICBhaGVhZDogbnVtYmVyOwogIGJlaGluZDogbnVtYmVyOwogIGZpbGVzOiBzdHJpbmdbXTsKfQoKZXhwb3J0IGZ1bmN0aW9uIGdldFN0YXR1cyhjd2Q6IHN0cmluZyk6IFJlcG9TdGF0dXMgewogIHRyeSB7CiAgICBjb25zdCBicmFuY2ggPSBleGVjU3luYygiZ2l0IHJldi1wYXJzZSAtLWFiYnJldi1yZWYgSEVBRCIsIHsgY3dkLCBlbmNvZGluZzogInV0Zi04IiB9KS50cmltKCk7CiAgICBjb25zdCBzdGF0dXMgPSBleGVjU3luYygiZ2l0IHN0YXR1cyAtLXBvcmNlbGFpbiIsIHsgY3dkLCBlbmNvZGluZzogInV0Zi04IiB9KTsKICAgIGNvbnN0IGZpbGVzID0gc3RhdHVzLnNwbGl0KCJcbiIpLmZpbHRlcihCb29sZWFuKS5tYXAoKGwpID0+IGwuc2xpY2UoMykpOwogICAgY29uc3QgYWhlYWQgPSBwYXJzZUludChleGVjU3luYygiZ2l0IHJldi1saXN0IC0tY291bnQgQHt1fS4uSEVBRCAyPi9kZXYvbnVsbCB8fCBlY2hvIDAiLCB7IGN3ZCwgZW5jb2Rpbmc6ICJ1dGYtOCIgfSkudHJpbSgpLCAxMCk7CiAgICBjb25zdCBiZWhpbmQgPSBwYXJzZUludChleGVjU3luYygiZ2l0IHJldi1saXN0IC0tY291bnQgSEVBRC4uQHt1fSAyPi9kZXYvbnVsbCB8fCBlY2hvIDAiLCB7IGN3ZCwgZW5jb2Rpbmc6ICJ1dGYtOCIgfSkudHJpbSgpLCAxMCk7CiAgICByZXR1cm4geyBicmFuY2gsIGNsZWFuOiBmaWxlcy5sZW5ndGggPT09IDAsIGFoZWFkLCBiZWhpbmQsIGZpbGVzIH07CiAgfSBjYXRjaCB7CiAgICByZXR1cm4geyBicmFuY2g6ICJ1bmtub3duIiwgY2xlYW46IHRydWUsIGFoZWFkOiAwLCBiZWhpbmQ6IDAsIGZpbGVzOiBbXSB9OwogIH0KfQoKZXhwb3J0IGZ1bmN0aW9uIGdldERpZmYoY3dkOiBzdHJpbmcpOiBzdHJpbmcgewogIHRyeSB7CiAgICByZXR1cm4gZXhlY1N5bmMoImdpdCBkaWZmIiwgeyBjd2QsIGVuY29kaW5nOiAidXRmLTgiIH0pOwogIH0gY2F0Y2ggewogICAgcmV0dXJuICIiOwogIH0KfQo=
+import { execSync } from "node:child_process";
+
+export interface RepoStatus {
+  branch: string;
+  clean: boolean;
+  ahead: number;
+  behind: number;
+  files: string[];
+}
+
+export function getStatus(cwd: string): RepoStatus {
+  try {
+    const branch = execSync("git rev-parse --abbrev-ref HEAD", { cwd, encoding: "utf-8" }).trim();
+    const status = execSync("git status --porcelain", { cwd, encoding: "utf-8" });
+    const files = status.split("\n").filter(Boolean).map((l) => l.slice(3));
+    const ahead = parseInt(execSync("git rev-list --count @{u}..HEAD 2>/dev/null || echo 0", { cwd, encoding: "utf-8" }).trim(), 10);
+    const behind = parseInt(execSync("git rev-list --count HEAD..@{u} 2>/dev/null || echo 0", { cwd, encoding: "utf-8" }).trim(), 10);
+    return { branch, clean: files.length === 0, ahead, behind, files };
+  } catch {
+    return { branch: "unknown", clean: true, ahead: 0, behind: 0, files: [] };
+  }
+}
+
+export function getDiff(cwd: string): string {
+  try {
+    return execSync("git diff", { cwd, encoding: "utf-8" });
+  } catch {
+    return "";
+  }
+}
