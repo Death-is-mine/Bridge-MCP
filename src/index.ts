@@ -1,1 +1,65 @@
-aW1wb3J0IGV4cHJlc3MgZnJvbSAiZXhwcmVzcyI7CmltcG9ydCBjb3JzIGZyb20gImNvcnMiOwppbXBvcnQgaGVsbWV0IGZyb20gImhlbG1ldCI7CmltcG9ydCBwYXRoIGZyb20gIm5vZGU6cGF0aCI7CmltcG9ydCB7IGZpbGVVUkxUb1BhdGggfSBmcm9tICJub2RlOnVybCI7CmltcG9ydCB7IGxvZ2dlciB9IGZyb20gIi4vY29yZS9hdWRpdC5qcyI7CmltcG9ydCB7IGNvbmZpZyB9IGZyb20gIi4vY29yZS9jb25maWcuanMiOwppbXBvcnQgeyByb3V0ZXIgfSBmcm9tICIuL2FwaS9yb3V0ZXMuanMiOwppbXBvcnQgeyBhdXRoTWlkZGxld2FyZSwgZXJyb3JIYW5kbGVyIH0gZnJvbSAiLi9hcGkvbWlkZGxld2FyZS5qcyI7CmltcG9ydCB7IGFwaUxpbWl0ZXIgfSBmcm9tICIuL3NlY3VyaXR5L3JhdGUtbGltaXQuanMiOwppbXBvcnQgeyBTdGRpb1NlcnZlclRyYW5zcG9ydCB9IGZyb20gIkBtb2RlbGNvbnRleHRwcm90b2NvbC9zZGsvc2VydmVyL3N0ZGlvLmpzIjsKaW1wb3J0IHsgY3JlYXRlTWNwU2VydmVyIH0gZnJvbSAiLi9tY3Avc2VydmVyLmpzIjsKCmNvbnN0IF9fZGlybmFtZSA9IHBhdGguZGlybmFtZShmaWxlVVJMVG9QYXRoKGltcG9ydC5tZXRhLnVybCkpOwoKY29uc3QgYXBwID0gZXhwcmVzcygpOwoKYXBwLnVzZShoZWxtZXQoeyBjb250ZW50U2VjdXJpdHlQb2xpY3k6IGZhbHNlIH0pKTsKYXBwLnVzZShjb3JzKCkpOwphcHAudXNlKGV4cHJlc3MuanNvbigpKTsKYXBwLnVzZShhcGlMaW1pdGVyKTsKYXBwLnVzZShhdXRoTWlkZGxld2FyZSk7CmFwcC51c2Uocm91dGVyKTsKYXBwLnVzZShleHByZXNzLnN0YXRpYyhwYXRoLmpvaW4oX19kaXJuYW1lLCAiLi4vd2ViIikpKTsKYXBwLmdldCgiKiIsIChfcmVxLCByZXMpID0+IHJlcy5zZW5kRmlsZShwYXRoLmpvaW4oX19kaXJuYW1lLCAiLi4vd2ViL2luZGV4Lmh0bWwiKSkpOwphcHAudXNlKGVycm9ySGFuZGxlcik7Cgpjb25zdCBzZXJ2ZXIgPSBhcHAubGlzdGVuKGNvbmZpZy5icmlkZ2UucG9ydCwgKCkgPT4gewogIGxvZ2dlci5pbmZvKHsgcG9ydDogY29uZmlnLmJyaWRnZS5wb3J0IH0sICJCcmlkZ2Ugc3RhcnRlZCIpOwp9KTsKCmFzeW5jIGZ1bmN0aW9uIHN0YXJ0TWNwKCk6IFByb21pc2U8dm9pZD4gewogIGNvbnN0IG1jcFNlcnZlciA9IGNyZWF0ZU1jcFNlcnZlcigpOwogIGNvbnN0IHRyYW5zcG9ydCA9IG5ldyBTdGRpb1NlcnZlclRyYW5zcG9ydCgpOwogIGF3YWl0IG1jcFNlcnZlci5jb25uZWN0KHRyYW5zcG9ydCk7CiAgbG9nZ2VyLmluZm8oIk1DUCBzZXJ2ZXIgY29ubmVjdGVkIHZpYSBzdGRpbyIpOwp9CgpzdGFydE1jcCgpLmNhdGNoKChlcnIpID0+IGxvZ2dlci5lcnJvcih7IGVyciB9LCAiTUNQIHN0YXJ0dXAgZmFpbGVkIikpOwoKcHJvY2Vzcy5vbigiU0lHVEVSTSIsICgpID0+IHsKICBsb2dnZXIuaW5mbygiU2h1dHRpbmcgZG93biIpOwogIHNlcnZlci5jbG9zZSgpOwogIHByb2Nlc3MuZXhpdCgwKTsKfSk7Cgpwcm9jZXNzLm9uKCJTSUdJTlQiLCAoKSA9PiB7CiAgbG9nZ2VyLmluZm8oIlNodXR0aW5nIGRvd24iKTsKICBzZXJ2ZXIuY2xvc2UoKTsKICBwcm9jZXNzLmV4aXQoMCk7Cn0pOwoKZXhwb3J0IHsgYXBwLCBzZXJ2ZXIgfTsK
+import express from "express";
+import helmet from "helmet";
+import { config } from "./core/config.js";
+import { logger, audit } from "./core/audit.js";
+import router from "./api/routes.js";
+import { errorHandler } from "./auth/middleware.js";
+import { corsMiddleware } from "./security/cors.js";
+import { expireOldApprovals } from "./core/approval.js";
+
+const app = express();
+
+// ─── Security ───
+app.use(helmet({
+  contentSecurityPolicy: false,
+  crossOriginEmbedderPolicy: false,
+}));
+app.use(corsMiddleware);
+app.use(express.json({ limit: "1mb" }));
+
+// ─── Request logging ───
+app.use((req, res, next) => {
+  const start = Date.now();
+  res.on("finish", () => {
+    const ms = Date.now() - start;
+    logger.info({ method: req.method, path: req.path, status: res.statusCode, ms }, "request");
+  });
+  next();
+});
+
+// ─── Routes ───
+app.use(router);
+
+// ─── 404 ───
+app.use((_req, res) => {
+  res.status(404).json({ error: { code: "NOT_FOUND", message: "Endpoint not found" } });
+});
+
+// ─── Error handler ───
+app.use(errorHandler);
+
+// ─── Expire old approvals periodically ───
+setInterval(() => {
+  const expired = expireOldApprovals();
+  if (expired > 0) logger.info({ expired }, "expired old approvals");
+}, 60_000);
+
+// ─── Start ───
+app.listen(config.bridge.port, config.bridge.host, () => {
+  logger.info({ host: config.bridge.host, port: config.bridge.port, env: config.nodeEnv }, "bridge started");
+  audit({
+    requestId: "startup",
+    clientId: "system",
+    userId: "system",
+    tool: "bridge.start",
+    argumentsHash: "",
+    repository: "",
+    bridgeSessionId: "",
+    opencodeSessionId: "",
+    permission: "",
+    approvalStatus: "",
+    status: "ok",
+  });
+});
+
+export default app;
