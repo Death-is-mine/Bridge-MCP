@@ -1,1 +1,42 @@
-ewogICJuYW1lIjogIm9wZW5jb2RlLW1jcC1icmlkZ2UiLAogICJ2ZXJzaW9uIjogIjAuMS4wIiwKICAiZGVzY3JpcHRpb24iOiAiV2ViLWZpcnN0IE1DUCBjb250cm9sIHBsYW5lIGNvbm5lY3RpbmcgQUkgY2xpZW50cyB0byBsb2NhbCBPcGVuQ29kZSIsCiAgInR5cGUiOiAibW9kdWxlIiwKICAibWFpbiI6ICJkaXN0L2luZGV4LmpzIiwKICAic2NyaXB0cyI6IHsKICAgICJkZXYiOiAidHN4IHdhdGNoIHNyYy9pbmRleC50cyIsCiAgICAiYnVpbGQiOiAidHNjIiwKICAgICJzdGFydCI6ICJub2RlIGRpc3QvaW5kZXguanMiLAogICAgInRlc3QiOiAidml0ZXN0IHJ1biIsCiAgICAidGVzdDp3YXRjaCI6ICJ2aXRlc3QiLAogICAgImxpbnQiOiAiZXNsaW50IHNyYy8iLAogICAgInR5cGVjaGVjayI6ICJ0c2MgLS1ub0VtaXQiCiAgfSwKICAiZGVwZW5kZW5jaWVzIjogewogICAgIkBtb2RlbGNvbnRleHRwcm90b2NvbC9zZGsiOiAiXjEuMTIuMSIsCiAgICAiY29ycyI6ICJeMi44LjUiLAogICAgImRvdGVudiI6ICJeMTYuNC4wIiwKICAgICJleHByZXNzIjogIl40LjIxLjAiLAogICAgImV4cHJlc3MtcmF0ZS1saW1pdCI6ICJeNy40LjAiLAogICAgImhlbG1ldCI6ICJeOC4wLjAiLAogICAgInBpbm8iOiAiXjkuMC4wIiwKICAgICJwaW5vLXByZXR0eSI6ICJeMTEuMC4wIiwKICAgICJ1dWlkIjogIl4xMC4wLjAiLAogICAgInpvZCI6ICJeMy4yNC4wIgogIH0sCiAgImRldkRlcGVuZGVuY2llcyI6IHsKICAgICJAdHlwZXMvY29ycyI6ICJeMi44LjE3IiwKICAgICJAdHlwZXMvZXhwcmVzcyI6ICJeNS4wLjAiLAogICAgIkB0eXBlcy9ub2RlIjogIl4yMi4wLjAiLAogICAgIkB0eXBlcy9zdXBlcnRlc3QiOiAiXjcuMi4xIiwKICAgICJAdHlwZXMvdXVpZCI6ICJeMTAuMC4wIiwKICAgICJAdHlwZXNjcmlwdC1lc2xpbnQvZXNsaW50LXBsdWdpbiI6ICJeOC4wLjAiLAogICAgIkB0eXBlc2NyaXB0LWVzbGludC9wYXJzZXIiOiAiXjguMC4wIiwKICAgICJlc2xpbnQiOiAiXjkuMC4wIiwKICAgICJzdXBlcnRlc3QiOiAiXjcuMi4yIiwKICAgICJ0c3giOiAiXjQuMTkuMCIsCiAgICAidHlwZXNjcmlwdCI6ICJeNS42LjAiLAogICAgInZpdGVzdCI6ICJeMi4xLjAiCiAgfQp9Cg==
+{
+  "name": "opencode-mcp-bridge",
+  "version": "0.1.0",
+  "description": "Web-first MCP control plane connecting AI clients to local OpenCode",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src/",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.0",
+    "express": "^4.21.0",
+    "express-rate-limit": "^7.4.0",
+    "helmet": "^8.0.0",
+    "pino": "^9.0.0",
+    "pino-pretty": "^11.0.0",
+    "uuid": "^10.0.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.0.0",
+    "@types/supertest": "^7.2.1",
+    "@types/uuid": "^10.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0",
+    "supertest": "^7.2.2",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}
