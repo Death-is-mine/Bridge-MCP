@@ -1,1 +1,80 @@
-aW1wb3J0IHsgY29uZmlnIH0gZnJvbSAiLi4vY29yZS9jb25maWcuanMiOwoKY29uc3QgVE9LRU4gPSBjb25maWcuZ2l0aHViLnRva2VuOwpjb25zdCBBUEkgPSAiaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbSI7Cgphc3luYyBmdW5jdGlvbiBnaDxUPihwYXRoOiBzdHJpbmcsIGluaXQ/OiBSZXF1ZXN0SW5pdCk6IFByb21pc2U8VD4gewogIGNvbnN0IHJlcyA9IGF3YWl0IGZldGNoKGAke0FQSX0ke3BhdGh9YCwgewogICAgLi4uaW5pdCwKICAgIGhlYWRlcnM6IHsKICAgICAgQWNjZXB0OiAiYXBwbGljYXRpb24vdm5kLmdpdGh1Yitqc29uIiwKICAgICAgLi4uKFRPS0VOID8geyBBdXRob3JpemF0aW9uOiBgdG9rZW4gJHtUT0tFTn1gIH0gOiB7fSksCiAgICAgIC4uLmluaXQ/LmhlYWRlcnMsCiAgICB9LAogIH0pOwogIGlmICghcmVzLm9rKSB7CiAgICBjb25zdCBib2R5ID0gYXdhaXQgcmVzLnRleHQoKS5jYXRjaCgoKSA9PiAiIik7CiAgICB0aHJvdyBuZXcgRXJyb3IoYEdpdEh1YiAke3Jlcy5zdGF0dXN9OiAke2JvZHkgfHwgcmVzLnN0YXR1c1RleHR9YCk7CiAgfQogIHJldHVybiByZXMuanNvbigpIGFzIFByb21pc2U8VD47Cn0KCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBpc0NvbmZpZ3VyZWQoKTogUHJvbWlzZTxib29sZWFuPiB7CiAgaWYgKCFUT0tFTikgcmV0dXJuIGZhbHNlOwogIHRyeSB7CiAgICBhd2FpdCBnaCgiL3VzZXIiKTsKICAgIHJldHVybiB0cnVlOwogIH0gY2F0Y2ggewogICAgcmV0dXJuIGZhbHNlOwogIH0KfQoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGNyZWF0ZUNvbW1pdChtZXNzYWdlOiBzdHJpbmcsIGZpbGVzOiB7IHBhdGg6IHN0cmluZzsgY29udGVudDogc3RyaW5nIH1bXSk6IFByb21pc2U8c3RyaW5nPiB7CiAgY29uc3QgcmVwbyA9IGNvbmZpZy5naXRodWIucmVwbzsKICBpZiAoIXJlcG8pIHRocm93IG5ldyBFcnJvcigiR0lUSFVCX1JFUE8gbm90IGNvbmZpZ3VyZWQiKTsKCiAgY29uc3QgdHJlZSA9IGF3YWl0IFByb21pc2UuYWxsKAogICAgZmlsZXMubWFwKGFzeW5jIChmKSA9PiB7CiAgICAgIGNvbnN0IGJsb2IgPSBhd2FpdCBnaDx7IHNoYTogc3RyaW5nIH0+KGAvcmVwb3MvJHtyZXBvfS9ibG9ic2AsIHsKICAgICAgICBtZXRob2Q6ICJQT1NUIiwKICAgICAgICBib2R5OiBKU09OLnN0cmluZ2lmeSh7IGNvbnRlbnQ6IEJ1ZmZlci5mcm9tKGYuY29udGVudCkudG9TdHJpbmcoImJhc2U2NCIpLCBlbmNvZGluZzogImJhc2U2NCIgfSksCiAgICAgIH0pOwogICAgICByZXR1cm4geyBwYXRoOiBmLnBhdGgsIG1vZGU6ICIxMDA2NDQiLCB0eXBlOiAiYmxvYiIgYXMgY29uc3QsIHNoYTogYmxvYi5zaGEgfTsKICAgIH0pLAogICk7CgogIGNvbnN0IG1haW4gPSBhd2FpdCBnaDx7IHNoYTogc3RyaW5nOyBvYmplY3Q6IHsgc2hhOiBzdHJpbmcgfSB9PihgL3JlcG9zLyR7cmVwb30vZ2l0L3JlZi9oZWFkcy9tYWluYCk7CiAgY29uc3QgY3VycmVudENvbW1pdCA9IGF3YWl0IGdoPHsgdHJlZTogeyBzaGE6IHN0cmluZyB9IH0+KGAvcmVwb3MvJHtyZXBvfS9naXQvY29tbWl0cy8ke21haW4ub2JqZWN0LnNoYX1gKTsKCiAgY29uc3QgbmV3VHJlZSA9IGF3YWl0IGdoPHsgc2hhOiBzdHJpbmcgfT4oYC9yZXBvcy8ke3JlcG99L2dpdC90cmVlc2AsIHsKICAgIG1ldGhvZDogIlBPU1QiLAogICAgYm9keTogSlNPTi5zdHJpbmdpZnkoeyBiYXNlX3RyZWU6IGN1cnJlbnRDb21taXQudHJlZS5zaGEsIHRyZWUgfSksCiAgfSk7CgogIGNvbnN0IGNvbW1pdCA9IGF3YWl0IGdoPHsgc2hhOiBzdHJpbmcgfT4oYC9yZXBvcy8ke3JlcG99L2dpdC9jb21taXRzYCwgewogICAgbWV0aG9kOiAiUE9TVCIsCiAgICBib2R5OiBKU09OLnN0cmluZ2lmeSh7IG1lc3NhZ2UsIHRyZWU6IG5ld1RyZWUuc2hhLCBwYXJlbnRzOiBbbWFpbi5vYmplY3Quc2hhXSB9KSwKICB9KTsKCiAgYXdhaXQgZ2goYC9yZXBvcy8ke3JlcG99L2dpdC9yZWZzL2hlYWRzL21haW5gLCB7CiAgICBtZXRob2Q6ICJQQVRDSCIsCiAgICBib2R5OiBKU09OLnN0cmluZ2lmeSh7IHNoYTogY29tbWl0LnNoYSB9KSwKICB9KTsKCiAgcmV0dXJuIGNvbW1pdC5zaGE7Cn0KCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBjcmVhdGVQcih0aXRsZTogc3RyaW5nLCBib2R5OiBzdHJpbmcsIGhlYWQ6IHN0cmluZywgYmFzZSA9ICJtYWluIik6IFByb21pc2U8eyBudW1iZXI6IG51bWJlcjsgdXJsOiBzdHJpbmcgfT4gewogIGNvbnN0IHJlcG8gPSBjb25maWcuZ2l0aHViLnJlcG87CiAgaWYgKCFyZXBvKSB0aHJvdyBuZXcgRXJyb3IoIkdJVEhVQl9SRVBPIG5vdCBjb25maWd1cmVkIik7CiAgcmV0dXJuIGdoPHsgbnVtYmVyOiBudW1iZXI7IGh0bWxfdXJsOiBzdHJpbmcgfT4oYC9yZXBvcy8ke3JlcG99L3B1bGxzYCwgewogICAgbWV0aG9kOiAiUE9TVCIsCiAgICBib2R5OiBKU09OLnN0cmluZ2lmeSh7IHRpdGxlLCBib2R5LCBoZWFkLCBiYXNlIH0pLAogIH0pLnRoZW4oKHByKSA9PiAoeyBudW1iZXI6IHByLm51bWJlciwgdXJsOiBwci5odG1sX3VybCB9KSk7Cn0KCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBnZXRQclJldmlld3MocHJOdW1iZXI6IG51bWJlcik6IFByb21pc2U8dW5rbm93bltdPiB7CiAgY29uc3QgcmVwbyA9IGNvbmZpZy5naXRodWIucmVwbzsKICBpZiAoIXJlcG8pIHRocm93IG5ldyBFcnJvcigiR0lUSFVCX1JFUE8gbm90IGNvbmZpZ3VyZWQiKTsKICByZXR1cm4gZ2g8dW5rbm93bltdPihgL3JlcG9zLyR7cmVwb30vcHVsbHMvJHtwck51bWJlcn0vcmV2aWV3c2ApOwp9Cg==
+import { config } from "../core/config.js";
+
+const TOKEN = config.github.token;
+const API = "https://api.github.com";
+
+async function gh<T>(path: string, init?: RequestInit): Promise<T> {
+  const res = await fetch(`${API}${path}`, {
+    ...init,
+    headers: {
+      Accept: "application/vnd.github+json",
+      ...(TOKEN ? { Authorization: `token ${TOKEN}` } : {}),
+      ...init?.headers,
+    },
+  });
+  if (!res.ok) {
+    const body = await res.text().catch(() => "");
+    throw new Error(`GitHub ${res.status}: ${body || res.statusText}`);
+  }
+  return res.json() as Promise<T>;
+}
+
+export async function isConfigured(): Promise<boolean> {
+  if (!TOKEN) return false;
+  try {
+    await gh("/user");
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+export async function createCommit(message: string, files: { path: string; content: string }[]): Promise<string> {
+  const repo = config.github.repository;
+  if (!repo) throw new Error("GITHUB_REPOSITORY not configured");
+
+  const tree = await Promise.all(
+    files.map(async (f) => {
+      const blob = await gh<{ sha: string }>(`/repos/${repo}/blobs`, {
+        method: "POST",
+        body: JSON.stringify({ content: Buffer.from(f.content).toString("base64"), encoding: "base64" }),
+      });
+      return { path: f.path, mode: "100644", type: "blob" as const, sha: blob.sha };
+    }),
+  );
+
+  const main = await gh<{ sha: string; object: { sha: string } }>(`/repos/${repo}/git/ref/heads/main`);
+  const currentCommit = await gh<{ tree: { sha: string } }>(`/repos/${repo}/git/commits/${main.object.sha}`);
+
+  const newTree = await gh<{ sha: string }>(`/repos/${repo}/git/trees`, {
+    method: "POST",
+    body: JSON.stringify({ base_tree: currentCommit.tree.sha, tree }),
+  });
+
+  const commit = await gh<{ sha: string }>(`/repos/${repo}/git/commits`, {
+    method: "POST",
+    body: JSON.stringify({ message, tree: newTree.sha, parents: [main.object.sha] }),
+  });
+
+  await gh(`/repos/${repo}/git/refs/heads/main`, {
+    method: "PATCH",
+    body: JSON.stringify({ sha: commit.sha }),
+  });
+
+  return commit.sha;
+}
+
+export async function createPr(title: string, body: string, head: string, base = "main"): Promise<{ number: number; url: string }> {
+  const repo = config.github.repository;
+  if (!repo) throw new Error("GITHUB_REPOSITORY not configured");
+  return gh<{ number: number; html_url: string }>(`/repos/${repo}/pulls`, {
+    method: "POST",
+    body: JSON.stringify({ title, body, head, base }),
+  }).then((pr) => ({ number: pr.number, url: pr.html_url }));
+}
+
+export async function getPrReviews(prNumber: number): Promise<unknown[]> {
+  const repo = config.github.repository;
+  if (!repo) throw new Error("GITHUB_REPOSITORY not configured");
+  return gh<unknown[]>(`/repos/${repo}/pulls/${prNumber}/reviews`);
+}
