@@ -1,1 +1,50 @@
-aW1wb3J0IHsgdjQgYXMgdXVpZCB9IGZyb20gInV1aWQiOwppbXBvcnQgdHlwZSB7IEJyaWRnZVNlc3Npb24sIFNlc3Npb25TdGF0dXMgfSBmcm9tICIuL3R5cGVzLmpzIjsKCmNvbnN0IHNlc3Npb25zID0gbmV3IE1hcDxzdHJpbmcsIEJyaWRnZVNlc3Npb24+KCk7CgpleHBvcnQgZnVuY3Rpb24gY3JlYXRlU2Vzc2lvbihjbGllbnRJZDogc3RyaW5nLCByZXBvc2l0b3J5OiBzdHJpbmcpOiBCcmlkZ2VTZXNzaW9uIHsKICBjb25zdCBzZXNzaW9uOiBCcmlkZ2VTZXNzaW9uID0gewogICAgYnJpZGdlU2Vzc2lvbklkOiB1dWlkKCksCiAgICBvcGVuY29kZVNlc3Npb25JZDogbnVsbCwKICAgIGNsaWVudElkLAogICAgcmVwb3NpdG9yeSwKICAgIHN0YXR1czogIklETEUiLAogICAgY3JlYXRlZEF0OiBuZXcgRGF0ZSgpLAogICAgdXBkYXRlZEF0OiBuZXcgRGF0ZSgpLAogIH07CiAgc2Vzc2lvbnMuc2V0KHNlc3Npb24uYnJpZGdlU2Vzc2lvbklkLCBzZXNzaW9uKTsKICByZXR1cm4gc2Vzc2lvbjsKfQoKZXhwb3J0IGZ1bmN0aW9uIGdldFNlc3Npb24oaWQ6IHN0cmluZyk6IEJyaWRnZVNlc3Npb24gfCB1bmRlZmluZWQgewogIHJldHVybiBzZXNzaW9ucy5nZXQoaWQpOwp9CgpleHBvcnQgZnVuY3Rpb24gbGlzdFNlc3Npb25zKGNsaWVudElkPzogc3RyaW5nKTogQnJpZGdlU2Vzc2lvbltdIHsKICBjb25zdCBhbGwgPSBBcnJheS5mcm9tKHNlc3Npb25zLnZhbHVlcygpKTsKICByZXR1cm4gY2xpZW50SWQgPyBhbGwuZmlsdGVyKChzKSA9PiBzLmNsaWVudElkID09PSBjbGllbnRJZCkgOiBhbGw7Cn0KCmV4cG9ydCBmdW5jdGlvbiB1cGRhdGVTZXNzaW9uKGlkOiBzdHJpbmcsIHBhdGNoOiBQYXJ0aWFsPFBpY2s8QnJpZGdlU2Vzc2lvbiwgIm9wZW5jb2RlU2Vzc2lvbklkIiB8ICJzdGF0dXMiPj4pOiBCcmlkZ2VTZXNzaW9uIHwgdW5kZWZpbmVkIHsKICBjb25zdCBzID0gc2Vzc2lvbnMuZ2V0KGlkKTsKICBpZiAoIXMpIHJldHVybiB1bmRlZmluZWQ7CiAgaWYgKHBhdGNoLm9wZW5jb2RlU2Vzc2lvbklkICE9PSB1bmRlZmluZWQpIHMub3BlbmNvZGVTZXNzaW9uSWQgPSBwYXRjaC5vcGVuY29kZVNlc3Npb25JZDsKICBpZiAocGF0Y2guc3RhdHVzICE9PSB1bmRlZmluZWQpIHMuc3RhdHVzID0gcGF0Y2guc3RhdHVzOwogIHMudXBkYXRlZEF0ID0gbmV3IERhdGUoKTsKICByZXR1cm4gczsKfQoKZXhwb3J0IGZ1bmN0aW9uIGRlbGV0ZVNlc3Npb24oaWQ6IHN0cmluZyk6IGJvb2xlYW4gewogIHJldHVybiBzZXNzaW9ucy5kZWxldGUoaWQpOwp9Cg==
+import { v4 as uuid } from "uuid";
+import type { BridgeSession, SessionStatus } from "./types.js";
+
+const sessions = new Map<string, BridgeSession>();
+
+export function createSession(clientId: string, repository: string, workingDirectory?: string): BridgeSession {
+  const session: BridgeSession = {
+    bridgeSessionId: uuid(),
+    opencodeSessionId: null,
+    clientId,
+    repository,
+    workingDirectory: workingDirectory || repository,
+    status: "IDLE",
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    lastEventAt: null,
+  };
+  sessions.set(session.bridgeSessionId, session);
+  return session;
+}
+
+export function getSession(id: string): BridgeSession | undefined {
+  return sessions.get(id);
+}
+
+export function listSessions(clientId?: string): BridgeSession[] {
+  const all = Array.from(sessions.values());
+  return clientId ? all.filter((s) => s.clientId === clientId) : all;
+}
+
+export function updateSession(id: string, patch: Partial<Pick<BridgeSession, "opencodeSessionId" | "status" | "lastEventAt">>): BridgeSession | undefined {
+  const s = sessions.get(id);
+  if (!s) return undefined;
+  if (patch.opencodeSessionId !== undefined) s.opencodeSessionId = patch.opencodeSessionId;
+  if (patch.status !== undefined) s.status = patch.status;
+  if (patch.lastEventAt !== undefined) s.lastEventAt = patch.lastEventAt;
+  s.updatedAt = new Date();
+  return s;
+}
+
+export function deleteSession(id: string): boolean {
+  return sessions.delete(id);
+}
+
+export function findSessionByOpenCodeId(ocSessionId: string): BridgeSession | undefined {
+  for (const s of sessions.values()) {
+    if (s.opencodeSessionId === ocSessionId) return s;
+  }
+  return undefined;
+}
