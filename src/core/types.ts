@@ -1,1 +1,41 @@
-ZXhwb3J0IHR5cGUgU2Vzc2lvblN0YXR1cyA9ICJJRExFIiB8ICJSVU5OSU5HIiB8ICJXQUlUSU5HIiB8ICJTVE9QUElORyIgfCAiQ09NUExFVEVEIiB8ICJGQUlMRUQiOwoKZXhwb3J0IGludGVyZmFjZSBCcmlkZ2VTZXNzaW9uIHsKICBicmlkZ2VTZXNzaW9uSWQ6IHN0cmluZzsKICBvcGVuY29kZVNlc3Npb25JZDogc3RyaW5nIHwgbnVsbDsKICBjbGllbnRJZDogc3RyaW5nOwogIHJlcG9zaXRvcnk6IHN0cmluZzsKICBzdGF0dXM6IFNlc3Npb25TdGF0dXM7CiAgY3JlYXRlZEF0OiBEYXRlOwogIHVwZGF0ZWRBdDogRGF0ZTsKfQoKZXhwb3J0IGludGVyZmFjZSBTZW5kUHJvbXB0UmVxdWVzdCB7CiAgc2Vzc2lvbjogQnJpZGdlU2Vzc2lvbjsKICBwcm9tcHQ6IHN0cmluZzsKfQoKZXhwb3J0IGludGVyZmFjZSBPcGVuQ29kZUV2ZW50IHsKICB0eXBlOiBzdHJpbmc7CiAgZGF0YTogdW5rbm93bjsKICB0aW1lc3RhbXA6IERhdGU7Cn0K
+export type SessionStatus = "IDLE" | "RUNNING" | "WAITING" | "STOPPING" | "COMPLETED" | "FAILED" | "DISCONNECTED";
+
+export interface BridgeSession {
+  bridgeSessionId: string;
+  opencodeSessionId: string | null;
+  clientId: string;
+  repository: string;
+  workingDirectory: string;
+  status: SessionStatus;
+  createdAt: Date;
+  updatedAt: Date;
+  lastEventAt: Date | null;
+}
+
+export interface SendPromptRequest {
+  session: BridgeSession;
+  prompt: string;
+}
+
+export interface OpenCodeEvent {
+  type: string;
+  data: unknown;
+  timestamp: Date;
+}
+
+export interface AuditEntry {
+  requestId: string;
+  clientId: string;
+  userId: string;
+  tool: string;
+  argumentsHash: string;
+  repository: string;
+  bridgeSessionId: string;
+  opencodeSessionId: string;
+  permission: string;
+  approvalStatus: string;
+  status: string;
+  errorCode?: string;
+  startedAt?: string;
+  completedAt?: string;
+}
