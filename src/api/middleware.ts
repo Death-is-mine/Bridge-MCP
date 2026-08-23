@@ -1,1 +1,37 @@
-aW1wb3J0IHR5cGUgeyBSZXF1ZXN0LCBSZXNwb25zZSwgTmV4dEZ1bmN0aW9uIH0gZnJvbSAiZXhwcmVzcyI7CmltcG9ydCB7IGNvbmZpZyB9IGZyb20gIi4uL2NvcmUvY29uZmlnLmpzIjsKCmNvbnN0IFZBTElEX1RPS0VOUyA9IG5ldyBTZXQ8c3RyaW5nPigpOwoKZXhwb3J0IGZ1bmN0aW9uIHJlZ2lzdGVyQXV0aFRva2VuKHRva2VuOiBzdHJpbmcpOiB2b2lkIHsKICBWQUxJRF9UT0tFTlMuYWRkKHRva2VuKTsKfQoKZXhwb3J0IGZ1bmN0aW9uIGF1dGhNaWRkbGV3YXJlKHJlcTogUmVxdWVzdCwgcmVzOiBSZXNwb25zZSwgbmV4dDogTmV4dEZ1bmN0aW9uKTogdm9pZCB7CiAgaWYgKCFjb25maWcuYnJpZGdlLmF1dGhTZWNyZXQpIHsKICAgIG5leHQoKTsKICAgIHJldHVybjsKICB9CgogIGNvbnN0IGF1dGhIZWFkZXIgPSByZXEuaGVhZGVycy5hdXRob3JpemF0aW9uOwogIGlmICghYXV0aEhlYWRlcj8uc3RhcnRzV2l0aCgiQmVhcmVyICIpKSB7CiAgICByZXMuc3RhdHVzKDQwMSkuanNvbih7IGVycm9yOiB7IGNvZGU6ICJVTkFVVEhPUklaRUQiLCBtZXNzYWdlOiAiTWlzc2luZyBhdXRoIHRva2VuIiB9IH0pOwogICAgcmV0dXJuOwogIH0KCiAgY29uc3QgdG9rZW4gPSBhdXRoSGVhZGVyLnNsaWNlKDcpOwogIGlmICh0b2tlbiAhPT0gY29uZmlnLmJyaWRnZS5hdXRoU2VjcmV0ICYmICFWQUxJRF9UT0tFTlMuaGFzKHRva2VuKSkgewogICAgcmVzLnN0YXR1cyg0MDMpLmpzb24oeyBlcnJvcjogeyBjb2RlOiAiRk9SQklEREVOIiwgbWVzc2FnZTogIkludmFsaWQgdG9rZW4iIH0gfSk7CiAgICByZXR1cm47CiAgfQoKICBuZXh0KCk7Cn0KCmV4cG9ydCBmdW5jdGlvbiBlcnJvckhhbmRsZXIoZXJyOiBFcnJvciwgX3JlcTogUmVxdWVzdCwgcmVzOiBSZXNwb25zZSwgX25leHQ6IE5leHRGdW5jdGlvbik6IHZvaWQgewogIGNvbnN0IG1lc3NhZ2UgPSBlcnIubWVzc2FnZSB8fCAiSW50ZXJuYWwgZXJyb3IiOwogIGNvbnN0IGNvZGUgPSBtZXNzYWdlLmluY2x1ZGVzKCJPcGVuQ29kZSIpID8gIk9QRU5DT0RFX0VSUk9SIiA6ICJJTlRFUk5BTF9FUlJPUiI7CiAgcmVzLnN0YXR1cyhjb2RlID09PSAiT1BFTkNPREVfRVJST1IiID8gNTAyIDogNTAwKS5qc29uKHsKICAgIGVycm9yOiB7IGNvZGUsIG1lc3NhZ2UsIHJlcXVlc3RJZDogIiIgfSwKICB9KTsKfQo=
+import type { Request, Response, NextFunction } from "express";
+import { config } from "../core/config.js";
+
+const VALID_TOKENS = new Set<string>();
+
+export function registerAuthToken(token: string): void {
+  VALID_TOKENS.add(token);
+}
+
+export function authMiddleware(req: Request, res: Response, next: NextFunction): void {
+  if (!config.bridge.authSecret) {
+    next();
+    return;
+  }
+
+  const authHeader = req.headers.authorization;
+  if (!authHeader?.startsWith("Bearer ")) {
+    res.status(401).json({ error: { code: "UNAUTHORIZED", message: "Missing auth token" } });
+    return;
+  }
+
+  const token = authHeader.slice(7);
+  if (token !== config.bridge.authSecret && !VALID_TOKENS.has(token)) {
+    res.status(403).json({ error: { code: "FORBIDDEN", message: "Invalid token" } });
+    return;
+  }
+
+  next();
+}
+
+export function errorHandler(err: Error, _req: Request, res: Response, _next: NextFunction): void {
+  const message = err.message || "Internal error";
+  const code = message.includes("OpenCode") ? "OPENCODE_ERROR" : "INTERNAL_ERROR";
+  res.status(code === "OPENCODE_ERROR" ? 502 : 500).json({
+    error: { code, message, requestId: "" },
+  });
+}
