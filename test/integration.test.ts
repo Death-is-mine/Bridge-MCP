@@ -1,1 +1,128 @@
-aW1wb3J0IHsgZGVzY3JpYmUsIGl0LCBleHBlY3QsIHZpIH0gZnJvbSAidml0ZXN0IjsKaW1wb3J0IGV4cHJlc3MgZnJvbSAiZXhwcmVzcyI7CmltcG9ydCB7IHJvdXRlciB9IGZyb20gIi4uL3NyYy9hcGkvcm91dGVzLmpzIjsKCnZpLm1vY2soIi4uL3NyYy9jb3JlL2NvbmZpZy5qcyIsICgpID0+ICh7CiAgY29uZmlnOiB7CiAgICBvcGVuY29kZTogeyBiYXNlVXJsOiAiaHR0cDovLzEyNy4wLjAuMTo0MDk2IiwgcGFzc3dvcmQ6ICIiIH0sCiAgICBicmlkZ2U6IHsgcG9ydDogMCwgYXV0aFNlY3JldDogIiIgfSwKICAgIGdpdGh1YjogeyB0b2tlbjogIiIsIHJlcG86ICIiIH0sCiAgICBsb2c6IHsgbGV2ZWw6ICJzaWxlbnQiIH0sCiAgfSwKfSkpOwoKdmkubW9jaygiLi4vc3JjL2FkYXB0ZXIvb3BlbmNvZGUuanMiLCAoKSA9PiAoewogIGhlYWx0aENoZWNrOiBhc3luYyAoKSA9PiB0cnVlLAogIGNyZWF0ZVNlc3Npb246IGFzeW5jICgpID0+ICJvYy1zZXNzaW9uLTEiLAogIHNlbmRQcm9tcHQ6IGFzeW5jICgpID0+IHt9LAogIHN0b3BTZXNzaW9uOiBhc3luYyAoKSA9PiB7fSwKICBnZXRTZXNzaW9uOiBhc3luYyAoKSA9PiAoeyBpZDogIm9jLXNlc3Npb24tMSIsIHN0YXR1czogInJ1bm5pbmciIH0pLAogIGdldERpZmY6IGFzeW5jICgpID0+ICIrIHRlc3QgZGlmZiIsCiAgc3RyZWFtRXZlbnRzOiAoKSA9PiAoKSA9PiB7fSwKfSkpOwoKaW1wb3J0IHJlcXVlc3QgZnJvbSAic3VwZXJ0ZXN0IjsKCmZ1bmN0aW9uIGNyZWF0ZUFwcCgpIHsKICBjb25zdCBhcHAgPSBleHByZXNzKCk7CiAgYXBwLnVzZShleHByZXNzLmpzb24oKSk7CiAgYXBwLnVzZShyb3V0ZXIpOwogIHJldHVybiBhcHA7Cn0KCmRlc2NyaWJlKCJBUEkgSW50ZWdyYXRpb24iLCAoKSA9PiB7CiAgY29uc3QgYXBwID0gY3JlYXRlQXBwKCk7CgogIGRlc2NyaWJlKCJHRVQgL2FwaS9zdGF0dXMiLCAoKSA9PiB7CiAgICBpdCgicmV0dXJucyBicmlkZ2UgYW5kIG9wZW5jb2RlIHN0YXR1cyIsIGFzeW5jICgpID0+IHsKICAgICAgY29uc3QgcmVzID0gYXdhaXQgcmVxdWVzdChhcHApLmdldCgiL2FwaS9zdGF0dXMiKTsKICAgICAgZXhwZWN0KHJlcy5zdGF0dXMpLnRvQmUoMjAwKTsKICAgICAgZXhwZWN0KHJlcy5ib2R5LmJyaWRnZS5zdGF0dXMpLnRvQmUoIm9rIik7CiAgICAgIGV4cGVjdChyZXMuYm9keS5vcGVuY29kZS5zdGF0dXMpLnRvQmUoImNvbm5lY3RlZCIpOwogICAgfSk7CiAgfSk7CgogIGRlc2NyaWJlKCJTZXNzaW9uIGxpZmVjeWNsZSIsICgpID0+IHsKICAgIGxldCBzZXNzaW9uSWQ6IHN0cmluZzsKCiAgICBpdCgiUE9TVCAvYXBpL3Nlc3Npb25zIGNyZWF0ZXMgYSBzZXNzaW9uIiwgYXN5bmMgKCkgPT4gewogICAgICBjb25zdCByZXMgPSBhd2FpdCByZXF1ZXN0KGFwcCkKICAgICAgICAucG9zdCgiL2FwaS9zZXNzaW9ucyIpCiAgICAgICAgLnNlbmQoeyBjbGllbnRJZDogInRlc3QiLCByZXBvc2l0b3J5OiAiL3RtcC9yZXBvIiB9KTsKICAgICAgZXhwZWN0KHJlcy5zdGF0dXMpLnRvQmUoMjAxKTsKICAgICAgZXhwZWN0KHJlcy5ib2R5LmJyaWRnZVNlc3Npb25JZCkudG9CZVRydXRoeSgpOwogICAgICBleHBlY3QocmVzLmJvZHkuc3RhdHVzKS50b0JlKCJJRExFIik7CiAgICAgIHNlc3Npb25JZCA9IHJlcy5ib2R5LmJyaWRnZVNlc3Npb25JZDsKICAgIH0pOwoKICAgIGl0KCJHRVQgL2FwaS9zZXNzaW9ucyBsaXN0cyBzZXNzaW9ucyIsIGFzeW5jICgpID0+IHsKICAgICAgY29uc3QgcmVzID0gYXdhaXQgcmVxdWVzdChhcHApLmdldCgiL2FwaS9zZXNzaW9ucyIpOwogICAgICBleHBlY3QocmVzLnN0YXR1cykudG9CZSgyMDApOwogICAgICBleHBlY3QoQXJyYXkuaXNBcnJheShyZXMuYm9keSkpLnRvQmUodHJ1ZSk7CiAgICAgIGV4cGVjdChyZXMuYm9keS5maW5kKChzOiBhbnkpID0+IHMuYnJpZGdlU2Vzc2lvbklkID09PSBzZXNzaW9uSWQpKS50b0JlVHJ1dGh5KCk7CiAgICB9KTsKCiAgICBpdCgiUE9TVCAvYXBpL3Nlc3Npb25zLzppZC9tZXNzYWdlcyBzZW5kcyBwcm9tcHQiLCBhc3luYyAoKSA9PiB7CiAgICAgIGNvbnN0IHJlcyA9IGF3YWl0IHJlcXVlc3QoYXBwKQogICAgICAgIC5wb3N0KGAvYXBpL3Nlc3Npb25zLyR7c2Vzc2lvbklkfS9tZXNzYWdlc2ApCiAgICAgICAgLnNlbmQoeyBwcm9tcHQ6ICJmaXggdGhlIGJ1ZyIgfSk7CiAgICAgIGV4cGVjdChyZXMuc3RhdHVzKS50b0JlKDIwMCk7CiAgICAgIGV4cGVjdChyZXMuYm9keS5vaykudG9CZSh0cnVlKTsKICAgICAgZXhwZWN0KHJlcy5ib2R5LnJlcXVlc3RJZCkudG9CZVRydXRoeSgpOwogICAgfSk7CgogICAgaXQoIlBPU1QgL2FwaS9zZXNzaW9ucy86aWQvc3RvcCBzdG9wcyBzZXNzaW9uIiwgYXN5bmMgKCkgPT4gewogICAgICBjb25zdCByZXMgPSBhd2FpdCByZXF1ZXN0KGFwcCkucG9zdChgL2FwaS9zZXNzaW9ucy8ke3Nlc3Npb25JZH0vc3RvcGApOwogICAgICBleHBlY3QocmVzLnN0YXR1cykudG9CZSgyMDApOwogICAgICBleHBlY3QocmVzLmJvZHkub2spLnRvQmUodHJ1ZSk7CiAgICB9KTsKCiAgICBpdCgiR0VUIC9hcGkvc2Vzc2lvbnMvOmlkL2V2ZW50cyAtIHJvdXRlIGV4aXN0cyIsIGFzeW5jICgpID0+IHsKICAgICAgY29uc3QgcmVzID0gYXdhaXQgcmVxdWVzdChhcHApLmdldCgiL2FwaS9zZXNzaW9ucy9mYWtlL2V2ZW50cyIpOwogICAgICBleHBlY3QocmVzLnN0YXR1cykudG9CZSg0MDQpOwogICAgfSk7CgogICAgaXQoInJldHVybnMgNDA0IGZvciBub25leGlzdGVudCBzZXNzaW9uIiwgYXN5bmMgKCkgPT4gewogICAgICBjb25zdCByZXMgPSBhd2FpdCByZXF1ZXN0KGFwcCkucG9zdCgiL2FwaS9zZXNzaW9ucy9mYWtlLWlkL21lc3NhZ2VzIikuc2VuZCh7IHByb21wdDogImhpIiB9KTsKICAgICAgZXhwZWN0KHJlcy5zdGF0dXMpLnRvQmUoNDA0KTsKICAgIH0pOwogIH0pOwoKICBkZXNjcmliZSgiUmVwb3NpdG9yeSIsICgpID0+IHsKICAgIGl0KCJHRVQgL2FwaS9yZXBvc2l0b3J5L2RpZmYgcmV0dXJucyBkaWZmIiwgYXN5bmMgKCkgPT4gewogICAgICBjb25zdCByZXMgPSBhd2FpdCByZXF1ZXN0KGFwcCkuZ2V0KCIvYXBpL3JlcG9zaXRvcnkvZGlmZiIpOwogICAgICBleHBlY3QocmVzLnN0YXR1cykudG9CZSgyMDApOwogICAgICBleHBlY3QocmVzLmJvZHkpLnRvSGF2ZVByb3BlcnR5KCJkaWZmIik7CiAgICB9KTsKICB9KTsKCiAgZGVzY3JpYmUoIkFwcHJvdmFscyIsICgpID0+IHsKICAgIGl0KCJHRVQgL2FwaS9hcHByb3ZhbHMgcmV0dXJucyBhcnJheSIsIGFzeW5jICgpID0+IHsKICAgICAgY29uc3QgcmVzID0gYXdhaXQgcmVxdWVzdChhcHApLmdldCgiL2FwaS9hcHByb3ZhbHMiKTsKICAgICAgZXhwZWN0KHJlcy5zdGF0dXMpLnRvQmUoMjAwKTsKICAgICAgZXhwZWN0KEFycmF5LmlzQXJyYXkocmVzLmJvZHkpKS50b0JlKHRydWUpOwogICAgfSk7CiAgfSk7CgogIGRlc2NyaWJlKCJFcnJvciBoYW5kbGluZyIsICgpID0+IHsKICAgIGl0KCJyZXR1cm5zIHByb3BlciBlcnJvciBmb3JtYXQiLCBhc3luYyAoKSA9PiB7CiAgICAgIGNvbnN0IHJlcyA9IGF3YWl0IHJlcXVlc3QoYXBwKS5wb3N0KCIvYXBpL3Nlc3Npb25zL25vbmV4aXN0ZW50L3N0b3AiKTsKICAgICAgZXhwZWN0KHJlcy5zdGF0dXMpLnRvQmUoNDA0KTsKICAgICAgZXhwZWN0KHJlcy5ib2R5LmVycm9yLmNvZGUpLnRvQmUoIlNFU1NJT05fTk9UX0ZPVU5EIik7CiAgICB9KTsKICB9KTsKfSk7Cg==
+import { describe, it, expect, vi } from "vitest";
+import express from "express";
+import request from "supertest";
+
+vi.mock("../src/adapter/opencode.js", () => ({
+  healthCheck: async () => ({ ok: true, version: "1.0.0" }),
+  createSession: async () => "oc-session-1",
+  sendPrompt: async () => "response",
+  stopSession: async () => {},
+  getDiff: async () => "+ test diff",
+  listSessions: async () => ["oc-session-1"],
+}));
+
+vi.mock("../src/core/config.js", () => ({
+  config: {
+    nodeEnv: "test",
+    opencode: { baseUrl: "http://127.0.0.1:4096", username: "", password: "", timeoutMs: 5000 },
+    bridge: { host: "0.0.0.0", port: 0, publicUrl: "http://localhost:3000", authSecret: "" },
+    oauth: { issuer: "http://localhost:3000", clientId: "", clientSecret: "" },
+    github: { token: "", repository: "" },
+    repositories: { allowed: [] },
+    rateLimit: { windowMs: 60000, maxRequests: 100, mcpMaxRequests: 60 },
+    audit: { logPath: "" },
+    log: { level: "silent" },
+  },
+  isDev: () => true,
+}));
+
+import router from "../src/api/routes.js";
+
+function createApp() {
+  const app = express();
+  app.use(express.json());
+  app.use(router);
+  return app;
+}
+
+describe("API Integration", () => {
+  const app = createApp();
+
+  it("GET /health returns status", async () => {
+    const res = await request(app).get("/health");
+    expect(res.status).toBe(200);
+    expect(res.body.bridge.ok).toBe(true);
+    expect(res.body.opencode.ok).toBe(true);
+  });
+
+  it("GET /ready returns ready status", async () => {
+    const res = await request(app).get("/ready");
+    expect(res.status).toBe(200);
+    expect(res.body.ready).toBe(true);
+  });
+
+  it("GET /.well-known/oauth-authorization-server returns metadata", async () => {
+    const res = await request(app).get("/.well-known/oauth-authorization-server");
+    expect(res.status).toBe(200);
+    expect(res.body.authorization_endpoint).toContain("/oauth/authorize");
+    expect(res.body.code_challenge_methods_supported).toContain("S256");
+  });
+
+  it("POST /oauth/register creates a client", async () => {
+    const res = await request(app)
+      .post("/oauth/register")
+      .send({ client_name: "test-app", redirect_uris: ["http://localhost/callback"] });
+    expect(res.status).toBe(201);
+    expect(res.body.client_id).toBeTruthy();
+  });
+
+  it("GET /api/status returns status", async () => {
+    const res = await request(app).get("/api/status");
+    expect(res.status).toBe(200);
+    expect(res.body.bridge.ok).toBe(true);
+  });
+
+  it("POST /api/sessions creates session", async () => {
+    const res = await request(app)
+      .post("/api/sessions")
+      .send({ repository: "/tmp/repo" });
+    expect(res.status).toBe(201);
+    expect(res.body.bridgeSessionId).toBeTruthy();
+  });
+
+  it("GET /api/sessions lists sessions", async () => {
+    const res = await request(app).get("/api/sessions");
+    expect(res.status).toBe(200);
+    expect(Array.isArray(res.body)).toBe(true);
+  });
+
+  it("GET /api/approvals returns array", async () => {
+    const res = await request(app).get("/api/approvals");
+    expect(res.status).toBe(200);
+    expect(Array.isArray(res.body)).toBe(true);
+  });
+
+  it("GET /api/audit returns array", async () => {
+    const res = await request(app).get("/api/audit");
+    expect(res.status).toBe(200);
+    expect(Array.isArray(res.body)).toBe(true);
+  });
+
+  it("GET /nonexistent returns 404", async () => {
+    const res = await request(app).get("/nonexistent");
+    expect(res.status).toBe(404);
+  });
+
+  it("POST /mcp requires session-id for subsequent requests", async () => {
+    const res = await request(app).get("/mcp").set("Mcp-Session-Id", "fake");
+    expect(res.status).toBe(404);
+  });
+
+  it("POST /mcp creates new session on first call", async () => {
+    const res = await request(app)
+      .post("/mcp")
+      .set("Accept", "application/json, text/event-stream")
+      .send({
+        jsonrpc: "2.0",
+        method: "initialize",
+        params: {
+          protocolVersion: "2025-03-26",
+          capabilities: {},
+          clientInfo: { name: "test", version: "1.0.0" },
+        },
+        id: 1,
+      });
+    expect(res.status).toBe(200);
+    expect(res.headers["mcp-session-id"]).toBeTruthy();
+  });
+});
