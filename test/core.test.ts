@@ -1,1 +1,103 @@
-aW1wb3J0IHsgZGVzY3JpYmUsIGl0LCBleHBlY3QsIHZpIH0gZnJvbSAidml0ZXN0IjsKCnZpLm1vY2soIi4uL3NyYy9jb3JlL2NvbmZpZy5qcyIsICgpID0+ICh7CiAgY29uZmlnOiB7CiAgICBvcGVuY29kZTogeyBiYXNlVXJsOiAiaHR0cDovLzEyNy4wLjAuMTo0MDk2IiwgcGFzc3dvcmQ6ICIiIH0sCiAgICBicmlkZ2U6IHsgcG9ydDogMCwgYXV0aFNlY3JldDogIiIgfSwKICAgIGdpdGh1YjogeyB0b2tlbjogIiIsIHJlcG86ICIiIH0sCiAgICBsb2c6IHsgbGV2ZWw6ICJzaWxlbnQiIH0sCiAgfSwKfSkpOwoKZGVzY3JpYmUoInBhdGggdHJhdmVyc2FsIHByb3RlY3Rpb24iLCAoKSA9PiB7CiAgaXQoImJsb2NrcyByZWxhdGl2ZSBwYXRoIGVzY2FwZXMiLCBhc3luYyAoKSA9PiB7CiAgICBjb25zdCB7IGlzUGF0aFNhZmUgfSA9IGF3YWl0IGltcG9ydCgiLi4vc3JjL3NlY3VyaXR5L3BhdGgtdHJhdmVyc2FsLmpzIik7CiAgICBleHBlY3QoaXNQYXRoU2FmZSgiLi4vLi4vZXRjL3Bhc3N3ZCIsIFsiL2hvbWUvdXNlciJdKSkudG9CZShmYWxzZSk7CiAgICBleHBlY3QoaXNQYXRoU2FmZSgifi8uc3NoL2lkX3JzYSIsIFsiL2hvbWUvdXNlciJdKSkudG9CZShmYWxzZSk7CiAgfSk7CgogIGl0KCJub3JtYWxpemVzIHBhdGhzIiwgYXN5bmMgKCkgPT4gewogICAgY29uc3QgeyBzYW5pdGl6ZVBhdGggfSA9IGF3YWl0IGltcG9ydCgiLi4vc3JjL3NlY3VyaXR5L3BhdGgtdHJhdmVyc2FsLmpzIik7CiAgICBjb25zdCByZXN1bHQgPSBzYW5pdGl6ZVBhdGgoIi4uLy4uLy4uL2V0Yy9wYXNzd2QiKTsKICAgIGV4cGVjdChyZXN1bHQpLnRvTWF0Y2goL15ldGNbL1xcXXBhc3N3ZCR8XmV0Y19wYXNzd2QkLyk7CiAgICBleHBlY3QocmVzdWx0KS5ub3QudG9Db250YWluKCIuLiIpOwogIH0pOwp9KTsKCmRlc2NyaWJlKCJzZXNzaW9uIG1hbmFnZXIiLCAoKSA9PiB7CiAgaXQoImNyZWF0ZXMgYW5kIHJldHJpZXZlcyBzZXNzaW9ucyIsIGFzeW5jICgpID0+IHsKICAgIGNvbnN0IHsgY3JlYXRlU2Vzc2lvbiwgZ2V0U2Vzc2lvbiwgbGlzdFNlc3Npb25zIH0gPSBhd2FpdCBpbXBvcnQoIi4uL3NyYy9jb3JlL3Nlc3Npb24uanMiKTsKICAgIGNvbnN0IHMgPSBjcmVhdGVTZXNzaW9uKCJ0ZXN0LWNsaWVudCIsICIvdG1wL3JlcG8iKTsKICAgIGV4cGVjdChzLmJyaWRnZVNlc3Npb25JZCkudG9CZVRydXRoeSgpOwogICAgZXhwZWN0KHMuc3RhdHVzKS50b0JlKCJJRExFIik7CiAgICBleHBlY3Qocy5jbGllbnRJZCkudG9CZSgidGVzdC1jbGllbnQiKTsKICAgIGV4cGVjdChnZXRTZXNzaW9uKHMuYnJpZGdlU2Vzc2lvbklkKSkudG9CZShzKTsKICAgIGV4cGVjdChsaXN0U2Vzc2lvbnMoInRlc3QtY2xpZW50IikpLnRvQ29udGFpbihzKTsKICB9KTsKCiAgaXQoInVwZGF0ZXMgc2Vzc2lvbiIsIGFzeW5jICgpID0+IHsKICAgIGNvbnN0IHsgY3JlYXRlU2Vzc2lvbiwgdXBkYXRlU2Vzc2lvbiwgZ2V0U2Vzc2lvbiB9ID0gYXdhaXQgaW1wb3J0KCIuLi9zcmMvY29yZS9zZXNzaW9uLmpzIik7CiAgICBjb25zdCBzID0gY3JlYXRlU2Vzc2lvbigiYyIsICIuIik7CiAgICB1cGRhdGVTZXNzaW9uKHMuYnJpZGdlU2Vzc2lvbklkLCB7IHN0YXR1czogIlJVTk5JTkciLCBvcGVuY29kZVNlc3Npb25JZDogIm9jLTEyMyIgfSk7CiAgICBjb25zdCB1cGRhdGVkID0gZ2V0U2Vzc2lvbihzLmJyaWRnZVNlc3Npb25JZCk7CiAgICBleHBlY3QodXBkYXRlZD8uc3RhdHVzKS50b0JlKCJSVU5OSU5HIik7CiAgICBleHBlY3QodXBkYXRlZD8ub3BlbmNvZGVTZXNzaW9uSWQpLnRvQmUoIm9jLTEyMyIpOwogIH0pOwoKICBpdCgiZGVsZXRlcyBzZXNzaW9uIiwgYXN5bmMgKCkgPT4gewogICAgY29uc3QgeyBjcmVhdGVTZXNzaW9uLCBkZWxldGVTZXNzaW9uLCBnZXRTZXNzaW9uIH0gPSBhd2FpdCBpbXBvcnQoIi4uL3NyYy9jb3JlL3Nlc3Npb24uanMiKTsKICAgIGNvbnN0IHMgPSBjcmVhdGVTZXNzaW9uKCJjIiwgIi4iKTsKICAgIGV4cGVjdChkZWxldGVTZXNzaW9uKHMuYnJpZGdlU2Vzc2lvbklkKSkudG9CZSh0cnVlKTsKICAgIGV4cGVjdChnZXRTZXNzaW9uKHMuYnJpZGdlU2Vzc2lvbklkKSkudG9CZVVuZGVmaW5lZCgpOwogIH0pOwp9KTsKCmRlc2NyaWJlKCJhcHByb3ZhbCBzeXN0ZW0iLCAoKSA9PiB7CiAgaXQoImNyZWF0ZXMgYW5kIHJlc29sdmVzIGFwcHJvdmFscyIsIGFzeW5jICgpID0+IHsKICAgIGNvbnN0IHsgY3JlYXRlQXBwcm92YWwsIGdldEFwcHJvdmFsLCBsaXN0UGVuZGluZ0FwcHJvdmFscywgcmVzb2x2ZUFwcHJvdmFsIH0gPSBhd2FpdCBpbXBvcnQoIi4uL3NyYy9jb3JlL2FwcHJvdmFsLmpzIik7CiAgICBjb25zdCBhID0gY3JlYXRlQXBwcm92YWwoImdpdCBwdXNoIiwgIi9yZXBvIiwgInNlc3MtMSIsICJVc2VyIHJlcXVlc3RlZCIsICJQdXNoZXMgdG8gcmVtb3RlIik7CiAgICBleHBlY3QoYS5zdGF0dXMpLnRvQmUoIlBFTkRJTkciKTsKICAgIGV4cGVjdChsaXN0UGVuZGluZ0FwcHJvdmFscygpKS50b0NvbnRhaW4oYSk7CiAgICByZXNvbHZlQXBwcm92YWwoYS5pZCwgIkFQUFJPVkVEIik7CiAgICBleHBlY3QoZ2V0QXBwcm92YWwoYS5pZCk/LnN0YXR1cykudG9CZSgiQVBQUk9WRUQiKTsKICB9KTsKfSk7CgpkZXNjcmliZSgiYXVkaXQgbG9nZ2VyIiwgKCkgPT4gewogIGl0KCJyZWNvcmRzIGVudHJpZXMiLCBhc3luYyAoKSA9PiB7CiAgICBjb25zdCB7IGF1ZGl0LCBnZXRBdWRpdExvZyB9ID0gYXdhaXQgaW1wb3J0KCIuLi9zcmMvY29yZS9hdWRpdC5qcyIpOwogICAgYXVkaXQoewogICAgICByZXF1ZXN0SWQ6ICJyZXEtMSIsCiAgICAgIGNsaWVudElkOiAidGVzdCIsCiAgICAgIGFjdGlvbjogInRlc3RfYWN0aW9uIiwKICAgICAgcmVwb3NpdG9yeTogIi9yZXBvIiwKICAgICAgc2Vzc2lvbjogInMxIiwKICAgICAgYXBwcm92YWxTdGF0dXM6ICJuL2EiLAogICAgICByZXN1bHQ6ICJvayIsCiAgICB9KTsKICAgIGNvbnN0IGxvZyA9IGdldEF1ZGl0TG9nKDEpOwogICAgZXhwZWN0KGxvZy5sZW5ndGgpLnRvQmVHcmVhdGVyVGhhbigwKTsKICAgIGV4cGVjdChsb2dbbG9nLmxlbmd0aCAtIDFdLmFjdGlvbikudG9CZSgidGVzdF9hY3Rpb24iKTsKICB9KTsKfSk7Cg==
+import { describe, it, expect } from "vitest";
+
+describe("path traversal protection", () => {
+  it("blocks relative path escapes", async () => {
+    const { isPathSafe } = await import("../src/security/path-traversal.js");
+    expect(isPathSafe("/home/user", "../../etc/passwd")).toBe(false);
+  });
+
+  it("allows safe paths", async () => {
+    const { isPathSafe } = await import("../src/security/path-traversal.js");
+    expect(isPathSafe("/home/user", "Documents/file.txt")).toBe(true);
+  });
+});
+
+describe("session manager", () => {
+  it("creates and retrieves sessions", async () => {
+    const { createSession, getSession, listSessions } = await import("../src/core/session.js");
+    const s = createSession("test-client", "/tmp/repo");
+    expect(s.bridgeSessionId).toBeTruthy();
+    expect(s.status).toBe("IDLE");
+    expect(s.clientId).toBe("test-client");
+    expect(s.repository).toBe("/tmp/repo");
+    expect(getSession(s.bridgeSessionId)).toBe(s);
+    expect(listSessions("test-client")).toContain(s);
+  });
+
+  it("updates session", async () => {
+    const { createSession, updateSession, getSession } = await import("../src/core/session.js");
+    const s = createSession("c", ".");
+    expect(s.lastEventAt).toBeNull();
+    updateSession(s.bridgeSessionId, { status: "RUNNING", opencodeSessionId: "oc-123" });
+    const updated = getSession(s.bridgeSessionId);
+    expect(updated?.status).toBe("RUNNING");
+    expect(updated?.opencodeSessionId).toBe("oc-123");
+    updateSession(s.bridgeSessionId, { lastEventAt: new Date() });
+    expect(getSession(s.bridgeSessionId)?.lastEventAt).toBeTruthy();
+  });
+
+  it("deletes session", async () => {
+    const { createSession, deleteSession, getSession } = await import("../src/core/session.js");
+    const s = createSession("c", ".");
+    expect(deleteSession(s.bridgeSessionId)).toBe(true);
+    expect(getSession(s.bridgeSessionId)).toBeUndefined();
+  });
+
+  it("lists all or by clientId", async () => {
+    const { createSession, listSessions } = await import("../src/core/session.js");
+    const s1 = createSession("client-a", "/a");
+    const s2 = createSession("client-b", "/b");
+    expect(listSessions("client-a")).toContain(s1);
+    expect(listSessions("client-b")).not.toContain(s1);
+    expect(listSessions().length).toBeGreaterThanOrEqual(2);
+  });
+});
+
+describe("approval system", () => {
+  it("creates and resolves approvals", async () => {
+    const { createApproval, getApproval, listPendingApprovals, resolveApproval } = await import("../src/core/approval.js");
+    const a = createApproval("git push", "/repo", "sess-1", "User requested", "Pushes to remote");
+    expect(a.status).toBe("PENDING");
+    expect(a.expiresAt.getTime()).toBeGreaterThan(Date.now());
+    expect(listPendingApprovals()).toContain(a);
+    resolveApproval(a.id, "APPROVED", "admin");
+    expect(getApproval(a.id)?.status).toBe("APPROVED");
+    expect(getApproval(a.id)?.resolvedBy).toBe("admin");
+  });
+
+  it("rejects approvals", async () => {
+    const { createApproval, resolveApproval, getApproval } = await import("../src/core/approval.js");
+    const a = createApproval("dangerous", "/repo", "s", "reason", "effect");
+    resolveApproval(a.id, "REJECTED", "reviewer");
+    expect(getApproval(a.id)?.status).toBe("REJECTED");
+  });
+
+  it("expires old approvals", async () => {
+    const { createApproval, expireOldApprovals, getApproval } = await import("../src/core/approval.js");
+    const a = createApproval("test", "/repo", "s", "r", "e", -1);
+    expireOldApprovals();
+    expect(getApproval(a.id)?.status).toBe("EXPIRED");
+  });
+});
+
+describe("audit logger", () => {
+  it("records entries", async () => {
+    const { audit, listAuditLogs } = await import("../src/core/audit.js");
+    audit({
+      requestId: "req-1",
+      clientId: "test",
+      userId: "u",
+      tool: "test_tool",
+      argumentsHash: "{}",
+      repository: "/repo",
+      bridgeSessionId: "s1",
+      opencodeSessionId: "oc1",
+      permission: "",
+      approvalStatus: "",
+      status: "ok",
+    });
+    const log = listAuditLogs(5, "test");
+    expect(log.length).toBeGreaterThan(0);
+    expect(log[log.length - 1].tool).toBe("test_tool");
+  });
+});
