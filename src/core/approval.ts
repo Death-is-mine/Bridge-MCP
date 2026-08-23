@@ -1,1 +1,81 @@
-aW1wb3J0IHsgdjQgYXMgdXVpZCB9IGZyb20gInV1aWQiOwoKZXhwb3J0IGludGVyZmFjZSBBcHByb3ZhbFJlcXVlc3QgewogIGlkOiBzdHJpbmc7CiAgYWN0aW9uOiBzdHJpbmc7CiAgcmVwb3NpdG9yeTogc3RyaW5nOwogIHNlc3Npb246IHN0cmluZzsKICByZWFzb246IHN0cmluZzsKICBwcm9wb3NlZEVmZmVjdDogc3RyaW5nOwogIHN0YXR1czogIlBFTkRJTkciIHwgIkFQUFJPVkVEIiB8ICJERU5JRUQiOwogIGNyZWF0ZWRBdDogRGF0ZTsKICByZXNvbHZlZEF0OiBEYXRlIHwgbnVsbDsKfQoKY29uc3QgcmVxdWVzdHMgPSBuZXcgTWFwPHN0cmluZywgQXBwcm92YWxSZXF1ZXN0PigpOwoKZXhwb3J0IGZ1bmN0aW9uIGNyZWF0ZUFwcHJvdmFsKAogIGFjdGlvbjogc3RyaW5nLAogIHJlcG9zaXRvcnk6IHN0cmluZywKICBzZXNzaW9uOiBzdHJpbmcsCiAgcmVhc29uOiBzdHJpbmcsCiAgcHJvcG9zZWRFZmZlY3Q6IHN0cmluZywKKTogQXBwcm92YWxSZXF1ZXN0IHsKICBjb25zdCByZXE6IEFwcHJvdmFsUmVxdWVzdCA9IHsKICAgIGlkOiB1dWlkKCksCiAgICBhY3Rpb24sCiAgICByZXBvc2l0b3J5LAogICAgc2Vzc2lvbiwKICAgIHJlYXNvbiwKICAgIHByb3Bvc2VkRWZmZWN0LAogICAgc3RhdHVzOiAiUEVORElORyIsCiAgICBjcmVhdGVkQXQ6IG5ldyBEYXRlKCksCiAgICByZXNvbHZlZEF0OiBudWxsLAogIH07CiAgcmVxdWVzdHMuc2V0KHJlcS5pZCwgcmVxKTsKICByZXR1cm4gcmVxOwp9CgpleHBvcnQgZnVuY3Rpb24gZ2V0QXBwcm92YWwoaWQ6IHN0cmluZyk6IEFwcHJvdmFsUmVxdWVzdCB8IHVuZGVmaW5lZCB7CiAgcmV0dXJuIHJlcXVlc3RzLmdldChpZCk7Cn0KCmV4cG9ydCBmdW5jdGlvbiBsaXN0UGVuZGluZ0FwcHJvdmFscygpOiBBcHByb3ZhbFJlcXVlc3RbXSB7CiAgcmV0dXJuIEFycmF5LmZyb20ocmVxdWVzdHMudmFsdWVzKCkpLmZpbHRlcigocikgPT4gci5zdGF0dXMgPT09ICJQRU5ESU5HIik7Cn0KCmV4cG9ydCBmdW5jdGlvbiByZXNvbHZlQXBwcm92YWwoaWQ6IHN0cmluZywgc3RhdHVzOiAiQVBQUk9WRUQiIHwgIkRFTklFRCIpOiBBcHByb3ZhbFJlcXVlc3QgfCB1bmRlZmluZWQgewogIGNvbnN0IHJlcSA9IHJlcXVlc3RzLmdldChpZCk7CiAgaWYgKCFyZXEpIHJldHVybiB1bmRlZmluZWQ7CiAgcmVxLnN0YXR1cyA9IHN0YXR1czsKICByZXEucmVzb2x2ZWRBdCA9IG5ldyBEYXRlKCk7CiAgcmV0dXJuIHJlcTsKfQo=
+import { v4 as uuid } from "uuid";
+
+export type ApprovalStatus = "PENDING" | "APPROVED" | "REJECTED" | "EXPIRED";
+
+export interface ApprovalRequest {
+  id: string;
+  requestId: string;
+  action: string;
+  repository: string;
+  session: string;
+  reason: string;
+  proposedEffect: string;
+  status: ApprovalStatus;
+  createdAt: Date;
+  resolvedAt: Date | null;
+  resolvedBy: string | null;
+  expiresAt: Date;
+}
+
+const requests = new Map<string, ApprovalRequest>();
+const DEFAULT_TTL_MS = 300_000;
+
+export function createApproval(
+  action: string,
+  repository: string,
+  session: string,
+  reason: string,
+  proposedEffect: string,
+  ttlMs = DEFAULT_TTL_MS,
+): ApprovalRequest {
+  const req: ApprovalRequest = {
+    id: uuid(),
+    requestId: uuid(),
+    action,
+    repository,
+    session,
+    reason,
+    proposedEffect,
+    status: "PENDING",
+    createdAt: new Date(),
+    resolvedAt: null,
+    resolvedBy: null,
+    expiresAt: new Date(Date.now() + ttlMs),
+  };
+  requests.set(req.id, req);
+  return req;
+}
+
+export function getApproval(id: string): ApprovalRequest | undefined {
+  return requests.get(id);
+}
+
+export function listPendingApprovals(): ApprovalRequest[] {
+  return Array.from(requests.values()).filter((r) => r.status === "PENDING");
+}
+
+export function listAllApprovals(): ApprovalRequest[] {
+  return Array.from(requests.values());
+}
+
+export function resolveApproval(id: string, status: "APPROVED" | "REJECTED", resolvedBy: string): ApprovalRequest | undefined {
+  const req = requests.get(id);
+  if (!req || req.status !== "PENDING") return undefined;
+  req.status = status;
+  req.resolvedAt = new Date();
+  req.resolvedBy = resolvedBy;
+  return req;
+}
+
+export function expireOldApprovals(): number {
+  let expired = 0;
+  const now = Date.now();
+  for (const req of requests.values()) {
+    if (req.status === "PENDING" && now > req.expiresAt.getTime()) {
+      req.status = "EXPIRED";
+      req.resolvedAt = new Date();
+      expired++;
+    }
+  }
+  return expired;
+}
