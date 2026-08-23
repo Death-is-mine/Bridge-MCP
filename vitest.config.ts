@@ -1,1 +1,14 @@
-aW1wb3J0IHsgZGVmaW5lQ29uZmlnIH0gZnJvbSAidml0ZXN0L2NvbmZpZyI7CgpleHBvcnQgZGVmYXVsdCBkZWZpbmVDb25maWcoewogIHRlc3Q6IHsKICAgIGdsb2JhbHM6IHRydWUsCiAgICBlbnZpcm9ubWVudDogIm5vZGUiLAogICAgaW5jbHVkZTogWyJ0ZXN0LyoqLyoudGVzdC50cyJdLAogICAgZW52OiB7CiAgICAgIE9QRU5DT0RFX0JBU0VfVVJMOiAiaHR0cDovLzEyNy4wLjAuMTo0MDk2IiwKICAgICAgQlJJREdFX1BPUlQ6ICIwIiwKICAgIH0sCiAgfSwKfSk7Cg==
+import { defineConfig } from "vitest/config";
+
+export default defineConfig({
+  test: {
+    globals: true,
+    environment: "node",
+    include: ["test/**/*.test.ts"],
+    env: {
+      NODE_ENV: "test",
+      OPENCODE_BASE_URL: "http://127.0.0.1:4096",
+      BRIDGE_PORT: "0",
+    },
+  },
+});
