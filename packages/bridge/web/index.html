@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bridge-MCP Dashboard</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid #1e293b; margin-bottom: 24px; }
+    h1 { font-size: 24px; font-weight: 600; }
+    .status-badge { padding: 4px 12px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+    .status-healthy { background: #065f46; color: #6ee7b7; }
+    .status-degraded { background: #78350f; color: #fbbf24; }
+    .status-offline { background: #7f1d1d; color: #fca5a5; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 24px; }
+    .card { background: #1e293b; border-radius: 12px; padding: 20px; border: 1px solid #334155; }
+    .card h2 { font-size: 14px; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; }
+    .card .value { font-size: 32px; font-weight: 700; }
+    .card .detail { font-size: 13px; color: #64748b; margin-top: 4px; }
+    table { width: 100%; border-collapse: collapse; }
+    th { text-align: left; padding: 12px; font-size: 12px; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #334155; }
+    td { padding: 12px; border-bottom: 1px solid #1e293b; font-size: 14px; }
+    .worker-status { display: inline-flex; align-items: center; gap: 6px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; }
+    .dot-green { background: #22c55e; }
+    .dot-yellow { background: #eab308; }
+    .dot-red { background: #ef4444; }
+    .dot-gray { background: #6b7280; }
+    .btn { padding: 8px 16px; border-radius: 8px; border: none; cursor: pointer; font-size: 13px; font-weight: 500; }
+    .btn-primary { background: #3b82f6; color: white; }
+    .btn-primary:hover { background: #2563eb; }
+    .btn-danger { background: #ef4444; color: white; }
+    .btn-danger:hover { background: #dc2626; }
+    .empty { text-align: center; padding: 40px; color: #64748b; }
+    #pairing-code { font-size: 24px; font-weight: 700; letter-spacing: 0.1em; color: #3b82f6; margin: 12px 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Bridge-MCP Dashboard</h1>
+      <div>
+        <span id="bridge-status" class="status-badge status-healthy">Loading...</span>
+      </div>
+    </header>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Bridge</h2>
+        <div class="value" id="bridge-version">-</div>
+        <div class="detail" id="bridge-uptime">Uptime: -</div>
+      </div>
+      <div class="card">
+        <h2>Workers</h2>
+        <div class="value" id="worker-count">0</div>
+        <div class="detail" id="worker-online">0 online</div>
+      </div>
+      <div class="card">
+        <h2>Sessions</h2>
+        <div class="value" id="session-count">0</div>
+        <div class="detail">Active sessions</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom: 24px;">
+      <h2>Workers</h2>
+      <div id="workers-content">
+        <div class="empty">No workers paired yet</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom: 24px;">
+      <h2>Sessions</h2>
+      <div id="sessions-content">
+        <div class="empty">No active sessions</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Recent Approvals</h2>
+      <div id="approvals-content">
+        <div class="empty">No pending approvals</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const esc = (s) => { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; };
+
+    async function fetchJSON(url) {
+      try {
+        const res = await fetch(url);
+        if (!res.ok) return null;
+        return await res.json();
+      } catch { return null; }
+    }
+
+    async function refresh() {
+      // Health
+      const health = await fetchJSON('/health');
+      const statusEl = document.getElementById('bridge-status');
+      if (health?.bridge?.ok) {
+        statusEl.textContent = 'Healthy';
+        statusEl.className = 'status-badge status-healthy';
+        document.getElementById('bridge-version').textContent = 'v' + (health.bridge.version || '?');
+        document.getElementById('bridge-uptime').textContent = 'Uptime: ' + formatUptime(health.bridge.uptime);
+      } else {
+        statusEl.textContent = 'Offline';
+        statusEl.className = 'status-badge status-offline';
+      }
+
+      // Workers
+      const workers = await fetchJSON('/api/workers') || [];
+      const onlineCount = workers.filter(w => w.status === 'ONLINE').length;
+      document.getElementById('worker-count').textContent = workers.length;
+      document.getElementById('worker-online').textContent = onlineCount + ' online';
+      renderWorkers(workers);
+
+      // Sessions
+      const sessions = await fetchJSON('/api/sessions') || [];
+      document.getElementById('session-count').textContent = sessions.filter(s => s.status === 'running' || s.status === 'active').length;
+      renderSessions(sessions);
+
+      // Approvals
+      const approvals = await fetchJSON('/api/approvals') || [];
+      renderApprovals(approvals);
+    }
+
+    function renderWorkers(workers) {
+      const el = document.getElementById('workers-content');
+      if (workers.length === 0) { el.innerHTML = '<div class="empty">No workers paired yet. Run the worker to connect.</div>'; return; }
+      el.innerHTML = `<table><thead><tr><th>Name</th><th>Platform</th><th>Status</th><th>Last Seen</th></tr></thead><tbody>${
+        workers.map(w => `<tr>
+          <td>${esc(w.name || w.id)}</td>
+          <td>${esc(w.platform || '?')}</td>
+          <td><span class="worker-status"><span class="dot dot-${statusColor(w.status)}"></span>${esc(w.status)}</span></td>
+          <td>${w.last_seen ? timeAgo(w.last_seen) : 'Never'}</td>
+        </tr>`).join('')
+      }</tbody></table>`;
+    }
+
+    function renderSessions(sessions) {
+      const el = document.getElementById('sessions-content');
+      if (sessions.length === 0) { el.innerHTML = '<div class="empty">No sessions</div>'; return; }
+      el.innerHTML = `<table><thead><tr><th>ID</th><th>Repository</th><th>Status</th><th>Created</th></tr></thead><tbody>${
+        sessions.slice(0, 10).map(s => `<tr>
+          <td>${esc(s.bridge_id || s.id?.slice(0, 8) || '?')}</td>
+          <td>${esc(s.repository || '-')}</td>
+          <td><span class="worker-status"><span class="dot dot-${statusColor(s.status)}"></span>${esc(s.status)}</span></td>
+          <td>${s.created_at ? timeAgo(s.created_at) : '?'}</td>
+        </tr>`).join('')
+      }</tbody></table>`;
+    }
+
+    function renderApprovals(approvals) {
+      const el = document.getElementById('approvals-content');
+      if (approvals.length === 0) { el.innerHTML = '<div class="empty">No pending approvals</div>'; return; }
+      el.innerHTML = `<table><thead><tr><th>Action</th><th>Repository</th><th>Reason</th><th>Status</th></tr></thead><tbody>${
+        approvals.map(a => `<tr>
+          <td>${esc(a.action)}</td>
+          <td>${esc(a.repository || '-')}</td>
+          <td>${esc(a.reason || '-')}</td>
+          <td><span class="worker-status"><span class="dot dot-${statusColor(a.status)}"></span>${esc(a.status)}</span></td>
+        </tr>`).join('')
+      }</tbody></table>`;
+    }
+
+    function statusColor(s) {
+      if (!s) return 'gray';
+      s = s.toLowerCase();
+      if (['online', 'running', 'active', 'healthy', 'approved'].includes(s)) return 'green';
+      if (['pairing', 'busy', 'pending'].includes(s)) return 'yellow';
+      if (['offline', 'error', 'failed', 'rejected'].includes(s)) return 'red';
+      return 'gray';
+    }
+
+    function formatUptime(s) {
+      if (!s) return '-';
+      const h = Math.floor(s / 3600);
+      const m = Math.floor((s % 3600) / 60);
+      return h > 0 ? `${h}h ${m}m` : `${m}m`;
+    }
+
+    function timeAgo(ts) {
+      const diff = Math.floor((Date.now() - ts) / 1000);
+      if (diff < 60) return 'just now';
+      if (diff < 3600) return Math.floor(diff / 60) + 'm ago';
+      if (diff < 86400) return Math.floor(diff / 3600) + 'h ago';
+      return Math.floor(diff / 86400) + 'd ago';
+    }
+
+    refresh();
+    setInterval(refresh, 10000);
+  </script>
+</body>
+</html>

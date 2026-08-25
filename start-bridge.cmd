@@ -1,11 +1,14 @@
 @echo off
-set PATH=C:\src\flutter\bin\mingit\cmd;%PATH%
-set OPENCODE_BASE_URL=http://127.0.0.1:4096
-set OPENCODE_SERVER_USERNAME=opencode
-set OPENCODE_SERVER_PASSWORD=testpass
-set BRIDGE_PORT=3000
-set OPENCODE_TIMEOUT_MS=300000
-set GITHUB_TOKEN=%GITHUB_TOKEN%
-set GITHUB_REPOSITORY=Death-is-mine/Bridge-MCP
 cd /d "D:\Projects\Bridge MCP"
-node dist\index.js
+
+REM Load .env
+for /f "tokens=1,* delims==" %%a in ('type .env') do (
+    if not "%%a"=="" if not "%%a"=="#" set "%%a=%%b"
+)
+
+REM Override with environment variables if set
+if defined OPENCODE_SERVER_PASSWORD set "OPENCODE_SERVER_PASSWORD=%OPENCODE_SERVER_PASSWORD%"
+if defined BRIDGE_AUTH_SECRET set "BRIDGE_AUTH_SECRET=%BRIDGE_AUTH_SECRET%"
+if defined GITHUB_TOKEN set "GITHUB_TOKEN=%GITHUB_TOKEN%"
+
+node packages\bridge\dist\index.js

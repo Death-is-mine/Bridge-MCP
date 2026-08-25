@@ -1,4 +1,10 @@
-node_modules/
+﻿node_modules/
 dist/
-.env
+bridge.db
+bridge.db-wal
+bridge.db-shm
 *.log
+certs/
+tunnel-url.txt
+test-project/
+.env
